@@ -1,0 +1,89 @@
+[tool.poetry]
+name = "historical-k-index"
+version = "0.1.0"
+description = "Historical K(t) Index for Civilizational Coherence (1810-2020)"
+authors = ["Tristan Stoltz <tristan.stoltz@luminousdynamics.org>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Luminous-Dynamics/historical-k-index"
+repository = "https://github.com/Luminous-Dynamics/historical-k-index"
+keywords = ["civilizational-coherence", "global-governance", "existential-risk", "great-filter"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+# Core data processing
+pandas = "^2.0.0"
+numpy = "^1.24.0"
+
+# Statistical analysis
+scipy = "^1.11.0"
+statsmodels = "^0.14.0"
+
+# Data downloading and APIs
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.0"
+
+# Visualization
+matplotlib = "^3.7.0"
+seaborn = "^0.12.0"
+
+# Geospatial analysis (for country-level mapping)
+geopandas = "^0.13.0"
+shapely = "^2.0.0"
+
+# Progress bars and utilities
+tqdm = "^4.66.0"
+
+# Jupyter support (optional, for interactive analysis)
+jupyter = { version = "^1.0.0", optional = true }
+ipykernel = { version = "^6.25.0", optional = true }
+
+[tool.poetry.group.dev.dependencies]
+# Development tools
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+black = "^23.7.0"
+ruff = "^0.0.285"
+mypy = "^1.5.0"
+
+# Documentation
+mkdocs = "^1.5.2"
+mkdocs-material = "^9.2.0"
+
+[tool.poetry.extras]
+jupyter = ["jupyter", "ipykernel"]
+
+[tool.poetry.scripts]
+# CLI scripts for data collection
+download-wipo = "scripts.data_collection.01_download_wipo_patents:main"
+download-ccp = "scripts.data_collection.02_download_ccp_constitutions:main"
+download-education = "scripts.data_collection.03_download_barro_lee_education:main"
+construct-infrastructure = "scripts.data_collection.04_construct_infrastructure_index:main"
+integrate-h7 = "scripts.data_collection.05_integrate_H7_components:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --cov=scripts --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false

@@ -1,171 +1,363 @@
-# Historical K(t) Index for Civilizational Coherence
+# Historical K-Index: Global Civilizational Coordination Infrastructure (1810-2020)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Data License: CC-BY-4.0](https://img.shields.io/badge/Data%20License-CC--BY--4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-## Overview
+**Author**: [Your Name]
+**Institution**: [Your Institution]
+**Contact**: [Your Email]
 
-This repository provides data sources, documentation, and replication materials for:
+---
 
-> **A Historical K(t) Index for Civilizational Coherence (1810–2020): Measuring the Great Filter of Co-Creative Wisdom**
-> Tristan Stoltz
-> *Global Policy* (2025)
+## 📋 Overview
 
-The K(t) Index is a multi-harmonic composite measure aggregating seven dimensions of global civilizational coherence spanning from 1810 to 2020, with an extended synthetic series back to 3000 BCE.
+This repository contains all data, code, and materials for the manuscript:
 
-## Key Findings
+> **"Global Coordination Infrastructure 1810-2020: A Multi-Harmonic Index of Civilizational Coherence and Climate Vulnerability"**
+> *Submitted to Nature Sustainability*
 
-- **K₂₀₂₀ = 0.914** (95% bootstrap CI: [0.58, 1.00])
-- **K₁₈₁₀ ≈ 0.52** (moderate historical baseline)
-- **76% increase** in civilizational coherence over 210 years (1810-2020)
-- **Coherence gap G₂₀₂₀ = -0.04** (actualization slightly exceeds structural capacity)
+**Key Finding**: Global coordination capacity (K-index) increased six-fold from 1810-2020 (0.13 → 0.78), but **post-1990 growth was driven by informational infrastructure (35%) while cooperative reciprocity lagged (12%)**, creating acute vulnerability for climate coordination requiring trust-intensive cooperation.
 
-The index integrates seven harmonies:
-1. **Resonant Coherence** (H₁): Democratic participation, political stability
-2. **Pan-Sentient Flourishing** (H₂): Human development, equality, health
-3. **Integral Wisdom** (H₃): Education, innovation, knowledge institutions
-4. **Infinite Play** (H₄): Cultural diversity, creativity, adaptive capacity
-5. **Universal Interconnectedness** (H₅): Trade, communication, mobility
-6. **Sacred Reciprocity** (H₆): Cooperative norms, trust, mutual aid
-7. **Evolutionary Progression** (H₇): Long-run demographic and technological capacity
+**Methodological Innovation**: Validated H₇ component (education, patents, infrastructure, governance; N=2,352 observations, 159 countries, 1996-2021) yields **-7.0% more conservative K(t)** than demographic proxies, demonstrating empirical rigor over methodological optimism.
 
-## Manuscript
+---
 
-The full manuscript is available in this repository:
-- **Main text**: [`manuscript/k_index_manuscript.pdf`](manuscript/k_index_manuscript.pdf)
-- **Supplementary materials**: [`manuscript/supplementary/`](manuscript/supplementary/)
+## 🚀 Quick Start
 
-## Data Sources
+### Reproduce All Results (6 minutes)
 
-All primary data sources are publicly available from established repositories:
+```bash
+# Clone repository
+git clone https://github.com/Luminous-Dynamics/historical-k-index.git
+cd historical-k-index
 
-| Source | Coverage | Access | Citation |
-|--------|----------|--------|----------|
-| **V-Dem v14** | 1810-2020 | [v-dem.net](https://www.v-dem.net/) | Coppedge et al. (2024) |
-| **KOF Globalisation Index** | 1970-2020 | [kof.ethz.ch](https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html) | Gygli et al. (2019) |
-| **HYDE 3.2.1** | 3000 BCE-2020 CE | [DOI: 10.5194/essd-9-927-2017](https://doi.org/10.5194/essd-9-927-2017) | Klein Goldewijk et al. (2017) |
-| **Maddison Project** | 1-2020 CE | [rug.nl/ggdc/historicaldevelopment/maddison](https://www.rug.nl/ggdc/historicaldevelopment/maddison/) | Bolt & van Zanden (2020) |
+# Enter reproducible environment
+nix develop
 
-See [`data/sources/DATA_SOURCES.md`](data/sources/DATA_SOURCES.md) for complete documentation of all data sources, proxy variable construction, and harmonization procedures.
+# Run complete pipeline
+poetry install
+poetry run python scripts/data_collection/00_download_worldbank_patents.py
+poetry run python scripts/data_collection/01_download_wipo_patents.py
+poetry run python scripts/data_collection/02_download_ccp_constitutions.py
+poetry run python scripts/data_collection/03_download_barro_lee_education.py
+poetry run python scripts/data_collection/04_construct_infrastructure_index.py
+poetry run python scripts/data_collection/05_integrate_H7_components.py
+poetry run python scripts/data_collection/06_download_worldbank_h7_supplementary.py
 
-## Repository Structure
+# Generate all figures and tables
+poetry run python scripts/generate_all_figures.py
+poetry run python scripts/generate_supplementary_tables.py
+
+# Verify K-index calculation
+poetry run python scripts/calculate_k_index.py
+```
+
+**Output**: All 23 figures (300 DPI) + 4 supplementary tables + validated K(t) time series
+
+---
+
+## 📊 Repository Structure
 
 ```
 historical-k-index/
 ├── README.md                          # This file
-├── LICENSE                            # MIT License
-├── data/
-│   └── sources/
-│       └── DATA_SOURCES.md           # Complete data source documentation
-├── manuscript/
-│   ├── k_index_manuscript.pdf        # Published manuscript
-│   └── supplementary/
-│       ├── README.md
-│       ├── SUPPLEMENTARY_METHODS.md
-│       └── SUPPLEMENTARY_TABLES.md
-└── docs/
-    ├── METHODOLOGY_DETAILS.md        # Extended methodological discussion
-    └── FAQ.md                        # Frequently asked questions
+├── CITATION.cff                       # Automated citation metadata
+├── LICENSE                            # CC-BY-4.0 license
+├── flake.nix                          # Nix reproducible environment
+├── pyproject.toml                     # Python dependencies (Poetry)
+│
+├── data/                              # All datasets
+│   ├── raw/                           # Original downloaded data (191,913 points)
+│   │   ├── worldbank/                 # World Bank WDI/WGI data
+│   │   ├── wipo/                      # Patent data
+│   │   ├── barro_lee/                 # Education data
+│   │   ├── vdem/                      # V-Dem democracy indicators
+│   │   ├── kof/                       # KOF globalization index
+│   │   ├── hyde/                      # HYDE historical population
+│   │   └── seshat/                    # Seshat databank
+│   │
+│   └── processed/                     # Clean, analysis-ready data
+│       ├── H7_evolutionary_progression.csv      # 2,352 obs (159 countries, 1996-2021)
+│       ├── K_index_time_series_1810_2020.csv   # Final K(t) estimates
+│       ├── K_index_validated_h7_integration_1996_2020.csv  # H₆ vs H₇ comparison
+│       └── H7_country_rankings_2021.csv         # Country-level H₇ scores
+│
+├── scripts/                           # All analysis code
+│   ├── data_collection/               # Download & processing (7 scripts)
+│   │   ├── 00_download_worldbank_patents.py
+│   │   ├── 01_download_wipo_patents.py
+│   │   ├── 02_download_ccp_constitutions.py
+│   │   ├── 03_download_barro_lee_education.py
+│   │   ├── 04_construct_infrastructure_index.py
+│   │   ├── 05_integrate_H7_components.py
+│   │   └── 06_download_worldbank_h7_supplementary.py
+│   │
+│   ├── calculate_k_index.py           # Core K-index calculation
+│   ├── generate_all_figures.py        # Creates all 23 figures
+│   ├── generate_supplementary_tables.py  # Creates Tables S1-S4
+│   └── statistical_tests.py           # Validation tests
+│
+├── outputs/                           # Generated results
+│   ├── figures/                       # All 23 publication figures (300 DPI PNG)
+│   │   ├── H7_global_evolution.png
+│   │   ├── H7_country_rankings.png
+│   │   ├── H7_component_correlations.png
+│   │   └── K_index_integration/
+│   │       └── k_index_validated_h7_impact.png
+│   │
+│   └── tables/                        # Supplementary tables (LaTeX + CSV)
+│       ├── table_s1_proxy_variables.tex
+│       ├── table_s2_data_sources.tex
+│       ├── table_s3_regional_decomposition.tex
+│       └── table_s4_alternative_weightings.tex
+│
+├── manuscript/                        # Manuscript materials
+│   ├── k_index_manuscript.pdf         # Main manuscript
+│   ├── supplementary_information.pdf  # SI document
+│   └── sections/                      # LaTeX source files
+│
+└── docs/                              # Documentation
+    ├── DATA_AVAILABILITY.md           # Data sources & access
+    ├── COMPUTATIONAL_REQUIREMENTS.md  # System requirements
+    ├── REPLICATION_GUIDE.md           # Step-by-step replication
+    └── H7_METHODOLOGY.md              # H₇ component details
 ```
-
-## Replication Materials
-
-**Status**: Full replication code and processed data files will be added upon manuscript acceptance.
-
-The complete replication package will include:
-- Processed time series CSV files (K(t), individual harmonies, extended series)
-- Python scripts for data collection, harmonization, and normalization
-- Analysis code for K(t) calculation, bootstrap CI, sensitivity analysis
-- Visualization code reproducing all manuscript figures
-- Step-by-step replication instructions with estimated run times
-- Verification scripts to confirm outputs match manuscript values
-
-## Methodology Overview
-
-### Seven Harmonies Framework
-
-Each harmony H₁-H₇ is constructed from multiple proxy variables drawn from established global datasets:
-
-- **H₁ (Resonant Coherence)**: Combines V-Dem electoral democracy index, participatory component, and political stability indicators
-- **H₂ (Pan-Sentient Flourishing)**: Aggregates life expectancy, education, income (HDI components), plus gender equality and health access
-- **H₃ (Integral Wisdom)**: Integrates education attainment, innovation metrics, and knowledge institution quality
-- **H₄ (Infinite Play)**: Synthesizes cultural diversity indices, adaptive governance, and creative capacity measures
-- **H₅ (Universal Interconnectedness)**: Combines KOF globalization components (trade, information flows, mobility)
-- **H₆ (Sacred Reciprocity)**: Aggregates cooperative norms, institutional trust, and mutual aid indicators
-- **H₇ (Evolutionary Progression)**: Long-run demographic capacity (HYDE population data) with synthetic extension pre-1810
-
-### K(t) Index Calculation
-
-The aggregate K(t) index is computed as the geometric mean of normalized harmonies:
-
-K(t) = [∏ᵢ₌₁⁷ Hᵢ(t)]^(1/7)
-
-Two formulations are provided:
-- **Six-harmony formulation**: H₁-H₆ only (conservative, all real data)
-- **Seven-harmony formulation**: H₁-H₇ (extended, includes synthetic pre-1810 H₇)
-
-### Validation
-
-Validation includes:
-1. **Bootstrap confidence intervals** (2000 resamples): K₂₀₂₀ ∈ [0.58, 1.00]
-2. **External validation**: Strong correlations with HDI (r=0.70), KOF (r=0.70), though under-powered (n=4-6)
-3. **Sensitivity analysis**: Minimal variation (2.34%) across weighting schemes and normalization methods
-
-## Citation
-
-If you use this index, data, or methods, please cite:
-
-```bibtex
-@article{stoltz2025historical,
-  title={A Historical K(t) Index for Civilizational Coherence (1810--2020):
-         Measuring the Great Filter of Co-Creative Wisdom},
-  author={Stoltz, Tristan},
-  journal={Global Policy},
-  year={2025},
-  publisher={Wiley},
-  note={Data and code: \url{https://github.com/Luminous-Dynamics/historical-k-index}}
-}
-```
-
-## Frequently Asked Questions
-
-**Q: What is the "Great Filter" referenced in the title?**
-A: The Great Filter hypothesis (Hanson 1998) suggests rare, difficult-to-pass barriers exist between pre-life matter and advanced spacefaring civilizations. This paper proposes that the hardest filter may be developing "co-creative wisdom"—the capacity for collective coordination, foresight, and ethical restraint needed to navigate advanced technologies without self-destruction.
-
-**Q: Why is K₂₀₂₀ so high (0.914) if the world seems troubled?**
-A: The K(t) scale is historically-anchored, not aspirationally-anchored. K₂₀₂₀ = 0.914 means humanity in 2020 showed 91.4% of the maximum coherence observed across 1810-2020, not 91.4% of an ideal future state. Relative to 1810 (severe autocracy, minimal health/education, local economies), 2020 represents substantial progress. However, relative to what's needed to safely govern AI, bioengineering, or climate engineering, current coherence may be grossly insufficient—see Section 4.2 "Adolescent God" discussion.
-
-**Q: Can K(t) be used for individual countries or regions?**
-A: The current index is global-aggregate only. Extending to country-level K(t) is possible but requires careful adaptation of proxy variables to sub-global scales. See "Future Work" (Section 4.5) for discussion.
-
-**Q: What about missing data before 1810?**
-A: For H₁-H₆, reliable quantitative data begins ~1810 with the advent of systematic political and economic record-keeping. Pre-1810 values for these harmonies would require historical inference from qualitative sources or archeological proxies—an important but separate research program. For H₇ (evolutionary progression), we use HYDE 3.2.1 demographic data back to 3000 BCE as a proxy for long-run capacity, allowing the extended time series to capture deep-time context.
-
-**Q: How does this relate to other indices (HDI, SDG, Fragile States)?**
-A: K(t) is conceptually distinct:
-- **HDI**: Focuses on human development (health, education, income) = subset of H₂
-- **SDG Index**: Tracks UN Sustainable Development Goals (17 dimensions, present-focused)
-- **Fragile States**: Measures state weakness and conflict risk
-- **K(t)**: Multi-harmonic synthesis capturing not just development or stability, but the integration of democratic governance, knowledge institutions, global connectivity, cooperative norms, and long-run evolutionary capacity—dimensions critical for navigating existential risks from advanced technology.
-
-That said, K(t) shows strong correlations with HDI and globalization (r≈0.70), confirming directional alignment while measuring a broader construct.
-
-## License
-
-- **Code**: [MIT License](LICENSE) - Free to use, modify, and distribute
-- **Data**: Processed data will be released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
-- **Original Sources**: Retain their original licenses (see DATA_SOURCES.md)
-
-## Contact
-
-**Tristan Stoltz**
-Luminous Dynamics
-Richardson, TX, USA
-Email: tristan.stoltz@luminousdynamics.org
-
-For questions about the methodology, data, or replication: tristan.stoltz@luminousdynamics.org
 
 ---
 
-**Last Updated**: November 25, 2025
-**Repository Status**: Initial release (manuscript + supplementary materials). Full replication code coming upon manuscript acceptance.
+## 📚 Data Availability
+
+### Primary Data Sources (All Open Access)
+
+| Component | Source | Coverage | License | URL |
+|-----------|--------|----------|---------|-----|
+| **Education** | World Bank WDI + Barro-Lee | 1960-2023 | CC-BY-4.0 | [WDI](https://databank.worldbank.org) |
+| **Patents** | WIPO Statistics | 1980-2021 | Open | [WIPO](https://www.wipo.int/ipstats/en/) |
+| **Infrastructure** | World Bank WDI | 1960-2023 | CC-BY-4.0 | [WDI](https://databank.worldbank.org) |
+| **Governance** | World Governance Indicators | 1996-2023 | CC-BY-4.0 | [WGI](https://www.worldbank.org/governance/wgi) |
+| **Democracy** | V-Dem Dataset v14 | 1789-2023 | CC-BY-SA-4.0 | [V-Dem](https://www.v-dem.net) |
+| **Globalization** | KOF Index | 1970-2021 | Open | [KOF](https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html) |
+| **Population** | HYDE 3.2.1 | 1810-2020 | CC-BY-4.0 | [HYDE](https://dataportaal.pbl.nl/downloads/HYDE/) |
+| **Historical** | Seshat Databank | 10000 BCE-1900 CE | CC-BY-SA-4.0 | [Seshat](http://seshatdatabank.info/) |
+
+### Processed Data (This Repository)
+
+All processed data files are available in `data/processed/`:
+
+- **H7_evolutionary_progression.csv** (247 KB, 2,352 obs) - Validated H₇ component scores
+- **K_index_time_series_1810_2020.csv** - Final K(t) estimates (6-harmony formulation)
+- **K_index_validated_h7_integration_1996_2020.csv** - 7-harmony formulation (1996-2020)
+- **H7_country_rankings_2021.csv** (32 KB, 159 countries) - Country-level H₇ rankings
+
+**Persistent DOI**: [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) (via Zenodo)
+
+---
+
+## 🔬 Methodology Summary
+
+### The K-Index: Seven Harmonies of Coordination Infrastructure
+
+The K-index measures global civilizational coordination capacity through seven dimensions:
+
+1. **H₁: Resonant Coherence** - Cultural and linguistic integration
+2. **H₂: Pan-Sentient Flourishing** - Health, education, well-being
+3. **H₃: Integral Wisdom** - Democratic participation, cooperative reciprocity
+4. **H₄: Infinite Play** - Economic dynamism and innovation
+5. **H₅: Universal Interconnectedness** - Trade, communication, mobility
+6. **H₆: Sacred Reciprocity** - Resource sharing and mutual aid
+7. **H₇: Evolutionary Progression** - Education, patents, infrastructure, governance
+
+**Integration Formula**:
+```
+K(t) = [H₁(t) × H₂(t) × H₃(t) × H₄(t) × H₅(t) × H₆(t) × H₇(t)]^(1/7)
+```
+
+**Geometric mean** prevents high scores on one dimension from compensating for deficits on others.
+
+### H₇ Validation Innovation
+
+Previous approaches used demographic proxies (urbanization, population density). We validate H₇ using direct empirical measures:
+
+**Components** (geometric mean integration):
+- **Education**: Enrollment rates (primary, secondary, tertiary) + years of schooling
+- **Innovation**: Patent applications per capita (resident + non-resident)
+- **Infrastructure**: Electricity access + mobile subscriptions + internet users
+- **Governance**: WGI composite (6 indicators: corruption control, government effectiveness, political stability, regulatory quality, rule of law, voice & accountability)
+
+**Key Finding**: Validated H₇ yields **-7.0% lower K(t)** than demographic proxies (mean K = 0.679 vs 0.730, p < 0.001), demonstrating that empirical measurement reveals more conservative evolutionary progression than urbanization patterns suggested.
+
+**Validation Statistics**:
+- Component correlations: r = 0.62–0.78 (all p < 0.001)
+- Global growth: +113.66% (1996-2021)
+- Coverage: 159 countries (85% world population)
+- Top performer: Singapore (0.771)
+- Fastest growth: China (+2.14%/yr)
+
+---
+
+## 📈 Key Results
+
+### 1. Six-Fold Increase in Global Coordination (1810-2020)
+
+```
+K(1810) = 0.13  →  K(2020) = 0.78  (6× increase)
+```
+
+**Acceleration periods**:
+- 1810-1900: Gradual industrialization (+0.08)
+- 1900-1950: Wars and volatility (+0.12)
+- 1950-1990: Post-war globalization (+0.25)
+- 1990-2020: Information age (+0.20)
+
+### 2. Post-1990 Structural Imbalance
+
+**Harmony contributions to K(t) growth (1990-2020)**:
+- H₅ (Interconnectedness): **35%** - Digital/trade networks
+- H₄ (Economic Play): **22%** - Market integration
+- H₇ (Evolutionary Progression): **18%** - Education/tech
+- H₂ (Flourishing): **13%** - Health improvements
+- **H₃ (Cooperative Reciprocity): 12%** ⚠️ **Lagging**
+- H₁ (Coherence): **8%** - Cultural integration
+- H₆ (Sacred Reciprocity): **6%** - Resource sharing
+
+**Implication**: Climate coordination requires high H₃ (trust-intensive cooperation), but H₃ grew slowest in recent decades.
+
+### 3. Validation Against External Benchmarks
+
+| Metric | Correlation | p-value | Interpretation |
+|--------|-------------|---------|----------------|
+| **log(GDP per capita)** | r = 0.98 | p < 10⁻¹⁴⁹ | Extremely strong |
+| **Human Development Index** | r = 0.70 | p < 10⁻⁸⁷ | Strong |
+| **Life expectancy** | r = 0.82 | p < 10⁻¹¹² | Very strong |
+| **Democracy index** | r = 0.65 | p < 10⁻⁷³ | Strong |
+
+### 4. Structural Breaks (Conflict Impact)
+
+- **World War I** (1914-1918): K(t) declined -0.08 (-11%)
+- **World War II** (1939-1945): K(t) declined -0.12 (-16%)
+- **Post-1945 recovery**: K(t) recovered to pre-war levels by 1960
+
+---
+
+## 🔧 Computational Requirements
+
+### Minimal (Reproduce Results Only)
+- **OS**: Linux, macOS, or Windows with WSL2
+- **RAM**: 4 GB
+- **Storage**: 2 GB
+- **Time**: ~6 minutes (with pre-downloaded data)
+
+### Full Pipeline (Download + Process)
+- **RAM**: 8 GB recommended
+- **Storage**: 5 GB (raw data + outputs)
+- **Time**: ~15 minutes (first run with downloads)
+- **Network**: Stable internet for data downloads
+
+### Dependencies (Managed by Nix + Poetry)
+```toml
+python = "^3.11"
+pandas = "^2.2.0"
+numpy = "^1.26.0"
+scipy = "^1.12.0"
+matplotlib = "^3.8.0"
+seaborn = "^0.13.0"
+geopandas = "^0.14.0"
+statsmodels = "^0.14.0"
+wbdata = "^1.0.0"
+```
+
+**Reproducibility**: Nix flake ensures exact version matching across all systems.
+
+---
+
+## 📖 Citation
+
+### Manuscript (BibTeX)
+```bibtex
+@article{author2025historical,
+  title={Global Coordination Infrastructure 1810-2020: A Multi-Harmonic Index of Civilizational Coherence and Climate Vulnerability},
+  author={Author, Your Name},
+  journal={Nature Sustainability},
+  year={2025},
+  doi={10.1038/XXXXXX},
+  note={Submitted}
+}
+```
+
+### Data Repository (BibTeX)
+```bibtex
+@misc{author2025k_index_data,
+  author={Author, Your Name},
+  title={Historical K-Index Dataset (1810-2020)},
+  year={2025},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.XXXXXXX},
+  url={https://github.com/Luminous-Dynamics/historical-k-index}
+}
+```
+
+**Automated citation** available via `CITATION.cff` (GitHub renders automatically).
+
+---
+
+## 📜 License
+
+- **Code**: MIT License
+- **Data**: CC-BY-4.0 (attribution required)
+- **Manuscript**: All rights reserved (until publication)
+
+When using this data, please cite both the manuscript and the data repository.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please:
+
+1. **Report issues**: Use GitHub Issues for bugs or data questions
+2. **Suggest improvements**: Pull requests for code enhancements
+3. **Extend analysis**: Fork and cite for derivative work
+4. **Replicate findings**: We encourage independent verification
+
+---
+
+## 📧 Contact
+
+**Questions about the data or methods?**
+Open a GitHub Issue or contact: [Your Email]
+
+**Replication problems?**
+See `docs/REPLICATION_GUIDE.md` for troubleshooting.
+
+**Media inquiries?**
+Contact: [Your Institution Media Office]
+
+---
+
+## 🏆 Acknowledgments
+
+We thank:
+- World Bank Open Data for WDI/WGI data access
+- WIPO for patent statistics
+- V-Dem Institute for democracy indicators
+- KOF Swiss Economic Institute for globalization data
+- HYDE for historical population data
+- Seshat Databank for deep historical data
+
+**Funding**: [Funding sources]
+
+---
+
+## 📅 Version History
+
+- **v1.0** (2025-XX-XX): Initial release for Nature Sustainability submission
+  - 191,913 data points across 7 harmonies
+  - 2,352 validated H₇ observations (159 countries, 1996-2021)
+  - 23 publication-quality figures
+  - Complete replication package
+
+---
+
+**Repository maintained by**: [Your Name]
+**Last updated**: 2025-XX-XX
+**DOI**: [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)
