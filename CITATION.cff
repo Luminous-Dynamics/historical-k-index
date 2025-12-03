@@ -1,28 +1,28 @@
-# Citation File Format (CFF) for H₇ Evolutionary Progression Component
+# Citation File Format (CFF) for Historical K-Index Research Program
 # https://citation-file-format.github.io/
 
 cff-version: 1.2.0
-message: "If you use this data or methodology, please cite it as below."
+message: "If you use this dataset, code, or methodology, please cite the relevant paper(s) from the trilogy."
 type: dataset
-title: "Validated H₇ (Evolutionary Progression) Component for Historical K(t) Coherence Index"
+title: "Historical K-Index Research Program: Global Coordination Capacity 1810-2020"
 abstract: >
-  This dataset provides a validated empirical operationalization of the H₇
-  (Evolutionary Progression) component of the historical K(t) coherence index,
-  integrating four dimensions of societal advancement: education, innovation
-  (patents), infrastructure, and governance. The dataset covers 159 countries
-  from 1996-2021 (2,352 observations) and demonstrates that direct empirical
-  measurement yields more conservative assessments than demographic proxies,
-  strengthening scientific credibility through methodological rigor. Includes
-  complete data pipeline (191,913 raw data points from World Bank), processing
-  scripts, and K(t) framework integration demonstrating -7.0% conservative
-  difference from synthetic approaches.
+  The Historical K-Index Research Program quantifies global coordination capacity
+  from 1810-2020 using seven fundamental harmonies: governance, interconnection,
+  reciprocity, complexity, knowledge, wellbeing, and evolutionary progression.
+  This repository contains complete replication materials for a trilogy of papers:
+  (1) Foundation paper establishing the K-index framework and validating all seven
+  harmonies (1810-2020), (2) Regional divergence analysis examining coordination
+  gaps across developed and developing regions, and (3) Temporal shocks study of
+  crisis impacts on coordination resilience. Includes 191,913 raw data points,
+  complete processing pipeline, and all figures/tables for Nature Sustainability
+  submission.
 
 authors:
-  - family-names: "[AUTHOR_SURNAME]"
-    given-names: "[AUTHOR_GIVEN_NAMES]"
-    orcid: "https://orcid.org/[AUTHOR_ORCID]"
-    affiliation: "[AUTHOR_AFFILIATION]"
-    email: "[AUTHOR_EMAIL]"
+  - family-names: "Stoltz"
+    given-names: "Tristan"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # TODO: Add your ORCID
+    affiliation: "Luminous Dynamics"
+    email: "tristan.stoltz@evolvingresonantcocreationism.com"
   # Add additional authors as needed
   # - family-names: "Surname"
   #   given-names: "Given Names"
@@ -33,25 +33,79 @@ date-released: "2025-12-03"
 license: CC-BY-4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 
-repository-code: "https://github.com/[ORGANIZATION]/historical-k-index"
-url: "https://github.com/[ORGANIZATION]/historical-k-index"
+repository-code: "https://github.com/Luminous-Dynamics/historical-k-index"
+url: "https://luminousdynamics.org/research/k-index"
 
 keywords:
-  - societal coherence
-  - evolutionary progression
-  - historical K-index
-  - composite indicators
-  - World Bank data
-  - education development
-  - innovation metrics
-  - infrastructure development
+  - global coordination
+  - historical analysis
+  - seven harmonies
+  - K-index
+  - time series analysis
   - governance quality
+  - economic interconnection
+  - reciprocity
+  - economic complexity
+  - knowledge systems
+  - wellbeing metrics
+  - evolutionary progression
   - sustainable development
-  - empirical validation
   - reproducible research
+  - computational social science
+  - 1810-2020
 
-# Data sources
+# Research papers in this trilogy
 references:
+  - type: article
+    scope: "Paper 1: Foundation (1810-2020)"
+    title: "Quantifying Global Coordination Capacity: A Historical K-Index from 1810-2020"
+    authors:
+      - family-names: "Stoltz"
+        given-names: "Tristan"
+    journal: "Nature Sustainability"
+    year: 2025
+    status: "submitted"
+    abstract: "Establishes K-index framework and validates all seven harmonies over 210 years"
+
+  - type: article
+    scope: "Paper 2: Regional Divergence"
+    title: "Regional Divergence in Global Coordination Capacity"
+    authors:
+      - family-names: "Stoltz"
+        given-names: "Tristan"
+    journal: "Regional Studies"
+    year: 2026
+    status: "planned"
+    abstract: "Analyzes coordination gaps across developed and developing regions"
+
+  - type: article
+    scope: "Paper 3: Temporal Shocks"
+    title: "Crisis Impacts on Global Coordination: Temporal Shocks and Resilience"
+    authors:
+      - family-names: "Stoltz"
+        given-names: "Tristan"
+    journal: "Journal of Economic History"
+    year: 2026
+    status: "planned"
+    abstract: "Examines how wars, pandemics, and financial crises impact coordination capacity"
+
+# Primary data sources
+  - type: dataset
+    title: "World Values Survey Time Series 1981-2022"
+    authors:
+      - name: "World Values Survey Association"
+    year: 2022
+    url: "https://www.worldvaluessurvey.org/"
+    license: "Free for academic use"
+
+  - type: dataset
+    title: "Varieties of Democracy (V-Dem) Dataset v15"
+    authors:
+      - name: "V-Dem Institute"
+    year: 2024
+    url: "https://www.v-dem.net/"
+    license: CC-BY-SA-4.0
+
   - type: dataset
     title: "World Development Indicators"
     authors:
@@ -76,21 +130,27 @@ references:
 # Dataset specifications
 identifiers:
   - type: doi
-    value: "[DOI_WILL_BE_ASSIGNED]"
-    description: "DOI for this dataset (assigned upon repository publication)"
+    value: "10.5281/zenodo.XXXXXXX"  # Will be assigned upon Zenodo release
+    description: "DOI for complete replication package (assigned upon first GitHub release)"
 
-# Recommended citation format
+# Recommended citation for the overall research program
 preferred-citation:
-  type: dataset
-  title: "Validated H₇ (Evolutionary Progression) Component Dataset"
+  type: article
+  title: "Quantifying Global Coordination Capacity: A Historical K-Index from 1810-2020"
   authors:
-    - family-names: "[AUTHOR_SURNAME]"
-      given-names: "[AUTHOR_GIVEN_NAMES]"
+    - family-names: "Stoltz"
+      given-names: "Tristan"
+  journal: "Nature Sustainability"
   year: 2025
-  publisher: "[Publisher/Repository Name]"
-  url: "[Final repository URL]"
-  # Add DOI when available:
-  # doi: "10.XXXX/XXXXX"
+  status: "submitted"
+  doi: "10.5281/zenodo.XXXXXXX"  # Zenodo DOI (to be updated)
+  url: "https://github.com/Luminous-Dynamics/historical-k-index"
+  abstract: >-
+    We present a comprehensive framework for quantifying global coordination
+    capacity from 1810-2020 using seven fundamental harmonies. The K-index
+    integrates governance quality, economic interconnection, reciprocity,
+    complexity, knowledge systems, wellbeing, and evolutionary progression
+    into a unified measure of humanity's capacity for large-scale cooperation.
 
 # Software dependencies
 dependencies:
@@ -105,22 +165,43 @@ dependencies:
   - name: "requests"
     version: "≥2.31"
 
-# Dataset contents
+# Key dataset files (in shared/data/, excluded from Git - available via Zenodo)
 dataset-files:
-  - path: "data/processed/H7_evolutionary_progression.csv"
-    description: "Complete H₇ panel dataset (2,352 observations, 159 countries, 1996-2021)"
-    size: "247 KB"
+  - path: "shared/data/processed/k_index_final_1810_2020.csv"
+    description: "Complete K(t) time series: global coordination capacity 1810-2020"
     format: "CSV"
 
-  - path: "data/processed/K_index_validated_h7_integration_1996_2020.csv"
-    description: "K(t) index integration with three formulations compared"
-    size: "4.1 KB"
+  - path: "shared/data/processed/H7_evolutionary_progression.csv"
+    description: "H₇ component: evolutionary progression (2,352 obs, 159 countries, 1996-2021)"
     format: "CSV"
 
-  - path: "data/processed/H7_country_rankings_2021.csv"
-    description: "Country rankings by H₇ score for 2021"
-    size: "32 KB"
+  - path: "shared/data/data_sources/h1_governance/"
+    description: "H₁ component: governance coherence 1810-2020"
     format: "CSV"
+
+  - path: "shared/data/data_sources/h2_interconnection/"
+    description: "H₂ component: financial integration 1810-2020"
+    format: "CSV"
+
+  - path: "shared/data/data_sources/h3_reciprocity/"
+    description: "H₃ component: reciprocity metrics 1810-2020"
+    format: "CSV"
+
+  - path: "shared/data/data_sources/h4_complexity/"
+    description: "H₄ component: economic complexity 1810-2020"
+    format: "CSV"
+
+  - path: "shared/data/data_sources/h5_knowledge/"
+    description: "H₅ component: knowledge systems 1810-2020"
+    format: "CSV"
+
+  - path: "shared/data/data_sources/h6_wellbeing/"
+    description: "H₆ component: wellbeing metrics 1810-2020"
+    format: "CSV"
+
+  - path: "papers/01-historical-k-index/manuscript/"
+    description: "Paper 1: Complete manuscript + supplementary materials (LaTeX + PDF)"
+    format: "LaTeX/PDF"
 
 # Reproducibility information
 reproducibility:
@@ -159,19 +240,26 @@ quality-assurance:
 
 # Usage notes
 notes: >
-  This dataset replaces exploratory synthetic H₇ proxies with validated empirical
-  measures. The conservative finding (-7.0% lower K(t)) strengthens scientific
-  credibility by demonstrating commitment to empirical honesty over result inflation.
+  This repository contains complete replication materials for a trilogy of papers
+  examining global coordination capacity. Data files (~2.5 GB) are excluded from
+  Git and available via Zenodo or download scripts. The repository uses a monorepo
+  structure with shared data/code resources and paper-specific materials.
 
-  Dual formulation strategy: Use six-harmony K(t) for historical periods (1810-1995)
-  where validated H₇ data are unavailable; use seven-harmony K(t) with validated
-  H₇ for modern period (1996-2021) where direct measures exist.
+  **For Paper 1 users**: Complete K(t) time series 1810-2020 with all seven harmonies
+  validated. Use shared/data/processed/k_index_final_1810_2020.csv as primary dataset.
 
-  All data sources are publicly available (World Bank CC-BY-4.0). Complete
-  reproducibility in <10 minutes using provided Nix environment.
+  **For Paper 2 users**: Regional analysis builds on Paper 1 framework. Data structures
+  support sub-national breakdowns where available.
+
+  **For Paper 3 users**: Event study methodology uses same K(t) time series with
+  high-frequency estimates during crisis periods.
+
+  All data sources are publicly available with open licenses (primarily CC-BY-4.0).
+  Complete reproducibility using provided Nix environment: `nix develop`.
 
 # Contact for questions
 contact:
-  - family-names: "[AUTHOR_SURNAME]"
-    given-names: "[AUTHOR_GIVEN_NAMES]"
-    email: "[AUTHOR_EMAIL]"
+  - family-names: "Stoltz"
+    given-names: "Tristan"
+    email: "tristan.stoltz@evolvingresonantcocreationism.com"
+    affiliation: "Luminous Dynamics"
