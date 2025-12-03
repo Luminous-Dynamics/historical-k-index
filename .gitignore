@@ -55,6 +55,14 @@ data/*
 !data/*/.gitkeep
 !data/README.md
 
+# Shared data - ALL shared data excluded from Git
+shared/data/data_sources/
+shared/data/sources/
+shared/data/raw/
+shared/data/processed/
+!shared/data/.gitkeep
+!shared/data/README.md
+
 # Outputs - Generated files (figures, tables, etc.)
 outputs/
 !outputs/.gitkeep

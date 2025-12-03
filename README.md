@@ -143,7 +143,12 @@ historical-k-index/
 │       ├── table_s3_regional_decomposition.tex
 │       └── table_s4_alternative_weightings.tex
 │
-├── manuscript/                        # Manuscript materials
+├── papers/                           # All research papers
+│   ├── 01-historical-k-index/      # Paper 1 (main manuscript)
+│   ├── 02-regional-divergence/     # Paper 2 (planned)
+│   └── 03-temporal-shocks/         # Paper 3 (planned)
+│
+├── shared/                          # Shared resources                        # Manuscript materials
 │   ├── k_index_manuscript.pdf         # Main manuscript
 │   ├── supplementary_information.pdf  # SI document
 │   └── sections/                      # LaTeX source files
