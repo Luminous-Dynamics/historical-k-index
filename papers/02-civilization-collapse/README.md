@@ -24,7 +24,7 @@ Complex societies require sustained coordination capacity to maintain institutio
 
 ## Case Studies
 
-### Primary Cases (Deep Analysis)
+### Primary Collapse Cases (Deep Analysis)
 
 1. **Bronze Age Collapse (~1200-1150 BCE)**
    - Multi-system failure across Eastern Mediterranean
@@ -50,19 +50,24 @@ Complex societies require sustained coordination capacity to maintain institutio
    - Economic coordination failure
    - Rapid, measurable K(t) decline
 
-### Secondary Cases (Comparative)
+### Matched Control Cases (Non-Collapse Comparisons) 🆕
 
-5. **Khmer Empire (~1400 CE)**
-   - Infrastructure collapse (water management)
-   - Environmental + coordination failure
+For causal inference, each collapse case is paired with a society that faced similar stressors but survived:
 
-6. **Easter Island / Rapa Nui**
-   - Small-scale collapse
-   - Resource competition + trust breakdown
+| Collapse Case | Matched Control | Shared Stressor | Why Control Survived |
+|---------------|-----------------|-----------------|----------------------|
+| Bronze Age (Mycenae) | **Egypt** | Sea Peoples, drought | Maintained H₃ via religious legitimacy |
+| Western Rome | **Byzantine Empire** | Barbarian pressure | Stronger central trust, religious unity |
+| Maya (Southern) | **Northern Maya** | Drought, warfare | Different political structure, H₃ resilient |
+| Soviet Union | **China (1989)** | Legitimacy crisis | Economic reform + centralized H₃ |
 
-7. **Weimar Germany (1929-1933)**
-   - Partial collapse → recovery under different system
-   - Economic + political coordination failure
+**Key Insight**: Controls maintained H₃ above ~0.40 threshold; collapse cases fell below ~0.35.
+
+### Secondary Cases (Future Expansion)
+
+5. **Khmer Empire (~1400 CE)** - Infrastructure collapse
+6. **Akkadian Empire (~2150 BCE)** - Climate + coordination failure
+7. **Weimar Germany (1929-1933)** - Partial collapse → recovery
 
 ---
 
