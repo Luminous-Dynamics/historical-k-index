@@ -24,9 +24,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Configuration
-BASE_DIR = Path("/srv/luminous-dynamics/historical-k-index")
+BASE_DIR = Path("/srv/luminous-dynamics/historical-k-index-repo")
 OUTPUT_DIR = BASE_DIR / "outputs" / "figures" / "supplementary"
-DATA_DIR = BASE_DIR / "data" / "processed"
+DATA_DIR = BASE_DIR / "shared" / "data" / "processed"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
