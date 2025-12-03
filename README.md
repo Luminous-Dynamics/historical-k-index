@@ -24,33 +24,51 @@ This repository contains all data, code, and materials for the manuscript:
 
 ## 🚀 Quick Start
 
-### Reproduce All Results (6 minutes)
+### Option A: Download Complete Replication Package from Zenodo (Recommended)
 
 ```bash
-# Clone repository
+# Download the complete dataset (~2.5 GB) from Zenodo
+# This includes ALL data (raw + processed) + code + manuscript
+wget https://zenodo.org/record/XXXXXXX/files/historical-k-index-v1.0.0.zip
+unzip historical-k-index-v1.0.0.zip
+cd historical-k-index
+
+# Enter reproducible environment
+nix develop
+poetry install
+
+# Generate all figures and tables (data already included)
+poetry run python scripts/generate_all_figures.py
+poetry run python scripts/generate_supplementary_tables.py
+```
+
+**Time**: ~10 minutes (including download)
+
+### Option B: Clone Repository and Download Data Automatically
+
+```bash
+# Clone code repository (lightweight: ~10 MB)
 git clone https://github.com/Luminous-Dynamics/historical-k-index.git
 cd historical-k-index
 
 # Enter reproducible environment
 nix develop
-
-# Run complete pipeline
 poetry install
-poetry run python scripts/data_collection/00_download_worldbank_patents.py
-poetry run python scripts/data_collection/01_download_wipo_patents.py
-poetry run python scripts/data_collection/02_download_ccp_constitutions.py
-poetry run python scripts/data_collection/03_download_barro_lee_education.py
-poetry run python scripts/data_collection/04_construct_infrastructure_index.py
-poetry run python scripts/data_collection/05_integrate_H7_components.py
-poetry run python scripts/data_collection/06_download_worldbank_h7_supplementary.py
 
-# Generate all figures and tables
+# Download all external data sources automatically (~2.5 GB, 10-20 minutes)
+poetry run python scripts/download_all_data.py
+
+# Process data and generate results
+poetry run python scripts/process_all_data.py
 poetry run python scripts/generate_all_figures.py
 poetry run python scripts/generate_supplementary_tables.py
-
-# Verify K-index calculation
-poetry run python scripts/calculate_k_index.py
 ```
+
+**Time**: ~25 minutes (first time, includes downloads)
+
+### Option C: Manual Download of Individual Datasets
+
+See `docs/DATA_SOURCES.md` for URLs and download instructions for each external dataset.
 
 **Output**: All 23 figures (300 DPI) + 4 supplementary tables + validated K(t) time series
 
@@ -66,8 +84,11 @@ historical-k-index/
 ├── flake.nix                          # Nix reproducible environment
 ├── pyproject.toml                     # Python dependencies (Poetry)
 │
-├── data/                              # All datasets
-│   ├── raw/                           # Original downloaded data (191,913 points)
+├── data/                              # DATA NOT IN GIT (download via Zenodo or scripts)
+│   ├── README.md                      # Data organization guide
+│   ├── .gitkeep                       # Preserves directory structure
+│   │
+│   ├── raw/                           # [Downloaded] Original data (191,913 points)
 │   │   ├── worldbank/                 # World Bank WDI/WGI data
 │   │   ├── wipo/                      # Patent data
 │   │   ├── barro_lee/                 # Education data
@@ -76,7 +97,18 @@ historical-k-index/
 │   │   ├── hyde/                      # HYDE historical population
 │   │   └── seshat/                    # Seshat databank
 │   │
-│   └── processed/                     # Clean, analysis-ready data
+│   ├── data_sources/                  # [Downloaded] Harmony-organized data
+│   │   ├── external/                  # External datasets (WVS, V-Dem, etc.)
+│   │   ├── h1_governance/             # H₁ component data
+│   │   ├── h2_interconnection/        # H₂ component data
+│   │   ├── h3_reciprocity/            # H₃ component data
+│   │   ├── h4_complexity/             # H₄ component data
+│   │   ├── h5_knowledge/              # H₅ component data
+│   │   ├── h6_wellbeing/              # H₆ component data
+│   │   ├── h7_*/                      # H₇ component data
+│   │   └── processed/                 # Processed harmony data
+│   │
+│   └── processed/                     # [Generated] Clean, analysis-ready data
 │       ├── H7_evolutionary_progression.csv      # 2,352 obs (159 countries, 1996-2021)
 │       ├── K_index_time_series_1810_2020.csv   # Final K(t) estimates
 │       ├── K_index_validated_h7_integration_1996_2020.csv  # H₆ vs H₇ comparison
@@ -127,29 +159,69 @@ historical-k-index/
 
 ## 📚 Data Availability
 
-### Primary Data Sources (All Open Access)
+### Complete Replication Package (Zenodo)
 
-| Component | Source | Coverage | License | URL |
-|-----------|--------|----------|---------|-----|
-| **Education** | World Bank WDI + Barro-Lee | 1960-2023 | CC-BY-4.0 | [WDI](https://databank.worldbank.org) |
-| **Patents** | WIPO Statistics | 1980-2021 | Open | [WIPO](https://www.wipo.int/ipstats/en/) |
-| **Infrastructure** | World Bank WDI | 1960-2023 | CC-BY-4.0 | [WDI](https://databank.worldbank.org) |
-| **Governance** | World Governance Indicators | 1996-2023 | CC-BY-4.0 | [WGI](https://www.worldbank.org/governance/wgi) |
-| **Democracy** | V-Dem Dataset v14 | 1789-2023 | CC-BY-SA-4.0 | [V-Dem](https://www.v-dem.net) |
-| **Globalization** | KOF Index | 1970-2021 | Open | [KOF](https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html) |
-| **Population** | HYDE 3.2.1 | 1810-2020 | CC-BY-4.0 | [HYDE](https://dataportaal.pbl.nl/downloads/HYDE/) |
-| **Historical** | Seshat Databank | 10000 BCE-1900 CE | CC-BY-SA-4.0 | [Seshat](http://seshatdatabank.info/) |
+**All data required to reproduce this study is available via Zenodo:**
 
-### Processed Data (This Repository)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
-All processed data files are available in `data/processed/`:
+**Download**: https://zenodo.org/record/XXXXXXX/files/historical-k-index-v1.0.0.zip
+**Size**: ~2.5 GB (complete package with all data + code + manuscript)
+**Includes**:
+- All external datasets (raw data from 8 sources)
+- Processed analysis-ready datasets
+- Complete codebase
+- Manuscript PDFs
+- Generated figures and tables
+
+### Automated Data Download
+
+**Don't want to download the full 2.5 GB?** Use our automated download script:
+
+```bash
+# Download ONLY what you need
+poetry run python scripts/download_all_data.py
+
+# Or skip large files (>50 MB)
+poetry run python scripts/download_all_data.py --skip-large
+```
+
+See `docs/DATA_SOURCES.md` for complete data provenance documentation.
+
+### Primary External Data Sources (All Open Access)
+
+| Component | Source | Coverage | Size | License | URL |
+|-----------|--------|----------|------|---------|-----|
+| **WVS** | World Values Survey | 1981-2022 | 1.3 GB | Free (cite) | [WVS](https://www.worldvaluessurvey.org/) |
+| **V-Dem** | Varieties of Democracy | 1789-2024 | 195 MB | CC-BY-SA-4.0 | [V-Dem](https://www.v-dem.net) |
+| **World Bank** | WDI + WGI | 1960-2024 | API | CC-BY-4.0 | [WB](https://databank.worldbank.org) |
+| **WIPO** | Patent Statistics | 1883-2023 | API | Free | [WIPO](https://www.wipo.int/ipstats/) |
+| **Barro-Lee** | Educational Attainment | 1950-2020 | 2 MB | Free (cite) | [BL](http://www.barrolee.com/) |
+| **KOF** | Globalization Index | 1970-2023 | 5 MB | CC-BY-4.0 | [KOF](https://kof.ethz.ch/) |
+| **IMF** | Financial Soundness | 2005-2024 | 85 MB | Public | [IMF](https://data.imf.org/FSI) |
+| **Pew** | Global Attitudes | Spring 2024 | 54 MB | Free (cite) | [Pew](https://www.pewresearch.org/global/) |
+
+**Total download size**: ~2.5 GB
+**Download time**: 10-20 minutes (depending on connection)
+
+### Processed Datasets (Generated by This Study)
+
+The following analysis-ready datasets are generated by our processing pipeline:
 
 - **H7_evolutionary_progression.csv** (247 KB, 2,352 obs) - Validated H₇ component scores
-- **K_index_time_series_1810_2020.csv** - Final K(t) estimates (6-harmony formulation)
-- **K_index_validated_h7_integration_1996_2020.csv** - 7-harmony formulation (1996-2020)
+- **K_index_time_series_1810_2020.csv** (89 KB, 211 years) - Final K(t) estimates
+- **K_index_validated_h7_integration_1996_2020.csv** (12 KB) - 6-harmony vs 7-harmony comparison
 - **H7_country_rankings_2021.csv** (32 KB, 159 countries) - Country-level H₇ rankings
 
-**Persistent DOI**: [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) (via Zenodo)
+These files are available in the Zenodo package or generated by running the processing pipeline.
+
+### Data Not Included in Git Repository
+
+**Important**: The `data/` directory is excluded from Git version control to keep the repository lightweight.
+
+- **Why?** GitHub has a 100 MB file size limit; our datasets range from 54 MB to 1.3 GB
+- **How to get data?** Download from Zenodo OR run `scripts/download_all_data.py`
+- **What's in Git?** Code, scripts, documentation, manuscript source (but NOT data or generated outputs)
 
 ---
 
