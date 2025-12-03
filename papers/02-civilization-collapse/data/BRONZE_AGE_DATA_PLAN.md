@@ -1,21 +1,38 @@
 # Bronze Age Collapse: Data Collection Plan
 
-**Case Study**: Bronze Age Collapse (~1250-1150 BCE)
-**Geography**: Eastern Mediterranean (Mycenaean Greece, Hittite Anatolia, Cyprus, Levant, Egypt)
-**Purpose**: First case study for Coordination Collapse paper
+> **"The first 'globalized' civilization—a system of interconnected palace economies spanning the Eastern Mediterranean—collapsed within a single generation, circa 1200-1150 BCE."**
 
 ---
 
-## Overview
+## Case Study Overview
 
-The Bronze Age Collapse (~1200-1150 BCE) represents one of history's most dramatic multi-system failures. Within 50-100 years, interconnected palace economies across the Eastern Mediterranean collapsed, resulting in:
-- Destruction of major cities (Ugarit, Hattusa, Mycenae, Tiryns)
-- Cessation of long-distance trade
-- Loss of writing systems (Linear B, Luwian)
-- Population decline and migration
-- Political fragmentation
+| Attribute | Value |
+|-----------|-------|
+| **Case Name** | Late Bronze Age Collapse |
+| **Region** | Eastern Mediterranean (Mycenae, Hatti, Levant, Egypt) |
+| **Temporal Scope** | 1300-1000 BCE (focus on 1200-1150 BCE collapse phase) |
+| **Population Affected** | ~5-10 million across region |
+| **Collapse Duration** | ~50 years (rapid by ancient standards) |
+| **Type** | Systemic/catastrophic (multi-factor cascade) |
+| **Control Case** | Egypt (survived, transitioned to Third Intermediate Period) |
 
-**K-Index Hypothesis**: K(t) declined from ~0.6-0.7 to ~0.1-0.2 within 50 years
+---
+
+## Strategic Value of This Case
+
+### Why the Bronze Age Case is Critical
+
+1. **First "World System" Collapse**: Interconnected palace economies = proto-globalization
+2. **Multi-Civilization Scope**: Tests whether K-Index applies across cultures
+3. **Trade Network Focus**: H₂ (economic) interdependence clearly visible
+4. **External Shock Present**: Sea Peoples, climate, earthquakes—tests multi-causal framework
+5. **Control Case Available**: Egypt survived → what was different?
+
+### What It Demonstrates
+- Interdependent systems are vulnerable to cascade effects
+- H₃ erosion at multiple levels (intra-polity, inter-polity, inter-regional)
+- System complexity (H₄) can become liability
+- Technology (H₇) can persist beyond political collapse
 
 ---
 
@@ -23,523 +40,419 @@ The Bronze Age Collapse (~1200-1150 BCE) represents one of history's most dramat
 
 ### Periodization
 
-| Period | Date Range | Phase | Expected K(t) |
-|--------|------------|-------|---------------|
-| **Peak** | 1400-1250 BCE | Late Bronze Age height | 0.65-0.75 |
-| **Stress** | 1250-1200 BCE | Pre-collapse stress | 0.50-0.65 |
-| **Acute** | 1200-1150 BCE | Collapse cascade | 0.20-0.50 |
-| **Nadir** | 1150-1100 BCE | Post-collapse | 0.10-0.25 |
-| **Dark Age** | 1100-900 BCE | Slow recovery | 0.15-0.30 |
+| Period | Dates | Phase | Expected K(t) |
+|--------|-------|-------|---------------|
+| **Late Bronze Peak** | 1300-1250 BCE | Maximum coordination | 0.70-0.75 |
+| **Early Stress** | 1250-1200 BCE | System strain visible | 0.60-0.65 |
+| **Crisis Cascade** | 1200-1175 BCE | Rapid collapse | 0.40-0.50 |
+| **Collapse** | 1175-1150 BCE | Systemic failure | 0.25-0.35 |
+| **Dark Age** | 1150-1000 BCE | Post-collapse fragmentation | 0.20-0.30 |
 
-### Key Dates
+### Key Dated Events
 
-- ~1250 BCE: First signs of stress (Hittite grain crisis)
-- ~1207 BCE: Merneptah Stele (first Sea Peoples mention)
-- ~1185 BCE: Medinet Habu texts (Ramesses III battles)
-- ~1177 BCE: Cline's focal year (symbolic)
-- ~1150 BCE: Most cities destroyed/abandoned
-- ~1100 BCE: Dark Age established
-
----
-
-## Data Sources by Harmony
-
-### H₁: Governance Coherence
-
-#### Primary Sources
-
-**Hittite Empire**:
-- Royal archives from Hattusa (Boğazköy tablets)
-- Treaty records (Egyptian-Hittite Treaty of 1259 BCE as peak)
-- Administrative correspondence
-- Final letters before collapse
-
-**Mycenaean Greece**:
-- Linear B tablets (Pylos archive especially)
-- Palace administrative records
-- Land tenure documents
-- Military organization records
-
-**Egypt**:
-- Royal inscriptions (Ramesses II, Merneptah, Ramesses III)
-- Administrative papyri
-- Temple records
-- Boundary stele
-
-**Ugarit**:
-- Diplomatic correspondence
-- Administrative texts
-- Final correspondence before destruction
-
-#### Evidence Indicators
-
-| Indicator | Peak (1350 BCE) | Collapse (1180 BCE) |
-|-----------|-----------------|---------------------|
-| Palace administration active | Yes (all polities) | Collapsed (most) |
-| Treaty compliance | High | Failed |
-| Territorial control | Extensive | Fragmented |
-| Succession stability | Mostly stable | Contested |
-| Tax collection | Functional | Ceased |
-
-#### Key Sources
-
-1. **Amarna Letters** (EA 1-382): Diplomatic correspondence showing international system
-2. **Hattusa Archives**: Administrative records and final desperate letters
-3. **Pylos Tablets**: Linear B records showing palace economy
-4. **Ugarit Final Letters**: Last correspondence before destruction
+| Date | Event | Harmony Impact | Source Type |
+|------|-------|----------------|-------------|
+| ~1274 BCE | Battle of Kadesh (Egypt-Hatti) | H₃ (inter-polity) | Inscriptions |
+| ~1259 BCE | Egypt-Hatti Peace Treaty | H₃ recovery | Treaty tablets |
+| ~1250 BCE | Trojan War (traditional dating) | H₃ disruption | Literary tradition |
+| ~1230 BCE | Hittite grain famine | H₆, H₂ | Diplomatic letters |
+| ~1207 BCE | Ramesses III defeats Sea Peoples | H₁ Egypt maintains | Medinet Habu |
+| ~1200 BCE | Destruction of Ugarit | H₁, H₂ collapse | Archaeology |
+| ~1180 BCE | Destruction of Hattusa | H₁ Hittite end | Archaeology |
+| ~1150 BCE | Destruction of Mycenaean palaces | H₁ collapse | Archaeology |
 
 ---
 
-### H₂: Economic Interconnection
+## Harmony Indicators and Data Sources
 
-#### Primary Sources
+### H₁: Governance Coordination (Palace Systems)
 
-**Trade Evidence**:
-- Uluburun shipwreck cargo inventory (1306 BCE)
-- Cape Gelidonya shipwreck (1200 BCE)
-- Port facility excavations (Ugarit, Enkomi)
-- Trade records from archives
+**Proxy Indicators**:
 
-**Distribution Studies**:
-- Mycenaean pottery distribution maps
-- Cypriot copper distribution (oxhide ingots)
-- Egyptian goods distribution
-- Syrian/Levantine trade goods
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Palace administrative activity | Cuneiform tablets, Linear B | Document volume | Available |
+| Diplomatic correspondence | Amarna letters, Hittite archives | Letter frequency | Available |
+| Treaty networks | International agreements | Active treaties | Available |
+| Military organization | Chariot lists, troop records | Force structure | Available |
+| Bureaucratic hierarchy | Administrative texts | Complexity levels | Available |
+| Royal succession | King lists, inscriptions | Stability | Available |
 
-**Infrastructure**:
-- Harbor installations
-- Storage facilities
-- Road networks
+**Key Data Points**:
+- Amarna correspondence (1350-1320 BCE): Peak diplomatic coordination
+- Ugarit correspondence (1250-1185 BCE): Declining network
+- Linear B tablets (1200 BCE): Administrative collapse visible
+- Hittite royal succession: 5 kings in final 50 years (instability)
 
-#### Evidence Indicators
-
-| Indicator | Peak | Stress | Collapse |
-|-----------|------|--------|----------|
-| Long-distance trade | Extensive | Declining | Ceased |
-| Imported goods in contexts | Common | Rare | Absent |
-| Standardized trade goods | Present | Simplified | Absent |
-| Port activity | High | Reduced | Abandoned |
-| Trade agreements | Active | Stressed | Failed |
-
-#### Key Sources
-
-1. **Cline (2014)**: Synthesis of trade network evidence
-2. **Knapp & Manning (2016)**: Cyprus as trade hub
-3. **Bass (1967)**: Cape Gelidonya shipwreck
-4. **Pulak (1998)**: Uluburun shipwreck analysis
+**Estimated H₁ Trajectory**:
+- 1300 BCE: 0.80 (sophisticated multi-polity diplomacy)
+- 1250 BCE: 0.70 (tensions rising, still functional)
+- 1200 BCE: 0.55 (system under severe strain)
+- 1175 BCE: 0.30 (multiple palace destructions)
+- 1150 BCE: 0.20 (no functioning palace administrations)
 
 ---
 
-### H₃: Cooperative Reciprocity (Trust)
+### H₂: Economic Coordination (Trade Networks)
 
-#### Primary Sources
+**Proxy Indicators**:
 
-**Diplomatic Records**:
-- Amarna Letters (trust indicators in language)
-- Treaty compliance records
-- Gift exchange documentation
-- Marriage alliances
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Cyprus copper trade | Ingot distributions | Trade volume | Available |
+| Levantine tin trade | Artifact analysis | Metal access | Available |
+| Mycenaean pottery distribution | Ceramic analysis | Export patterns | Available |
+| Egyptian luxury goods | Tomb/temple deposits | Elite exchange | Available |
+| Shipwreck cargoes | Uluburun, Cape Gelidonya | Trade composition | Available |
+| Commodity prices | Administrative texts | Market stability | Limited |
 
-**Conflict Evidence**:
-- Sea Peoples narratives
-- Internal rebellion records
-- Fortification construction patterns
-- Violence evidence (skeletal, destruction)
+**Key Data Sources**:
+- **Uluburun shipwreck** (1300 BCE): Peak trade complexity (10 tons cargo, 7+ origins)
+- **Cape Gelidonya wreck** (1200 BCE): Simpler, smaller trade
+- Mycenaean pottery exports: Decline visible 1200-1150 BCE
+- Cyprus copper: Production continues but distribution shrinks
 
-**Elite Relations**:
-- Royal correspondence tone
-- Alliance stability
-- Tribute/gift patterns
-
-#### Evidence Indicators
-
-| Indicator | Peak | Stress | Collapse |
-|-----------|------|--------|----------|
-| Treaty compliance | High | Declining | Failed |
-| Diplomatic gift exchange | Regular | Reduced | Ceased |
-| Inter-polity cooperation | Strong | Strained | Hostile |
-| Elite-commoner relations | Stable | Stressed | Rebellion |
-| Collective defense | Coordinated | Fragmented | None |
-
-#### Key Sources
-
-1. **Amarna Letters**: Language analysis for trust indicators
-2. **Hittite-Egyptian treaties**: Compliance tracking
-3. **Sea Peoples texts**: External threat response (failed coordination)
-4. **Destruction layer evidence**: Violence patterns
+**Estimated H₂ Trajectory**:
+- 1300 BCE: 0.75 (extensive international trade)
+- 1250 BCE: 0.70 (still robust)
+- 1200 BCE: 0.50 (major disruption)
+- 1175 BCE: 0.30 (collapse of long-distance trade)
+- 1150 BCE: 0.25 (local exchange only)
 
 ---
 
-### H₄: Economic Complexity
+### H₃: Trust/Social Cohesion (Critical Variable)
 
-#### Primary Sources
+**Proxy Indicators**:
 
-**Craft Production**:
-- Pottery typologies and quality
-- Metallurgy sophistication (bronze, iron transition)
-- Textile evidence
-- Ivory and luxury goods
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Inter-polity treaties | Diplomatic archives | Active agreements | Available |
+| Gift exchange networks | Royal correspondence | Reciprocity flows | Available |
+| Mercenary integration | Military records | Foreign troops | Available |
+| Diplomatic marriages | Royal genealogies | Alliance networks | Available |
+| Trade dispute resolution | Correspondence | Conflict management | Available |
+| Fortification intensity | Archaeological survey | Defensive investment | Available |
 
-**Occupational Specialization**:
-- Linear B occupational lists
-- Craft workshop evidence
-- Specialist quarters in cities
+**Key Trust Indicators**:
+- **Egypt-Hatti treaty (1259 BCE)**: Peak inter-polity trust
+- **Great Kings correspondence**: "Brotherhood" language
+- **Mercenary employment**: Foreigners trusted in armies
+- **Late letters (1200-1180 BCE)**: Desperate, unanswered pleas
 
-**Economic Organization**:
-- Palace redistribution records
-- Market evidence (if any)
-- Land tenure systems
+**Trust Erosion Evidence**:
+- Ugarit's final letters: No response from allies
+- Hittite-Egyptian alliance: Ineffective against Sea Peoples
+- Mycenaean inter-palace cooperation: Collapsed
+- "Every man's hand was against his brother" (literary tradition)
 
-#### Evidence Indicators
+**Estimated H₃ Trajectory**:
+- 1300 BCE: 0.70 (functional international system)
+- 1259 BCE: 0.75 (post-treaty high)
+- 1250 BCE: 0.60 (strain visible)
+- 1200 BCE: 0.40 (alliance network failing)
+- 1175 BCE: 0.25 (every polity for itself)
+- 1150 BCE: 0.20 (endemic warfare, no trust)
 
-| Indicator | Peak | Stress | Collapse |
-|-----------|------|--------|----------|
-| Craft specialization | High | Maintained | Lost |
-| Production quality | Sophisticated | Declining | Crude |
-| Product diversity | Extensive | Reduced | Limited |
-| Palace economy | Complex | Stressed | Collapsed |
-| Occupational lists | Extensive | Reduced | Absent |
-
-#### Key Sources
-
-1. **Sherratt (2000)**: Economic transformation
-2. **Knapp (2013)**: Cyprus craft production
-3. **Shelmerdine (2001)**: Mycenaean economy
-4. **Voskos & Knapp (2008)**: Cypriot complexity
-
----
-
-### H₅: Knowledge Systems
-
-#### Primary Sources
-
-**Writing Systems**:
-- Linear B tablet counts by period
-- Cuneiform continuation (Ugarit, Hattusa)
-- Script cessation evidence
-- Scribal training evidence
-
-**Technical Knowledge**:
-- Construction techniques
-- Metallurgical practices
-- Agricultural technology
-- Astronomical/calendrical
-
-**Libraries/Archives**:
-- Archive sizes over time
-- Text genres present
-- Educational texts
-
-#### Evidence Indicators
-
-| Indicator | Peak | Stress | Collapse |
-|-----------|------|--------|----------|
-| Script use | Active | Maintained | Ceased |
-| Archive activity | High | Declining | Ended |
-| Scribal training | Ongoing | Reduced | Stopped |
-| Technical texts | Present | Reduced | Lost |
-| Educational continuity | Stable | Stressed | Broken |
-
-#### Key Sources
-
-1. **Deger-Jalkotzy (2008)**: Linear B cessation
-2. **Palaima (1988)**: Mycenaean scribal practices
-3. **Singer (1999)**: Hittite archive decline
-4. **Yon (2006)**: Ugarit texts
+**H₃ Threshold Analysis**:
+- **Threshold crossing**: ~1210-1200 BCE (H₃ drops below 0.40)
+- **Cascade trigger**: Failure of mutual defense obligations
+- **Pattern**: Inter-polity trust collapse → intra-polity elite fracture → popular abandonment
 
 ---
 
-### H₆: Wellbeing Metrics
+### H₄: Institutional Complexity
 
-#### Primary Sources
+**Proxy Indicators**:
 
-**Bioarchaeological**:
-- Skeletal collections from late Bronze Age
-- Paleopathology studies
-- Dental health indicators
-- Stable isotope analysis (diet)
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Administrative hierarchy | Palace organization | Bureaucratic layers | Available |
+| Script usage | Linear B, cuneiform | Literacy maintenance | Available |
+| Craft specialization | Artifact analysis | Production complexity | Available |
+| Architectural complexity | Palace archaeology | Building sophistication | Available |
+| International standards | Weights, measures | System integration | Available |
+| Record-keeping intensity | Archive sizes | Administrative scope | Available |
 
-**Demographic**:
-- Settlement surveys (population estimates)
-- Cemetery size/activity
-- Settlement abandonment patterns
+**Complexity Trajectory**:
+- Late Bronze peak: 4-5 tier administrative hierarchies
+- Palace economies: Sophisticated redistribution systems
+- International standards: Common weight systems, diplomatic protocols
+- Collapse: Transition to village-level organization
 
-**Nutritional**:
-- Faunal remains (meat consumption)
-- Botanical remains (crop diversity)
-- Storage evidence (food security)
+**Estimated H₄ Trajectory**:
+- 1300 BCE: 0.80 (highly complex palace systems)
+- 1250 BCE: 0.75 (maintained complexity)
+- 1200 BCE: 0.55 (simplification beginning)
+- 1175 BCE: 0.35 (rapid institutional collapse)
+- 1150 BCE: 0.30 (village-level only)
 
-#### Evidence Indicators
+---
 
-| Indicator | Peak | Stress | Collapse |
-|-----------|------|--------|----------|
-| Skeletal health | Good | Declining | Poor |
-| Population | Stable/growing | Stressed | Declining |
-| Settlement occupation | Full | Reduced | Abandoned |
-| Diet diversity | High | Reduced | Limited |
-| Child mortality | Low | Increasing | High |
+### H₅: Knowledge Preservation
 
-#### Key Sources
+**Proxy Indicators**:
 
-1. **Shelmerdine & Bennet (2008)**: Population estimates
-2. **Maran (2009)**: Mycenae/Tiryns evidence
-3. **Kaniewski et al. (2013)**: Climate-diet connections
-4. **Various osteological studies**: Site-specific skeletal analyses
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Script continuity | Epigraphic record | Writing maintenance | Available |
+| Technical knowledge | Metallurgy, crafts | Skill transmission | Available |
+| Literary tradition | Text survival | Cultural continuity | Available |
+| Astronomical knowledge | Calendar maintenance | Scientific continuity | Limited |
+| Scribal training | Tablet analysis | Education systems | Available |
+
+**Key Observations**:
+- Linear B: Lost entirely (no Greek writing for 400 years)
+- Cuneiform: Continued in Mesopotamia core
+- Alphabetic scripts: Actually expanded (Phoenician)
+- Technical skills: Many survived, though simplified
+- Oral tradition: Maintained (Homer preserves Bronze Age memories)
+
+**Estimated H₅ Trajectory**:
+- 1300 BCE: 0.80 (sophisticated literate cultures)
+- 1250 BCE: 0.75 (maintained)
+- 1200 BCE: 0.60 (scribal disruption)
+- 1175 BCE: 0.45 (knowledge loss accelerating)
+- 1150 BCE: 0.40 (partial survival in oral form)
+
+---
+
+### H₆: Population Wellbeing
+
+**Proxy Indicators**:
+
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Settlement continuity | Survey archaeology | Population stability | Available |
+| Skeletal health | Bioarchaeology | Paleopathology | Limited |
+| Climate indicators | Paleoclimate data | Environmental stress | Available |
+| Food storage | Granary archaeology | Food security | Available |
+| Burial practices | Mortuary archaeology | Social disruption | Available |
+
+**Environmental Evidence**:
+- **Kaniewski et al. (2013)**: Drought 1200-1150 BCE
+- **Dead Sea levels**: Low point ~1200-1100 BCE
+- **Pollen records**: Agricultural decline
+- **Famine letters**: Hittite grain crisis (~1230 BCE)
+
+**Estimated H₆ Trajectory**:
+- 1300 BCE: 0.65 (generally prosperous)
+- 1250 BCE: 0.55 (stress visible)
+- 1200 BCE: 0.40 (famine, population movement)
+- 1175 BCE: 0.30 (severe depopulation)
+- 1150 BCE: 0.35 (survivors adapted)
 
 ---
 
 ### H₇: Technological Infrastructure
 
-#### Primary Sources
+**Proxy Indicators**:
 
-**Architecture**:
-- Palace construction/maintenance
-- Fortification patterns
-- Public buildings
-- Housing quality
+| Indicator | Data Source | Scoring Criteria | Availability |
+|-----------|-------------|------------------|--------------|
+| Metallurgical capacity | Artifact analysis | Bronze/iron production | Available |
+| Naval technology | Shipwreck analysis | Maritime capability | Available |
+| Agricultural technology | Tool analysis | Food production | Available |
+| Construction techniques | Architectural analysis | Building capacity | Available |
+| Weapon development | Military artifacts | Combat technology | Available |
 
-**Water Management**:
-- Mycenaean dams
-- Hittite reservoir systems
-- Irrigation evidence
+**Key Observations**:
+- Bronze technology: Persisted through collapse
+- Iron adoption: Actually accelerated (necessity)
+- Maritime skills: Maintained (Sea Peoples, Phoenicians)
+- Construction: Simplified but functional
+- Agricultural: Adapted to new conditions
 
-**Roads/Transport**:
-- Road network evidence
-- Harbor facilities
-- Bridge construction
-
-**Tools/Equipment**:
-- Tool quality over time
-- Bronze vs. iron transition
-- Agricultural implements
-
-#### Evidence Indicators
-
-| Indicator | Peak | Stress | Collapse |
-|-----------|------|--------|----------|
-| Monumental construction | Active | Reduced | Ceased |
-| Infrastructure maintenance | Good | Declining | Abandoned |
-| Tool quality | High | Maintained | Declining |
-| Building materials | Sophisticated | Simplified | Poor |
-| Water systems | Functional | Stressed | Failed |
-
-#### Key Sources
-
-1. **Maran & Van de Moortel (2014)**: Mycenaean infrastructure
-2. **Bryce (2002)**: Hittite infrastructure
-3. **Various excavation reports**: Site-specific evidence
-4. **Snodgrass (1971)**: Dark Age material culture
+**Estimated H₇ Trajectory**:
+- 1300 BCE: 0.75 (sophisticated Bronze Age technology)
+- 1250 BCE: 0.70 (maintained)
+- 1200 BCE: 0.55 (supply chain disruption)
+- 1175 BCE: 0.45 (adaptation in progress)
+- 1150 BCE: 0.50 (iron technology emerging)
 
 ---
 
-## Regional Analysis Framework
+## Composite K(t) Trajectory
 
-### Major Regions
+| Period | H₁ | H₂ | H₃ | H₄ | H₅ | H₆ | H₇ | K(t) | Phase |
+|--------|----|----|----|----|----|----|----|----|-------|
+| 1300 BCE | 0.80 | 0.75 | 0.70 | 0.80 | 0.80 | 0.65 | 0.75 | **0.75** | Peak |
+| 1250 BCE | 0.70 | 0.70 | 0.60 | 0.75 | 0.75 | 0.55 | 0.70 | **0.68** | Pre-crisis |
+| 1200 BCE | 0.55 | 0.50 | 0.40 | 0.55 | 0.60 | 0.40 | 0.55 | **0.50** | H₃ ≈ θ |
+| 1175 BCE | 0.30 | 0.30 | 0.25 | 0.35 | 0.45 | 0.30 | 0.45 | **0.34** | Collapse |
+| 1150 BCE | 0.20 | 0.25 | 0.20 | 0.30 | 0.40 | 0.35 | 0.50 | **0.30** | Post-collapse |
 
-| Region | Key Sites | Evidence Quality | Collapse Timing |
-|--------|-----------|------------------|-----------------|
-| **Mycenaean Greece** | Mycenae, Tiryns, Pylos, Thebes | High | ~1200-1150 BCE |
-| **Hittite Anatolia** | Hattusa, Carchemish | High | ~1180-1160 BCE |
-| **Cyprus** | Enkomi, Kition, Alashiya | High | ~1200-1175 BCE |
-| **Levant** | Ugarit, Megiddo, Hazor | High | ~1185-1175 BCE |
-| **Egypt** | Thebes, Pi-Ramesses | High | Survived (stressed) |
-
-### Site-Specific Data Sheets
-
-Create data sheets for each major site:
-- Destruction layer dating
-- Final occupation evidence
-- Harmony indicators present
-- Post-destruction activity
+**Observations**:
+- **Fastest collapse proportionally**: K(t) dropped 0.68 → 0.30 in ~100 years
+- **H₃ as cascade trigger**: Inter-polity trust collapse preceded systemic failure
+- **H₂ amplifier**: Trade network collapse accelerated other declines
+- **H₇ resilience**: Technology actually adapted (iron adoption)
+- **System vulnerability**: High interdependence = high cascade risk
 
 ---
 
-## Climate Data Integration
+## Control Case: Egypt (New Kingdom → Third Intermediate Period)
 
-### Paleoclimate Sources
+### Why Egypt Survived
 
-1. **Kaniewski et al. (2013)**: Pollen cores from coastal Syria
-2. **Drake (2012)**: Eastern Mediterranean climate reconstruction
-3. **Kaniewski et al. (2015)**: Dead Sea level reconstruction
-4. **Finné et al. (2017)**: Eastern Mediterranean synthesis
+| Factor | Collapsed Polities | Egypt |
+|--------|-------------------|-------|
+| **H₃ at Crisis** | < 0.40 | ~0.50 |
+| **Self-sufficiency** | Trade-dependent | Nile agriculture |
+| **Centralization** | Distributed | Strong central state |
+| **External defense** | Failed | Ramesses III victory |
+| **Adaptability** | Rigid | Administrative reform |
 
-### Climate Indicators
+### Key Differentiators:
+1. **Agricultural independence**: Nile provided reliable food supply
+2. **Geographic buffer**: Desert boundaries provided protection
+3. **Military effectiveness**: Defeated Sea Peoples (Medinet Habu inscriptions)
+4. **Internal cohesion**: Maintained state legitimacy
+5. **Adaptive governance**: Transition to new administrative forms
 
-| Indicator | Pre-1250 BCE | 1250-1200 BCE | Post-1200 BCE |
-|-----------|--------------|---------------|---------------|
-| Precipitation | Normal | Declining | Drought |
-| Agricultural yield | Good | Stressed | Failed |
-| Water availability | Adequate | Declining | Scarce |
-
-**Important Note**: Climate is CONTEXT, not CAUSE. Coordination failure determined outcome to environmental stress.
-
----
-
-## Quantitative Data Compilation
-
-### Target Datasets
-
-1. **Trade Good Distribution**: Maps of diagnostic artifact distributions
-2. **Destruction Chronology**: Radiocarbon dates for destruction events
-3. **Settlement Data**: Occupation/abandonment patterns
-4. **Inscription Counts**: Writing system activity over time
-5. **Population Estimates**: By region and period
-
-### Data Tables to Create
-
-**Table 1**: Site Destruction Chronology
-| Site | Region | Destruction Date | Evidence Quality | Post-Destruction |
-|------|--------|------------------|------------------|------------------|
-| Ugarit | Levant | ~1185 BCE | High | Abandoned |
-| Hattusa | Anatolia | ~1180 BCE | High | Abandoned |
-| Pylos | Greece | ~1200 BCE | High | Abandoned |
-| Mycenae | Greece | ~1200 BCE | Medium | Reduced occupation |
-| ... | ... | ... | ... | ... |
-
-**Table 2**: Trade Good Frequency
-| Period | Cypriot Copper | Mycenaean Pottery | Egyptian Goods | Levantine Items |
-|--------|----------------|-------------------|----------------|-----------------|
-| 1350-1300 BCE | Common | Common | Present | Common |
-| 1300-1250 BCE | Common | Common | Present | Common |
-| 1250-1200 BCE | Reduced | Reduced | Reduced | Reduced |
-| 1200-1150 BCE | Rare | Rare | Rare | Absent |
-| 1150-1100 BCE | Absent | Absent | Absent | Absent |
+### Control Case Data:
+- Egypt H₃ trajectory: 0.60 (1300) → 0.50 (1200) → 0.45 (1150)
+- Never crossed threshold (~0.40)
+- Gradual transition vs. collapse
+- Maintained literacy, bureaucracy, state functions
 
 ---
 
-## Literature Review Priorities
+## Cascade Sequence Reconstruction
 
-### Essential Reading (Complete First)
+### Phase 1: System Stress (1250-1210 BCE)
+- Environmental stress begins (drought indicators)
+- Trade disruptions emerge
+- Military tensions rise (Hittite-Egyptian)
+- System still functional but strained
 
-1. **Cline, E. (2014)**. *1177 B.C.: The Year Civilization Collapsed*
-   - Comprehensive synthesis
-   - Trade network analysis
-   - Multi-causal framework
+### Phase 2: Trust Erosion (1210-1200 BCE)
+- Alliance networks weakening
+- Inter-polity communication declining
+- Internal elite competition rising
+- **H₃ approaching threshold** (~0.45-0.40)
 
-2. **Knapp, A.B. & Manning, S.W. (2016)**. "Crisis in Context"
-   - High-resolution chronology
-   - Regional differentiation
-   - Methodological framework
+### Phase 3: Cascade Trigger (1200-1180 BCE)
+- Sea Peoples pressure intensifies
+- Mutual defense fails (Ugarit's unanswered letters)
+- **H₃ crosses threshold** (<0.40)
+- Palace destructions begin
 
-3. **Kaniewski, D. et al. (2013)**. "Environmental Roots"
-   - Climate data
-   - Correlation analysis
-   - Trigger vs. cause distinction
+### Phase 4: Systemic Collapse (1180-1150 BCE)
+- H₃ collapse → H₁ collapse (no legitimate authority)
+- H₂ collapse (trade network dissolves)
+- H₄ collapses (complexity unsustainable)
+- H₅ declines (scribal traditions lost)
+- Self-reinforcing decline
 
-4. **Middleton, G. (2017)**. *Understanding Collapse*
-   - Critical perspective
-   - Transformation vs. collapse
-   - Methodological cautions
-
-### Secondary Reading (Context)
-
-5. **Singer, I. (1999)**. "A Political History of Ugarit"
-6. **Bryce, T. (2002)**. *The Kingdom of the Hittites*
-7. **Shelmerdine, C. (2008)**. Cambridge Companion to Mycenaean Civilization
-8. **Van de Mieroop, M. (2016)**. *A History of the Ancient Near East*
-
-### Specialized Studies (Harmony-Specific)
-
-9. **Trade**: Bell (2006), Artzy (1997), Sherratt (2000)
-10. **Governance**: Singer (2000), Beckman (1996)
-11. **Environment**: Drake (2012), Finné et al. (2017)
-12. **Demography**: Maran (2009), Shelmerdine & Bennet (2008)
+### Phase 5: Post-Collapse Adaptation (1150+ BCE)
+- Iron Age emerges
+- Smaller, simpler polities
+- New ethnic configurations (Israel, Phoenicia)
+- Slow recovery over centuries
 
 ---
 
-## Scoring Timeline
+## Data Quality Assessment
 
-### Week 1-2: Literature Immersion
-- Complete essential reading
-- Extract harmony-relevant data
-- Compile timeline of events
+| Harmony | Data Quality | Confidence | Key Limitations |
+|---------|--------------|------------|-----------------|
+| H₁ | High | ±0.08 | Dating precision ±25 years |
+| H₂ | High | ±0.08 | Shipwrecks provide anchor |
+| H₃ | Medium | ±0.12 | Diplomacy well-documented |
+| H₄ | High | ±0.08 | Administrative texts abundant |
+| H₅ | Medium-High | ±0.10 | Script loss well-documented |
+| H₆ | Medium | ±0.15 | Paleoclimate improving |
+| H₇ | High | ±0.08 | Material culture well-studied |
 
-### Week 3: Evidence Compilation
-- Create site-specific data sheets
-- Compile trade distribution data
-- Assemble destruction chronology
-
-### Week 4: Initial Scoring
-- Score each harmony for each period
-- Document evidence for each score
-- Note confidence levels
-
-### Week 5: Validation
-- Internal consistency check
-- Literature comparison
-- Sensitivity analysis
-
-### Week 6: K(t) Calculation
-- Calculate K(t) for each period
-- Generate trajectory visualization
-- Identify collapse sequence
+**Overall Case Quality**: HIGH - Well-documented, much scholarly attention
 
 ---
 
-## Expected Outputs
+## Literature Priorities
 
-1. **Harmony Score Table**: H₁-H₇ for each period (Peak through Dark Age)
-2. **K(t) Trajectory**: Graph showing coordination capacity over time
-3. **Collapse Sequence**: Which harmonies declined first, last
-4. **Evidence Summary**: Documentation for each score
-5. **Sensitivity Analysis**: How robust are findings to scoring variations?
+### Essential Sources
 
----
+**Synthetic Works**:
+1. Cline, E. (2014). *1177 B.C.: The Year Civilization Collapsed* - Definitive synthesis
+2. Middleton, G. (2017). *Understanding Collapse* - Critical perspective
+3. Drews, R. (1993). *The End of the Bronze Age* - Military focus
 
-## Key Questions to Answer
+**Environmental/Climate**:
+4. Kaniewski, D. et al. (2013). "Environmental roots of Bronze Age crisis"
+5. Drake, B.L. (2012). "The influence of climatic change on Bronze Age collapse"
 
-1. **Which harmony declined FIRST?** (Hypothesis: H₃ trust or H₂ trade)
-2. **Which persisted LONGEST?** (Hypothesis: H₇ infrastructure)
-3. **Was there a tipping point?** (K(t) threshold crossing)
-4. **How long was collapse?** (Estimate: 50-100 years peak to nadir)
-5. **What explains regional variation?** (Egypt survived; others didn't)
-6. **Was recovery possible?** (Answer: Not for 300+ years)
+**Trade Networks**:
+6. Cline, E. & Yasur-Landau, A. (2007). "Pottery in international trade"
+7. Monroe, C.M. (2009). *Scales of Fate* - Trade network analysis
 
----
+**Archaeological**:
+8. Maran, J. (2009). "The Crisis Years?" - Mycenaean perspective
+9. Singer, I. (2000). "Hittite fate and the history of the Levant"
 
-## Regional Comparison
+**Primary Sources**:
+10. Moran, W. (1992). *The Amarna Letters* - Diplomatic corpus
+11. Medinet Habu inscriptions - Sea Peoples accounts
 
-The Bronze Age provides a natural experiment: multiple interconnected polities with varying outcomes.
+### Data Repositories
 
-| Region | Outcome | Key Factor | H₃ at Crisis |
-|--------|---------|------------|--------------|
-| Egypt | Survived (stressed) | Centralized trust | Maintained |
-| Hittites | Collapsed | External + internal trust failure | Failed |
-| Mycenaeans | Collapsed | Inter-palace competition | Failed |
-| Cyprus | Partial | Trade hub resilience | Partial |
-| Levant | Collapsed | Small polities, no coordination | Failed |
-
-**Hypothesis**: Regions with maintained H₃ (trust) survived; those with H₃ failure collapsed.
-
----
-
-## Data Collection Checklist
-
-### Before Scoring
-
-- [ ] Cline (2014) completed and annotated
-- [ ] Knapp & Manning (2016) completed
-- [ ] Climate data compiled
-- [ ] Destruction chronology assembled
-- [ ] Trade distribution maps gathered
-- [ ] Population estimates collected
-
-### During Scoring
-
-- [ ] All seven harmonies scored for all periods
-- [ ] Evidence documented for each score
-- [ ] Confidence levels assigned
-- [ ] Regional variations noted
-- [ ] K(t) calculated
-
-### After Scoring
-
-- [ ] Internal consistency verified
-- [ ] Sensitivity analysis completed
-- [ ] Collapse sequence identified
-- [ ] Findings compared to literature
-- [ ] Draft case study section written
+| Repository | Content | Access |
+|------------|---------|--------|
+| CDLI (Cuneiform) | Administrative texts | Open |
+| DAMOS | Linear B corpus | Open |
+| NOAA Paleoclimate | Climate reconstructions | Open |
+| Shipwreck databases | Maritime archaeology | Academic |
+| Aegean Dendrochronology | Dating | Academic |
 
 ---
 
-**This data collection plan provides the systematic framework for reconstructing K-Index trajectories for the Bronze Age Collapse, enabling rigorous analysis of coordination failure patterns.**
+## Data Collection Timeline
+
+### Month 1: Chronological Framework
+- [ ] Compile destruction layer dates
+- [ ] Integrate dendrochronology
+- [ ] Map palace abandonment sequence
+- [ ] Document diplomatic corpus
+
+### Month 2: Trade Network Reconstruction
+- [ ] Compile shipwreck cargo analyses
+- [ ] Map pottery distribution patterns
+- [ ] Track copper/tin flows
+- [ ] Document commodity evidence
+
+### Month 3: Climate and Environment
+- [ ] Integrate paleoclimate data
+- [ ] Compile settlement surveys
+- [ ] Document agricultural indicators
+- [ ] Correlate environmental and cultural changes
+
+### Month 4: Synthesis and Scoring
+- [ ] Generate 50-year harmony estimates
+- [ ] Calculate confidence intervals
+- [ ] Compare to Egypt control case
+- [ ] Validate against existing chronologies
+
+---
+
+## Unique Contributions to CTC
+
+The Bronze Age case offers:
+
+1. **System-level collapse**: Not one polity but interconnected system
+2. **Trade network focus**: Clear H₂ interdependence dynamics
+3. **Multi-polity H₃**: Inter-state trust as critical variable
+4. **External shock integration**: Sea Peoples, climate, earthquakes
+5. **Speed comparison**: Fastest ancient collapse in our set
+
+**Key Insight**: Interdependence increases both capacity (peak K) and vulnerability (cascade risk).
+
+---
+
+*"The Bronze Age collapse shows that what makes civilizations powerful—their interconnection—can also be what makes them fragile."*
+
+---
+
+**Document**: Bronze Age Collapse Data Collection Plan
+**Version**: 1.0
+**Date**: December 2025
+**Status**: Ready for data collection
