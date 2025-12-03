@@ -25,17 +25,24 @@ This research program introduces the **K-index**: a comprehensive measure of glo
 
 ---
 
-## 📚 The Research Trilogy
+## 📚 The Research Program: 8-Paper Arc
 
-This repository contains materials for a three-paper research program:
+This repository contains materials for a comprehensive 8-paper research program—from theory to existential risk to policy action:
 
 | Paper | Focus | Status | Target Journal | Expected |
 |-------|-------|--------|----------------|----------|
 | **Paper 1: Foundation** | K-index framework 1810-2020<br/>All seven harmonies validated | 95% Complete | Nature Sustainability | Dec 2025 |
-| **Paper 2: Regional Divergence** | Coordination gaps across<br/>developed/developing regions | Planning | Regional Studies | Q2 2026 |
-| **Paper 3: Temporal Shocks** | Crisis impacts on coordination<br/>resilience (wars, pandemics, crashes) | Planned | J. Economic History | Q3 2026 |
+| **Paper 2: Civilization Collapse** 🆕 | What destroys coordination?<br/>Bronze Age, Rome, Maya, Soviet | Infrastructure Ready | PNAS | Q1 2026 |
+| **Paper 3: Modern Fragility** | Are we at risk now?<br/>Current trajectory analysis | Planned | Science | Q2 2026 |
+| **Paper 4: Regional Divergence** | Where are weak points?<br/>Coordination inequality | Planned | Regional Studies | Q3 2026 |
+| **Paper 5: Climate Gap** | What's most urgent?<br/>Paris Agreement requirements | Planned | Nature Climate Change | Q4 2026 |
+| **Paper 6: Recovery Mechanisms** | What rebuilds coordination?<br/>Post-collapse recovery | Planned | World Development | Q1 2027 |
+| **Paper 7: AI Governance** | What's coming next?<br/>Coordination for AI safety | Planned | Science | Q2 2027 |
+| **Paper 8: Policy Framework** | How do we act?<br/>Comprehensive intervention design | Planned | Annual Review | Q3 2027 |
 
-**See**: [papers/README.md](papers/README.md) for trilogy overview
+**The Arc**: Build understanding → Reveal existential stakes → Identify vulnerabilities → Provide solutions
+
+**See**: [RESEARCH_PROGRAM_REIMAGINED.md](RESEARCH_PROGRAM_REIMAGINED.md) for complete program
 
 ---
 
@@ -95,10 +102,11 @@ historical-k-index-repo/
 │   │   ├── manuscript/             # Complete LaTeX + PDFs
 │   │   ├── analysis/               # Paper-specific analysis
 │   │   └── figures/                # Paper-specific figures
-│   ├── 02-regional-divergence/     # Paper 2 (planned Q2 2026)
-│   │   └── README.md               # Research plan
-│   └── 03-temporal-shocks/         # Paper 3 (planned Q3 2026)
-│       └── README.md               # Research plan
+│   └── 02-civilization-collapse/   # Paper 2 (infrastructure ready)
+│       ├── manuscript/             # Outline + draft structure
+│       ├── analysis/               # Harmony scoring rubric
+│       ├── literature/             # 40+ source review framework
+│       └── data/                   # Case study data plans
 │
 ├── shared/                          # Shared resources for all papers
 │   ├── data/                       # ALL datasets (gitignored)
@@ -302,16 +310,26 @@ K(1810) = 0.13  →  K(2020) = 0.78  (+500%)
 - Paper 1: K-index framework and validation (Dec 2025 submission)
 - 191,913 data points across seven harmonies
 - 2,352 validated H₇ observations (159 countries, 1996-2021)
+- Paper 2 infrastructure: Complete research framework for civilization collapse analysis
 
 ### In Progress 🚧
-- Paper 2: Regional divergence analysis (Q2 2026)
-- Paper 3: Temporal shocks and resilience (Q3 2026)
+- Paper 2: Civilization Collapse literature review and harmony scoring (Q1 2026)
+  - Bronze Age Collapse data collection underway
+  - Harmony scoring rubric developed
+
+### Planned 📋
+- Paper 3: Modern Fragility Assessment (Q2 2026)
+- Paper 4: Regional Divergence (Q3 2026)
+- Paper 5: Climate Coordination Gap (Q4 2026)
+- Paper 6: Recovery Mechanisms (Q1 2027)
+- Paper 7: AI Governance Readiness (Q2 2027)
+- Paper 8: Comprehensive Policy Framework (Q3 2027)
 
 ### Future Directions 🔮
-- Paper 4+: Sub-national analysis, sectoral breakdowns, predictive modeling
 - Interactive dashboard for exploring K(t) trends
 - Integration with climate vulnerability indices
-- Quarterly updates with new data releases
+- Real-time coordination monitoring
+- Policy implementation toolkit
 
 **Community input welcome!** Open a Discussion to propose research directions.
 
@@ -364,7 +382,7 @@ Global coordination is humanity's superpower. By measuring it, we can improve it
 
 **Maintained by**: Tristan Stoltz (Luminous Dynamics)
 **Last Updated**: December 3, 2025
-**Repository Status**: Active development (Paper 1 ready, Papers 2-3 in planning)
+**Repository Status**: Active development (Paper 1 ready, Paper 2 infrastructure complete, Papers 3-8 planned)
 **DOI**: [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) (will be assigned on first release)
 
 ---
