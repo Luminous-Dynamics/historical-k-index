@@ -46,6 +46,11 @@ TRUST_ASYMMETRY_RATIO = 5.0  # k⁻/k⁺ ≈ 3-10
 # Complexity Exponent (Law 2: Entropy of Complexity)
 COMPLEXITY_EXPONENT = 1.3  # β > 1
 
+# Trust Attractor (Law 4): Natural equilibrium and restoration
+TRUST_EQUILIBRIUM = 0.60  # H₃* - natural equilibrium level
+TRUST_RESTORATION_RATE = 0.02  # ρ - restoration coefficient
+MANUFACTURED_DISTRUST_SUSCEPTIBILITY = 0.1  # μ - propaganda susceptibility
+
 
 # =============================================================================
 # Data Classes
@@ -93,6 +98,12 @@ class CascadeParameters:
     # Reference values
     S_star: float = 0.5  # Optimal stressor level
     H1_ref: float = 0.7  # Reference governance level
+
+    # Trust Attractor parameters (Law 4)
+    trust_equilibrium: float = TRUST_EQUILIBRIUM  # H₃* natural equilibrium
+    trust_restoration: float = TRUST_RESTORATION_RATE  # ρ restoration coefficient
+    manufactured_distrust: float = 0.0  # M - current propaganda/fear level
+    distrust_susceptibility: float = MANUFACTURED_DISTRUST_SUSCEPTIBILITY  # μ
 
 
 @dataclass
@@ -147,9 +158,14 @@ class CascadeSimulator:
         H1, H2, H3, H4, H5, H6, H7 = np.clip(H, 0.01, 1.0)
         p = self.params
 
-        # Trust dynamics (foundational - Law 1: Trust Primacy)
+        # Trust dynamics (foundational - Law 1: Trust Primacy + Law 4: Trust Attractor)
+        # dH₃/dt = α(H₁·H₂ - S*) - γE + ρ(H₃* - H₃) - μM - decay
+        restoration_force = p.trust_restoration * (p.trust_equilibrium - H3)
+        manufactured_effect = p.distrust_susceptibility * p.manufactured_distrust
         dH3 = (p.alpha['H3'] * (H1 * H2 - p.S_star)
                - p.gamma.get('H3', 0.2) * p.external_shock
+               + restoration_force  # Law 4: natural pull toward trust
+               - manufactured_effect  # Law 4: propaganda/fear effect
                - p.decay['H3'] * (1 - H3))
 
         # Governance depends on trust

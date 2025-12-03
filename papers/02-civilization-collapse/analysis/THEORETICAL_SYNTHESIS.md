@@ -195,6 +195,77 @@ This asymmetry explains:
 - Why prevention is cheaper than cure
 ```
 
+### Law 4: The Trust Attractor
+
+> **"Humans naturally seek to trust—distrust requires active causes. Trust has a restorative force pulling toward functional equilibrium."**
+
+**Psychological Foundation**:
+People have a deep psychological need to trust systems because:
+- Trust reduces cognitive load (no need to verify everything)
+- Trust enables cooperation (essential for social life)
+- Trust provides existential security (world feels predictable)
+- Trust is the default developmental state (children trust caregivers)
+
+**Mathematical Form**:
+```
+dH₃/dt = -α(distrust_causes) + ρ(H₃* - H₃)    [Trust dynamics with attractor]
+
+Where:
+- ρ = restoration coefficient (strength of pull toward trust)
+- H₃* = natural equilibrium level (~0.55-0.65)
+- distrust_causes = {systemic_failures + manufactured_distrust}
+```
+
+**Critical Implication**: Trust erosion is not passive—it requires **active causes**:
+
+| Cause Type | Mechanism | Reversibility |
+|------------|-----------|---------------|
+| **Systemic Failures** | Corruption exposed, promises broken, elite visibly failing | Hard—requires real reform |
+| **Manufactured Distrust** | Propaganda, fear-mongering, deliberate polarization | Easier—truth + trust-builders |
+
+**The Two Pathways to Threshold**:
+
+```
+                    CAUSE OF DISTRUST
+              Earned              Manufactured
+           (Real Failures)       (Propaganda)
+           ┌─────────────────┬─────────────────┐
+           │                 │                 │
+    Deep   │  INSTITUTIONAL  │   IDEOLOGICAL   │
+           │    FAILURE      │    CAPTURE      │
+           │                 │                 │
+ DEPTH     │  Rome, Maya     │   (Modern       │
+           │  (real decay)   │    polarization)│
+           │                 │                 │
+           ├─────────────────┼─────────────────┤
+           │                 │                 │
+  Surface  │   SCANDAL       │   MORAL PANIC   │
+           │                 │                 │
+           │  (Recoverable   │  (Recoverable   │
+           │   with reform)  │   with truth)   │
+           │                 │                 │
+           └─────────────────┴─────────────────┘
+```
+
+**Policy Implications**:
+1. Manufactured distrust is more tractable than earned distrust
+2. Early intervention against fear-mongering is high-ROI
+3. Distinguishing distrust sources is essential for response
+4. Trust-building programs leverage natural restorative force
+5. Systemic failures require systemic solutions, not messaging
+
+**Refinement to Cascade Equations**:
+```
+dH₃/dt = -α₃(S - S*) + β₃(H₁·H₂) - γ₃(E) + ρ(H₃* - H₃) - μ(M)
+
+Where:
+- ρ(H₃* - H₃) = restoration force (new term)
+- M = manufactured distrust (propaganda, fear-mongering)
+- μ = susceptibility to manufactured distrust
+```
+
+This modification explains why societies can sustain stress for extended periods (restoration force) but collapse rapidly once distrust sources overwhelm the attractor.
+
 ---
 
 ## Part IV: Collapse Typology

@@ -114,7 +114,7 @@
 - Recovery asymmetry (rebuilding trust slower than destroying it)
 - Historical vs. modern collapse patterns
 
-### 2.3 The Three Laws of Coordination Collapse (~500 words) 🆕
+### 2.3 The Four Laws of Coordination Collapse (~650 words) 🆕
 
 **Law 1: Conservation of Coordination Potential**
 > "Coordination capacity cannot be created instantly—it can only be transferred, transformed, or gradually accumulated/depleted."
@@ -131,6 +131,14 @@
 > "Trust is destroyed faster than it is created. The rate of trust erosion exceeds trust building by 3-10x."
 - Explains fast collapses, slow recoveries
 - Mathematical form: dH₃⁺/dt / dH₃⁻/dt ≈ 0.1-0.3
+
+**Law 4: The Trust Attractor** 🆕
+> "Humans naturally seek to trust—distrust requires active causes. Trust has a restorative force pulling toward functional equilibrium."
+- Trust reduces cognitive load, enables cooperation, provides security
+- Distrust requires active causes: systemic failures OR manufactured distrust
+- Distinguishes "earned distrust" (real failures) from "manufactured distrust" (propaganda)
+- Policy implication: countering fear-mongering more tractable than fixing broken systems
+- Mathematical: dH₃/dt includes +ρ(H₃* - H₃) restoration term
 
 ### 2.4 The Trust Primacy Theorem (~400 words) 🆕
 
