@@ -1,0 +1,40 @@
+harmony,component,variable,source,years,N
+H1,Linguistic Integration,Common language speakers (%),Ethnologue,1950-2020,195 countries
+H1,Cultural Exchange,International tourism (% GDP),World Bank WDI,1995-2020,217 countries
+H1,Information Flow,Internet bandwidth (Mbps per capita),ITU,2000-2020,193 countries
+H2,Health,Life expectancy at birth (years),World Bank WDI,1960-2023,266 countries
+H2,Health,"Infant mortality (per 1,000 live births)",World Bank WDI,1960-2023,266 countries
+H2,Education,Primary enrollment rate (%),World Bank WDI,1970-2023,217 countries
+H2,Education,Secondary enrollment rate (%),World Bank WDI,1970-2023,217 countries
+H2,Living Standards,Access to electricity (%),World Bank WDI,1990-2023,266 countries
+H3,Democratic Participation,Electoral democracy index,V-Dem v14,1789-2023,202 countries
+H3,Democratic Participation,Participatory democracy index,V-Dem v14,1789-2023,202 countries
+H3,Climate Finance,Climate finance contributions (USD millions),OECD,2013-2020,50 countries
+H3,Refugee Burden-Sharing,Refugees hosted per capita,UNHCR,1951-2020,185 countries
+H3,Treaty Compliance,Environmental treaty ratification (%),ECOLEX,1950-2020,193 countries
+H4,Economic Dynamism,GDP per capita (2017 PPP USD),World Bank WDI,1960-2023,266 countries
+H4,Economic Dynamism,Entrepreneurship index,GEM Consortium,1999-2020,115 countries
+H4,Innovation,R&D expenditure (% GDP),UNESCO,1996-2020,147 countries
+H5,Trade Integration,Trade openness (% GDP),World Bank WDI,1960-2023,266 countries
+H5,Trade Integration,KOF economic globalization index,KOF Swiss Economic Institute,1970-2021,203 countries
+H5,Communication,Mobile cellular subscriptions (per 100),World Bank WDI,1960-2023,266 countries
+H5,Communication,Internet users (% population),World Bank WDI,1990-2023,266 countries
+H5,Mobility,Air transport passengers,World Bank WDI,1970-2023,204 countries
+H6,Resource Sharing,ODA disbursements (% GNI),OECD DAC,1960-2020,30 countries
+H6,Resource Sharing,Remittances received (% GDP),World Bank WDI,1970-2023,217 countries
+H6,Mutual Aid,Humanitarian assistance (USD per capita),OCHA FTS,2000-2020,150 countries
+H7,Education,Primary enrollment rate (%),World Bank WDI,1970-2023,217 countries
+H7,Education,Secondary enrollment rate (%),World Bank WDI,1970-2023,217 countries
+H7,Education,Tertiary enrollment rate (%),World Bank WDI,1970-2023,217 countries
+H7,Education,Average years of schooling,Barro-Lee,1950-2015,146 countries
+H7,Innovation,Patent applications (residents),WIPO,1980-2021,195 countries
+H7,Innovation,Patent applications (non-residents),WIPO,1980-2021,195 countries
+H7,Infrastructure,Access to electricity (%),World Bank WDI,1990-2023,266 countries
+H7,Infrastructure,Mobile subscriptions (per 100),World Bank WDI,1960-2023,266 countries
+H7,Infrastructure,Internet users (% population),World Bank WDI,1990-2023,266 countries
+H7,Governance,Control of corruption,WGI,1996-2023,215 countries
+H7,Governance,Government effectiveness,WGI,1996-2023,215 countries
+H7,Governance,Political stability,WGI,1996-2023,215 countries
+H7,Governance,Regulatory quality,WGI,1996-2023,215 countries
+H7,Governance,Rule of law,WGI,1996-2023,215 countries
+H7,Governance,Voice and accountability,WGI,1996-2023,215 countries

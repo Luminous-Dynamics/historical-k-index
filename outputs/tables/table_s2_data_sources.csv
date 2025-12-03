@@ -1,0 +1,11 @@
+source,full_name,url,temporal,geographic,license,accessed
+World Bank WDI,World Development Indicators,https://databank.worldbank.org,1960-2023,266 countries,CC-BY-4.0,2024-11
+World Bank WGI,World Governance Indicators,https://www.worldbank.org/governance/wgi,1996-2023,215 countries,CC-BY-4.0,2024-11
+WIPO,World Intellectual Property Organization Statistics,https://www.wipo.int/ipstats/en/,1980-2021,195 countries,Open,2024-11
+Barro-Lee,Barro-Lee Educational Attainment Dataset,http://www.barrolee.com/,1950-2015,146 countries,Open,2024-11
+V-Dem v14,Varieties of Democracy Dataset Version 14,https://www.v-dem.net,1789-2023,202 countries,CC-BY-SA-4.0,2024-11
+KOF,KOF Globalisation Index,https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html,1970-2021,203 countries,Open,2024-11
+HYDE 3.2.1,History Database of the Global Environment,https://dataportaal.pbl.nl/downloads/HYDE/,10000 BCE-2020 CE,Global gridded,CC-BY-4.0,2024-11
+Seshat,Seshat: Global History Databank,http://seshatdatabank.info/,10000 BCE-1900 CE,414 polities,CC-BY-SA-4.0,2024-11
+OECD,Organisation for Economic Co-operation and Development,https://stats.oecd.org/,1960-2023,50 countries,Open,2024-11
+UNHCR,UN High Commissioner for Refugees,https://www.unhcr.org/data.html,1951-2020,185 countries,Open,2024-11
