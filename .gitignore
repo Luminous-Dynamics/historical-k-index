@@ -51,6 +51,14 @@ Thumbs.db
 data/raw/*
 !data/raw/.gitkeep
 
+# Large external datasets (>100MB - exceeds GitHub limit)
+# These should be downloaded via scripts, not stored in Git
+data/data_sources/external/wvs/WVS_Time_Series_1981-2022_csv_v5_0.csv  # 1316 MB
+data/data_sources/external/vdem/V-Dem-CY-Core-v15.csv  # 195 MB
+data/data_sources/external/F00011931-WVS_Time_Series_1981-2022_csv_v5_0.zip  # 118 MB
+data/data_sources/external/imf_fsi_raw.csv  # 85 MB
+data/data_sources/external/pew/Pew Research Center Global Attitudes Spring 2024 Dataset CSV.csv  # 54 MB
+
 # Temporary files
 *.tmp
 *.bak

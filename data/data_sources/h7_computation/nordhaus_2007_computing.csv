@@ -1,0 +1,23 @@
+year,relative_performance,cost_per_mips_usd,log_performance,notes
+1850,1.00E-13,1.00E+13,-13.0,Manual computation (human calculator)
+1900,5.00E-11,2.00E+10,-10.3,Mechanical calculators
+1910,1.00E-10,1.00E+10,-10.0,Improved mechanical
+1920,2.00E-10,5.00E+09,-9.7,Electromechanical
+1930,5.00E-10,2.00E+09,-9.3,Punch card systems
+1940,1.00E-09,1.00E+09,-9.0,Early relay computers
+1946,1.00E-07,1.00E+07,-7.0,ENIAC (first electronic)
+1950,2.00E-05,5.00E+04,-4.7,Early stored-program computers
+1955,1.00E-04,1.00E+04,-4.0,Transistor computers
+1960,5.00E-04,2.00E+03,-3.3,Second generation
+1965,2.50E-03,4.00E+02,-2.6,Early integrated circuits
+1970,1.00E-02,1.00E+02,-2.0,Third generation (IC)
+1975,5.00E-02,2.00E+01,-1.3,Minicomputers
+1980,2.50E-01,4.00E+00,-0.6,Personal computers emerge
+1985,1.25E+00,8.00E-01,0.1,PC revolution
+1990,1.00E+03,1.00E-03,3.0,486/Pentium era
+1995,1.00E+05,1.00E-05,5.0,Internet age begins
+2000,1.00E+09,1.00E-09,9.0,Gigahertz processors
+2005,1.00E+11,1.00E-11,11.0,Multi-core processors
+2010,1.00E+12,1.00E-12,12.0,Cloud computing era
+2015,5.00E+12,2.00E-13,12.7,Mobile dominance
+2020,1.00E+13,1.00E-13,13.0,AI/ML acceleration
