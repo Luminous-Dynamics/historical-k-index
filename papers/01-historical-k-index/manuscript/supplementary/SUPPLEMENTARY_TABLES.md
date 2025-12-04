@@ -12,7 +12,8 @@
 | **KOF Globalization Index** | Economic, social, political globalization | 203 countries | 1970-2021 | https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html | Nov 2025 | gygli2019 |
 | **HYDE 3.2.1** | Population, land use, urbanization | Global (5' grid) | 10,000 BCE-2017 CE | https://doi.org/10.17026/dans-25g-gez3 | Nov 2025 | kleingoldewijk2017 |
 | **UNDP Human Development Reports** | HDI, life expectancy, education, GNI | 189 countries | 1990-2023 | http://hdr.undp.org | Nov 2025 | undp2023 |
-| **World Bank WDI** | GDP, trade, demographics, health | 217 economies | 1960-2023 | https://data.worldbank.org | Nov 2025 | World Bank 2024 |
+| **World Bank WDI** | GDP, trade, demographics, health, education, infrastructure, patents | 217 economies | 1960-2023 | https://data.worldbank.org | Nov 2025 | World Bank 2024 |
+| **World Bank WGI** | Worldwide Governance Indicators (6 dimensions: CC, GE, PV, RQ, RL, VA) | 215 countries | 1996-2023 | https://info.worldbank.org/governance/wgi | Nov 2025 | Kaufmann et al. 2023 |
 | **Bolt-van Zanden (Maddison Project)** | Historical GDP per capita | 165 countries | 1-2018 CE | https://www.rug.nl/ggdc/historicaldevelopment/maddison/ | Nov 2025 | boltetal2020 |
 | **COMTRADE (UN)** | Bilateral trade flows | 200+ countries | 1962-2023 | https://comtrade.un.org | Nov 2025 | UN 2024 |
 | **UN DESA Migration** | Bilateral migration stocks | 232 countries | 1990-2020 | https://www.un.org/development/desa/pd/ | Nov 2025 | UN DESA 2020 |
@@ -62,10 +63,14 @@
 | | Environmental Performance | ★★★★☆ | 2000-2022 | 180 countries | ★★★★☆ | ✓ Recent |
 | | Historical CO₂ (inverted) | ★★★☆☆ | 1751-2023 | Global | ★★★★☆ | ✓ Historical |
 | **H₇: Evolutionary Progression** |
-| | ⚠️ HYDE Population Growth | ★★☆☆☆ (synthetic) | 10,000 BCE-2017 | Global | ★★★☆☆ | ✓ Exploratory |
-| | ⚠️ HYDE Urbanization | ★★☆☆☆ (synthetic) | 10,000 BCE-2017 | Global | ★★★☆☆ | ✓ Exploratory |
-| | Patent Accumulation | ★★★★☆ | 1883-2023 | 150+ countries | ★★★★★ | 🔄 Planned |
-| | Constitutional Complexity | ★★★★☆ | 1789-2023 | Limited | ★★★☆☆ | 🔄 Planned |
+| | ✅ Education Component (enrollment, literacy, years schooling) | ★★★★★ | 1960-2023 | 217 countries | ★★★★★ | ✓ Primary (1996-2021) |
+| | ✅ Patents Component (resident + non-resident applications) | ★★★★☆ | 1980-2021 | 150+ countries | ★★★★★ | ✓ Primary (1996-2021) |
+| | ✅ Infrastructure Component (electricity, mobile, internet, transport) | ★★★★★ | 1960-2023 | 217 countries | ★★★★★ | ✓ Primary (1996-2021) |
+| | ✅ Governance Component (WGI 6 dimensions: CC, GE, PV, RQ, RL, VA) | ★★★★★ | 1996-2023 | 215 countries | ★★★★★ | ✓ Primary (1996-2021) |
+| | HYDE Population Growth (replaced) | ★★☆☆☆ (synthetic) | 10,000 BCE-2017 | Global | ★★★☆☆ | ✗ Replaced |
+| | HYDE Urbanization (replaced) | ★★☆☆☆ (synthetic) | 10,000 BCE-2017 | Global | ★★★☆☆ | ✗ Replaced |
+| | WIPO Historical Patents (future extension) | ★★★★☆ | 1883-2023 | 150+ countries | ★★★★★ | 🔄 Planned |
+| | Constitutional Complexity (CCP, future extension) | ★★★★☆ | 1789-2023 | Limited | ★★★☆☆ | 🔄 Planned |
 
 **Rating Scale**: ★★★★★ Excellent, ★★★★☆ Good, ★★★☆☆ Fair, ★★☆☆☆ Poor, ★☆☆☆☆ Very Poor
 

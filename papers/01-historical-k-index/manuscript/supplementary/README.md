@@ -81,7 +81,7 @@
 - H4_diversity
 - H5_wisdom
 - H6_flourishing
-- H7_progression (⚠️ synthetic for exploratory analysis)
+- H7_progression (✅ validated empirical data, 1996-2021)
 - K_six_harmony (primary)
 - K_seven_harmony (exploratory)
 - K_bootstrap_ci_lower
