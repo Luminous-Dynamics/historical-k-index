@@ -9,8 +9,8 @@ Validates that the new geometric mean aggregation:
 4. Produces expected divergence patterns
 
 Usage:
-    cd /srv/luminous-dynamics/kosmic-lab
-    nix develop --command python historical_k/validate_geometric_integration.py
+    cd /srv/luminous-dynamics/historical-k-index
+    nix develop --command python shared/scripts/validation/validate_geometric_integration.py
 """
 
 from __future__ import annotations

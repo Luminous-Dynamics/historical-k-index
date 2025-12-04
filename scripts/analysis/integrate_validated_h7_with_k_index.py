@@ -39,7 +39,7 @@ def load_existing_k_index():
     print()
 
     # Path to existing K(t) data
-    k_path = Path('/srv/luminous-dynamics/kosmic-lab/historical_k/data_sources/processed/k_index_final_1810_2020.csv')
+    k_path = Path('/srv/luminous-dynamics/historical-k-index/data/processed/k_index_final_1810_2020.csv')
 
     if not k_path.exists():
         raise FileNotFoundError(f"K(t) index not found: {k_path}")

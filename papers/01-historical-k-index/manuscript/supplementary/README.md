@@ -89,8 +89,8 @@
 
 **Instructions**: To generate this file, run:
 ```bash
-cd /srv/luminous-dynamics/kosmic-lab/historical_k
-poetry run python export_timeseries_data.py
+cd /srv/luminous-dynamics/historical-k-index
+poetry run python scripts/processing/export_timeseries_data.py
 ```
 
 ---

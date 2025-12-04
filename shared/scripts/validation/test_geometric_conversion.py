@@ -314,6 +314,6 @@ if __name__ == "__main__":
 
     result = subprocess.run(
         [sys.executable, "-m", "pytest", __file__, "-v", "--tb=short"],
-        cwd="/srv/luminous-dynamics/kosmic-lab"
+        cwd="/srv/luminous-dynamics/historical-k-index"
     )
     sys.exit(result.returncode)
