@@ -309,13 +309,15 @@ Several limitations warrant acknowledgment:
 
 **Selection Bias**: Our sample necessarily emphasizes "famous" collapses with sufficient documentation. Societies that collapsed without leaving extensive records are underrepresented.
 
-**Measurement Challenges**: Converting qualitative historical evidence to quantitative scores involves judgment calls. While inter-coder reliability (α > 0.85) is acceptable, systematic biases may persist.
+**Measurement Challenges**: Converting qualitative historical evidence to quantitative scores involves judgment calls. While inter-coder reliability (α > 0.85) is acceptable, systematic biases may persist. The apparent precision of scores (e.g., H₃ = 0.38 for Rome 400 CE) should be understood as central estimates of inherently fuzzy quantities; the reported uncertainty ranges (±0.03 to ±0.06) are themselves estimates. We report decimal values for computational reproducibility, not to claim spurious precision about ancient sentiment.
 
 **Cross-Era Calibration**: Ancient H₃ measurement relies on behavioral inference (institutional records, archaeological patterns of cooperation/conflict), while modern H₃ measurement relies on sentiment surveys (stated trust levels). These are ontologically different: ancient measures capture revealed trust through actions; modern measures capture reported trust through self-assessment. While calibration using "anchor cases" (British Empire, Weimar Germany, Soviet Union) shows reasonable alignment (factor = 1.046 ± 0.02), the underlying constructs may not be perfectly equivalent. This represents a fundamental limitation of any cross-temporal comparison.
 
 **Dark Trust Uncertainty**: Our "Dark Trust" concept—unmeasured coordination capacity including habitual trust (routine expectations), narrative trust (shared identity stories), and network trust (relational capital)—represents approximately 40% of total trust infrastructure based on survey calibration gaps. However, this estimate is indirect and may vary significantly across cultures and eras. The methodology for estimating unmeasured trust remains imprecise.
 
 **Marginal Cases**: While LOOCV accuracy is 89%, some cases fit poorly. The Carolingian Empire prediction erred by 25 years (predicted 843 CE, actual collapse process 840-888 CE), likely due to the unusual "negotiated partition" rather than coordination failure. The Sassanid Empire shows similar ambiguity—the Arab conquest (651 CE) may represent external military defeat rather than internal collapse dynamics.
+
+**Determinism and Human Agency**: The historical recovery rate (P ≈ 0.15 below threshold) should not be interpreted as deterministic fate. This probability reflects outcomes in societies that crossed threshold *without* deliberate, coordinated intervention informed by collapse dynamics. Societies with awareness of threshold effects and resources for targeted trust-building may achieve substantially higher recovery rates. The framework is intended to inform action, not predict inevitable doom—our hope is that understanding the mechanism enables societies to avoid the fate of historical predecessors.
 
 ### 5.4 Theoretical Extensions
 
