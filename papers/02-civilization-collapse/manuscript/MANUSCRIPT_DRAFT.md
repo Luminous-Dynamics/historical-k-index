@@ -417,7 +417,69 @@ All data and code are available at [GitHub repository] and [Zenodo archive].
 
 ## References
 
-[To be completed - key references include Tainter 1988, Diamond 2005, Turchin 2006, Cline 2014, etc.]
+### Core Collapse Theory
+
+1. Tainter, J. A. (1988). *The Collapse of Complex Societies*. Cambridge University Press.
+
+2. Diamond, J. (2005). *Collapse: How Societies Choose to Fail or Succeed*. Viking Press.
+
+3. Turchin, P. (2006). *War and Peace and War: The Rise and Fall of Empires*. Pi Press.
+
+4. Turchin, P. & Nefedov, S. (2009). *Secular Cycles*. Princeton University Press.
+
+5. Goldstone, J. A. (1991). *Revolution and Rebellion in the Early Modern World*. University of California Press.
+
+### Complexity Science and Critical Transitions
+
+6. Scheffer, M. (2009). *Critical Transitions in Nature and Society*. Princeton University Press.
+
+7. Scheffer, M., Carpenter, S. R., Lenton, T. M., Bascompte, J., Brock, W., Dakos, V., ... & Vandermeer, J. (2012). Anticipating critical transitions. *Science*, 338(6105), 344-348.
+
+8. Dakos, V., Carpenter, S. R., van Nes, E. H., & Scheffer, M. (2015). Resilience indicators: prospects and limitations for early warnings of regime shifts. *Philosophical Transactions of the Royal Society B*, 370(1659), 20130263.
+
+### Case Studies
+
+9. Cline, E. H. (2014). *1177 B.C.: The Year Civilization Collapsed*. Princeton University Press.
+
+10. Martin, S. & Grube, N. (2000). *Chronicle of the Maya Kings and Queens: Deciphering the Dynasties of the Ancient Maya*. Thames & Hudson.
+
+11. Gill, R. B. (2000). *The Great Maya Droughts: Water, Life, and Death*. University of New Mexico Press.
+
+12. Harper, K. (2017). *The Fate of Rome: Climate, Disease, and the End of an Empire*. Princeton University Press.
+
+13. Ward-Perkins, B. (2005). *The Fall of Rome and the End of Civilization*. Oxford University Press.
+
+14. Kotkin, S. (2001). *Armageddon Averted: The Soviet Collapse, 1970-2000*. Oxford University Press.
+
+### Trust and Social Capital
+
+15. Putnam, R. D. (2000). *Bowling Alone: The Collapse and Revival of American Community*. Simon & Schuster.
+
+16. Putnam, R. D. (1993). *Making Democracy Work: Civic Traditions in Modern Italy*. Princeton University Press.
+
+17. Fukuyama, F. (1995). *Trust: The Social Virtues and the Creation of Prosperity*. Free Press.
+
+18. Axelrod, R. (1984). *The Evolution of Cooperation*. Basic Books.
+
+### Quantitative History
+
+19. Turchin, P. et al. (2018). Quantitative historical analysis uncovers a single dimension of complexity that structures global variation in human social organization. *PNAS*, 115(2), E144-E151.
+
+20. Turchin, P. et al. (2015). Seshat: The Global History Databank. *Cliodynamics*, 6(1), 77-107.
+
+### Archaeological Data Sources
+
+21. Parker, A. J. (1992). *Ancient Shipwrecks of the Mediterranean and the Roman Provinces*. BAR International Series 580.
+
+22. Wright, L. E. (2006). Diet, Health, and Status among the Pasión Maya. Vanderbilt University Press.
+
+23. Broodbank, C. (2013). *The Making of the Middle Sea: A History of the Mediterranean from the Beginning to the Emergence of the Classical World*. Thames & Hudson.
+
+### Methodological
+
+24. Carpenter, S. R. & Brock, W. A. (2006). Rising variance: a leading indicator of ecological transition. *Ecology Letters*, 9(3), 311-318.
+
+25. [Author et al.]. (2025). Historical K(t) Index: Quantifying Global Civilizational Coherence (1810-2020). [Paper 1 in series].
 
 ---
 
