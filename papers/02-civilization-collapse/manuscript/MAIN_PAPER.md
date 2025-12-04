@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Why do civilizations collapse? Despite decades of research, no unified framework successfully predicts both the timing and velocity of societal decline across diverse historical contexts. We present the K-Index framework, a quantitative model that treats civilizations as coordination systems characterized by seven measurable harmonies. Our central finding is that trust (H₃)—the capacity for collective action among strangers—exhibits a universal threshold (θ ≈ 0.375 on a 0-1 scale) below which cascade failures become self-reinforcing. Analysis of 39 historical civilizations spanning 5,000 years reveals that this threshold correctly predicts collapse timing within ±15 years in 89% of cases. The Collapse Velocity Equation, v_c = -λ·(θ - H₃)²·Φ(N), explains why some collapses take centuries (Rome) while others unfold in months (Soviet Union). Leave-one-out cross-validation demonstrates threshold stability (θ = 0.375 ± 0.004), and six post-analysis cases added after threshold derivation confirm predictions with 100% accuracy within stated uncertainty bounds. Contemporary monitoring suggests the United States is approaching the critical threshold, with H₃ declining from 0.60 (1964) to 0.42 (2024). We discuss implications for early warning systems, intervention strategies, and the fundamental constraints on civilizational coordination capacity.
+Why do civilizations collapse? Despite decades of research, no unified framework successfully predicts both the timing and velocity of societal decline across diverse historical contexts. We present the K-Index framework, a quantitative model that treats civilizations as coordination systems characterized by seven measurable harmonies. Our central finding is that trust (H₃)—the capacity for collective action among strangers—exhibits a universal threshold (θ ≈ 0.375 on a 0-1 scale) below which cascade failures become self-reinforcing. Analysis of 39 historical civilizations spanning 5,000 years reveals that this threshold correctly predicts collapse timing within ±15 years in 89% of cases. The Collapse Velocity Equation, v_c = -λ·(θ - H₃)²·Φ(N), explains why some collapses take centuries (Rome) while others unfold in months (Soviet Union). Leave-one-out cross-validation demonstrates threshold stability (θ = 0.375 ± 0.004), and six post-analysis cases added after threshold derivation show strong predictive alignment, with all cases falling within stated uncertainty bounds. Contemporary monitoring suggests the United States is approaching the critical threshold, with H₃ declining from 0.60 (1964) to 0.42 (2024). We discuss implications for early warning systems, intervention strategies, and the fundamental constraints on civilizational coordination capacity.
 
 **Keywords**: civilizational collapse, social trust, coordination failure, cliodynamics, complex systems, early warning indicators
 
@@ -24,7 +24,7 @@ Existing theories emphasize different causal mechanisms. Tainter (1988) argues t
 
 This paper introduces the K-Index framework, which reconceptualizes civilizational stability through the lens of coordination capacity. Rather than treating collapse as driven by any single factor—complexity, environment, or elite dynamics—we argue that civilizations fail when their capacity for collective action falls below a critical threshold. This coordination capacity, measured as the geometric mean of seven "harmonies," represents the multidimensional health of societal systems.
 
-Our central contribution is the identification of a universal trust threshold (θ ≈ 0.375) below which collapse becomes self-reinforcing. This threshold emerges from three independent lines of evidence: (1) empirical observation across 39 historical cases, (2) theoretical derivation from coordination game theory, and (3) cross-validation with modern survey data. The threshold's universality—appearing in agrarian empires, commercial republics, and modern nation-states—suggests it reflects fundamental constraints on human coordination capacity rather than contingent historical factors.
+Our central contribution is the identification of a universal trust threshold (θ ≈ 0.375) below which collapse becomes self-reinforcing. This threshold emerges from four independent lines of evidence: (1) empirical grid search across 39 historical cases, (2) comparative analysis of collapsed vs. survivor societies, (3) theoretical derivation from coordination game theory, and (4) calibration with modern trust survey data. The threshold's universality—appearing in agrarian empires, commercial republics, and modern nation-states—suggests it reflects fundamental constraints on human coordination capacity rather than contingent historical factors.
 
 We also introduce the Collapse Velocity Equation, which explains the puzzling variation in collapse speeds. The Western Roman Empire declined over approximately 250 years; the Soviet Union dissolved in six years; the Bronze Age civilizations collapsed within decades. Our model explains this variation through three parameters: network topology (hierarchical vs. distributed), population density (affecting cascade propagation), and the trust-threshold gap (how far below θ the society has fallen).
 
@@ -48,13 +48,13 @@ We identify seven dimensions of coordination capacity, termed "harmonies":
 
 **H₃: Trust/Social Cohesion** — The capacity for collective action among strangers based on shared expectations of reciprocity. This harmony occupies a privileged position in our framework as the "keystone" enabling all other coordination. Ancient measurement relies on institutional indicators (oath-keeping, contract enforcement, civic participation); modern measurement uses interpersonal trust surveys (World Values Survey, Edelman Trust Barometer).
 
-**H₄: Cultural Continuity** — The capacity to maintain shared narratives, values, and identities across generations. Measured through cultural production, educational institutions, and identity coherence indicators.
+**H₄: Institutional Complexity** — The degree of social differentiation, administrative hierarchy, and specialized roles enabling sophisticated coordination. Ancient measurement uses settlement hierarchy levels, occupational specialization, and bureaucratic depth; modern measurement uses government complexity indices and organizational density.
 
-**H₅: Environmental Sustainability** — The capacity to manage resource extraction within ecological limits. Ancient measurement uses archaeological evidence of deforestation, soil degradation, and resource depletion; modern measurement uses environmental performance indices.
+**H₅: Knowledge Preservation** — The capacity to transmit technical, cultural, and historical knowledge across generations. Ancient measurement relies on script usage, archive maintenance, and scribal quality; modern measurement uses literacy rates, tertiary enrollment, R&D spending, and scientific publications.
 
-**H₆: Social Welfare** — The capacity to meet basic needs and maintain human development. Measured through demographic evidence, health indicators, and quality-of-life measures.
+**H₆: Population Wellbeing** — The physical, mental, and material quality of life of the general population. Ancient measurement uses skeletal health, mortality patterns, and settlement density; modern measurement uses life expectancy, HDI components, nutrition indices, and mental health indicators.
 
-**H₇: Technological Adaptation** — The capacity to develop and deploy technologies addressing societal challenges. Measured through innovation indicators, infrastructure quality, and technological diffusion.
+**H₇: Technological Infrastructure** — The capacity to maintain and develop physical and technical systems supporting coordination. Ancient measurement relies on infrastructure maintenance and metallurgical capacity; modern measurement uses infrastructure investment, energy capacity, and communications penetration.
 
 ### 2.3 The K-Index Formula
 
@@ -130,7 +130,7 @@ All four methods converge on θ ≈ 0.375.
 
 **k-Fold Cross-Validation (k=5)**: Stratified by civilization type, mean test accuracy = 86% ± 10%.
 
-**Out-of-Sample Validation**: Six cases added after initial threshold estimation (Hittite, Indus Valley, Songhai, Olmec, Aksumite, Umayyad) achieved 100% prediction accuracy within stated uncertainty bounds.
+**Out-of-Sample Validation**: Six cases added after initial threshold estimation (Hittite, Indus Valley, Songhai, Olmec, Aksumite, Umayyad) demonstrated strong predictive alignment, with all cases falling within stated uncertainty bounds.
 
 ---
 
@@ -190,26 +190,26 @@ All six post-analysis cases (added v7.7-v7.8) confirmed within uncertainty bound
 - Songhai: Predicted 1590 CE ± 20, Actual 1591 CE ✓
 - Hittite: Predicted 1185 BCE ± 30, Actual 1178 BCE ✓
 
-### 4.5 The Twelve Laws of Coordination Collapse
+### 4.5 Twelve Empirical Regularities of Coordination Collapse
 
-From our empirical analysis, we derive twelve fundamental laws governing civilizational decline (see SI Section 24.4 for detailed derivations):
+From our empirical analysis, we derive twelve recurring patterns governing civilizational decline. Given our sample size (N=35) and measurement uncertainties, we present these as empirical regularities subject to refinement as additional cases and data become available (see SI Section 24.4 for detailed derivations):
 
-| Law | Statement | Empirical Basis |
-|-----|-----------|-----------------|
+| # | Pattern | Empirical Basis |
+|---|---------|-----------------|
 | **1. Trust Threshold** | θ ≈ 0.375 is the critical collapse boundary | 35 cases, LOOCV validated |
 | **2. Cascade** | Below θ, trust decline accelerates quadratically | Velocity equation fit |
 | **3. Network** | Hub-and-spoke networks collapse faster than distributed | λ variation by topology |
 | **4. Modernization** | Higher connectivity (λ) = faster collapse | Soviet vs. Rome comparison |
 | **5. Recovery** | P(recovery \| below θ) ≈ 0.15 | 4/35 survivor cases |
 | **6. Visibility** | Resource wealth masks declining H₃ | Oil states, late empires |
-| **7. Intervention** | ROI = 10:1 before θ, 1:10 after | Marshall Plan vs. late Rome |
+| **7. Intervention** | ROI ≈ 10:1 before θ, ≈1:10 after | Marshall Plan vs. late Rome |
 | **8. Dark Trust** | ~40% of coordination capacity is unmeasured | Survey calibration gaps |
 | **9. Feedback** | Trust generates trust above θ (virtuous cycle) | Nordic trajectory analysis |
 | **10. Percolation** | θ ≈ p_c (network phase transition) | Theoretical correspondence |
 | **11. Learning** | μ (learning coefficient) historically ≈ 0 | Repeated collapse patterns |
 | **12. Glass Ceiling** | K_max ≈ 0.85 is the coordination limit | No society exceeds |
 
-These laws synthesize our findings into predictive principles. Law 7 (Intervention) has particular policy relevance: interventions before threshold crossing are approximately 10× more cost-effective than after, explaining why late-stage rescue efforts consistently fail while early investment succeeds.
+These regularities synthesize our findings into predictive principles. Regularity 7 (Intervention) has particular policy relevance: interventions before threshold crossing are approximately 10× more cost-effective than after, explaining why late-stage rescue efforts consistently fail while early investment succeeds.
 
 ### 4.6 Contemporary Application
 
@@ -224,7 +224,7 @@ Applying the framework to current societies:
 | China | 0.52 | Stable | +0.145 | Lower |
 | India | 0.48 | Declining | +0.105 | Moderate |
 
-The United States presents the most concerning trajectory among major democracies. Trust in government has declined from approximately 77% (1964) to 22% (2024) according to Pew Research. Converting to our H₃ scale, this represents a decline from ~0.60 to ~0.42—approaching the critical threshold. At current rates, threshold crossing could occur between 2028 and 2035.
+The United States presents the most concerning trajectory among major democracies. Trust in government has declined from approximately 77% (1964) to 22% (2024) according to Pew Research. Converting to our H₃ scale, this represents a decline from ~0.60 to ~0.42—approaching the critical threshold. Note that different measurement approaches yield somewhat different estimates (range: 0.35-0.45), reflecting genuine uncertainty in trust quantification. At current trajectory rates, if the decline continues, threshold proximity could be reached between 2028 and 2035—though such projections are inherently contingent on policy responses and measurement refinement.
 
 ---
 
@@ -258,7 +258,7 @@ The common factor is investment in "trust infrastructure"—institutions and pra
 | Social | Public spaces, community organizations | +0.02 to +0.06 |
 | Digital | Platform governance, algorithmic transparency | +0.05 to +0.12 |
 
-Critically, Law 7 (Intervention Law) indicates that these investments must occur before threshold crossing to be effective. The United States, for instance, shows strong constitutional infrastructure but severely degraded deliberative, information, and social infrastructure—a combination that may be insufficient to prevent continued trust decline.
+Critically, Regularity 7 (Intervention) indicates that these investments must occur before threshold crossing to be effective. The United States, for instance, shows strong constitutional infrastructure but severely degraded deliberative, information, and social infrastructure—a combination that may be insufficient to prevent continued trust decline.
 
 ### 5.3 Limitations
 
@@ -354,7 +354,7 @@ Turchin, P., & Nefedov, S.A. (2009). *Secular Cycles*. Princeton University Pres
 
 **Figure 5**: Early warning indicator presence across 35 collapsed cases, showing lead times before threshold crossing.
 
-**Figure 6**: The Twelve Laws of Coordination Collapse visualized, showing empirical relationships, threshold dynamics, and intervention windows.
+**Figure 6**: The Twelve Empirical Regularities of Coordination Collapse visualized, showing observed patterns, threshold dynamics, and intervention windows.
 
 ---
 
@@ -368,7 +368,7 @@ Comprehensive supplementary information is available, including:
 - SI Sections 10-15: Network theory, catastrophe theory, and information-theoretic frameworks
 - **SI Section 16: Intervention Engineering and Trust Infrastructure** (detailed ROI analysis)
 - SI Sections 17-23: Extended theoretical frameworks
-- **SI Section 24: Collective Intelligence and the Twelve Laws of Coordination Collapse** (full derivations)
+- **SI Section 24: Collective Intelligence and the Twelve Empirical Regularities** (full derivations)
 - SI Sections 25-46: Extended case studies, regional analyses, and quantitative tools
 - SI Section 47: Complete bibliography (200+ references)
 
