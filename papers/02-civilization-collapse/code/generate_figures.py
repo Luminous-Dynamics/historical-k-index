@@ -474,75 +474,164 @@ def figure_5_modern_predictions(output_dir: str = 'outputs/figures'):
     plt.close()
 
 
-def figure_6_four_laws(output_dir: str = 'outputs/figures'):
+def figure_6_twelve_laws(output_dir: str = 'outputs/figures'):
     """
-    Figure 6: The Four Laws Visualization
-    """
-    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    Figure 6: The Twelve Laws of Coordination Collapse
 
-    # Law 1: Conservation
-    ax1 = axes[0, 0]
+    Complete visualization of all 12 laws discovered through empirical analysis.
+    """
+    fig, axes = plt.subplots(4, 3, figsize=(16, 18))
+
+    # Law 1: Trust Threshold Law (θ ≈ 0.375)
+    ax = axes[0, 0]
+    H3 = np.linspace(0, 1, 100)
+    stability = np.where(H3 > 0.375, 0.8 + 0.15*np.sin(5*H3), 0.3 - 0.5*(0.375-H3)**2)
+    ax.plot(H3, stability, 'b-', linewidth=2)
+    ax.axvline(x=0.375, color='red', linestyle='--', linewidth=2, label='θ = 0.375')
+    ax.fill_between(H3[H3 < 0.375], 0, stability[H3 < 0.375], alpha=0.3, color='red')
+    ax.fill_between(H3[H3 >= 0.375], 0, stability[H3 >= 0.375], alpha=0.3, color='green')
+    ax.set_xlabel('H₃ (Trust)')
+    ax.set_ylabel('System Stability')
+    ax.set_title('Law 1: Trust Threshold\nθ ≈ 0.375 is critical boundary', fontsize=10, fontweight='bold')
+    ax.legend(fontsize=8)
+
+    # Law 2: Cascade Law
+    ax = axes[0, 1]
+    t = np.linspace(0, 5, 100)
+    above_threshold = 0.5 - 0.02*t
+    below_threshold = 0.35 - 0.02*t - 0.05*t**2
+    ax.plot(t, above_threshold, 'g-', linewidth=2, label='Above θ (linear)')
+    ax.plot(t, np.maximum(below_threshold, 0), 'r-', linewidth=2, label='Below θ (quadratic)')
+    ax.axhline(y=0.375, color='orange', linestyle='--', alpha=0.7)
+    ax.set_xlabel('Time')
+    ax.set_ylabel('Trust Level')
+    ax.set_title('Law 2: Cascade\nBelow θ: quadratic acceleration', fontsize=10, fontweight='bold')
+    ax.legend(fontsize=8)
+    ax.set_ylim(0, 0.6)
+
+    # Law 3: Network Law
+    ax = axes[0, 2]
+    categories = ['Hub-Spoke', 'Hierarchical', 'Distributed']
+    collapse_rates = [0.85, 0.55, 0.25]
+    colors = ['red', 'orange', 'green']
+    ax.barh(categories, collapse_rates, color=colors, alpha=0.7)
+    ax.set_xlabel('Relative Collapse Rate')
+    ax.set_title('Law 3: Network Topology\nHub-spoke fails fastest', fontsize=10, fontweight='bold')
+
+    # Law 4: Modernization Law
+    ax = axes[1, 0]
+    lambda_vals = np.linspace(0.1, 1.0, 100)
+    collapse_speed = lambda_vals**1.5
+    ax.plot(lambda_vals, collapse_speed, 'b-', linewidth=2)
+    ax.fill_between(lambda_vals, 0, collapse_speed, alpha=0.3)
+    ax.set_xlabel('Modernization Rate (λ)')
+    ax.set_ylabel('Collapse Speed')
+    ax.set_title('Law 4: Modernization\nHigher λ = faster collapse', fontsize=10, fontweight='bold')
+
+    # Law 5: Recovery Law
+    ax = axes[1, 1]
+    labels = ['Recovery\n(15%)', 'Permanent\nCollapse\n(85%)']
+    sizes = [15, 85]
+    colors = ['green', 'red']
+    ax.pie(sizes, labels=labels, colors=colors, autopct='%1.0f%%', startangle=90)
+    ax.set_title('Law 5: Recovery\nP(recovery|below θ) ≈ 0.15', fontsize=10, fontweight='bold')
+
+    # Law 6: Visibility Law
+    ax = axes[1, 2]
+    wealth = np.linspace(0, 10, 100)
+    true_H3 = 0.5 - 0.05*wealth
+    perceived_H3 = 0.5 - 0.02*wealth
+    ax.plot(wealth, true_H3, 'r-', linewidth=2, label='True H₃')
+    ax.plot(wealth, perceived_H3, 'g--', linewidth=2, label='Perceived H₃')
+    ax.fill_between(wealth, true_H3, perceived_H3, alpha=0.3, color='yellow')
+    ax.axhline(y=0.375, color='orange', linestyle=':', alpha=0.7)
+    ax.set_xlabel('Resource Wealth')
+    ax.set_ylabel('Trust Level')
+    ax.set_title('Law 6: Visibility\nWealth masks declining H₃', fontsize=10, fontweight='bold')
+    ax.legend(fontsize=8)
+
+    # Law 7: Intervention Law
+    ax = axes[2, 0]
+    categories = ['Before θ', 'After θ']
+    roi_values = [10, 0.1]
+    colors = ['green', 'red']
+    bars = ax.bar(categories, roi_values, color=colors, alpha=0.7)
+    ax.set_ylabel('ROI (return per unit invested)')
+    ax.set_title('Law 7: Intervention Timing\nROI: 10:1 before, 1:10 after', fontsize=10, fontweight='bold')
+    ax.set_yscale('log')
+
+    # Law 8: Dark Trust Law
+    ax = axes[2, 1]
+    labels = ['Measured\n(60%)', 'Dark Trust\n(40%)']
+    sizes = [60, 40]
+    colors = ['lightblue', 'gray']
+    ax.pie(sizes, labels=labels, colors=colors, autopct='%1.0f%%', startangle=90)
+    ax.set_title('Law 8: Dark Trust\n~40% unmeasured capacity', fontsize=10, fontweight='bold')
+
+    # Law 9: Feedback Law
+    ax = axes[2, 2]
+    H3 = np.linspace(0.2, 0.8, 100)
+    feedback = np.where(H3 > 0.375, 0.5*(H3-0.375), -0.8*(0.375-H3))
+    ax.plot(H3, feedback, 'b-', linewidth=2)
+    ax.axhline(y=0, color='gray', linestyle='--', alpha=0.5)
+    ax.axvline(x=0.375, color='red', linestyle='--', alpha=0.7)
+    ax.fill_between(H3[H3 > 0.375], 0, feedback[H3 > 0.375], alpha=0.3, color='green')
+    ax.fill_between(H3[H3 <= 0.375], feedback[H3 <= 0.375], 0, alpha=0.3, color='red')
+    ax.set_xlabel('H₃ (Trust)')
+    ax.set_ylabel('Feedback Strength')
+    ax.set_title('Law 9: Feedback\nPositive above θ, negative below', fontsize=10, fontweight='bold')
+
+    # Law 10: Percolation Law
+    ax = axes[3, 0]
+    p = np.linspace(0, 1, 100)
+    connectivity = np.where(p > 0.375, (p-0.375)**0.4, 0)
+    ax.plot(p, connectivity, 'b-', linewidth=2)
+    ax.axvline(x=0.375, color='red', linestyle='--', linewidth=2, label='p_c ≈ θ')
+    ax.fill_between(p[p > 0.375], 0, connectivity[p > 0.375], alpha=0.3, color='green')
+    ax.set_xlabel('Trust Density (p)')
+    ax.set_ylabel('Network Connectivity')
+    ax.set_title('Law 10: Percolation\nθ ≈ p_c (phase transition)', fontsize=10, fontweight='bold')
+    ax.legend(fontsize=8)
+
+    # Law 11: Learning Law
+    ax = axes[3, 1]
+    civilizations = ['Rome', 'Maya', 'Bronze', 'Soviet', 'Modern?']
+    learning = [0.02, 0.01, 0.00, 0.05, 0.15]
+    colors = ['gray', 'gray', 'gray', 'gray', 'blue']
+    ax.bar(civilizations, learning, color=colors, alpha=0.7)
+    ax.axhline(y=0.05, color='red', linestyle='--', label='Historical avg')
+    ax.set_ylabel('Learning Coefficient (μ)')
+    ax.set_title('Law 11: Learning\nμ historically ≈ 0', fontsize=10, fontweight='bold')
+    ax.legend(fontsize=8)
+
+    # Law 12: Glass Ceiling Law
+    ax = axes[3, 2]
     t = np.linspace(0, 10, 100)
-    manifest = 0.7 - 0.3 * np.tanh(t - 5)
-    latent = 0.3 + 0.3 * np.tanh(t - 5)
-    ax1.fill_between(t, 0, manifest, alpha=0.5, color='blue', label='Manifest (Institutional)')
-    ax1.fill_between(t, manifest, manifest + latent, alpha=0.5, color='orange', label='Latent (Trust-based)')
-    ax1.axhline(y=1.0, color='black', linestyle='--', alpha=0.5)
-    ax1.set_xlabel('Time')
-    ax1.set_ylabel('Coordination Capacity')
-    ax1.set_title('Law 1: Conservation of Coordination\nTotal capacity conserved; form transforms', fontweight='bold')
-    ax1.legend(loc='upper right')
-    ax1.set_ylim(0, 1.1)
+    K_trajectory = 0.85 * (1 - np.exp(-0.5*t))
+    ax.plot(t, K_trajectory, 'b-', linewidth=2)
+    ax.axhline(y=0.85, color='red', linestyle='--', linewidth=2, label='K_max ≈ 0.85')
+    ax.fill_between(t, K_trajectory, 0.85, alpha=0.3, color='red')
+    ax.set_xlabel('Development Time')
+    ax.set_ylabel('K-Index')
+    ax.set_title('Law 12: Glass Ceiling\nK_max ≈ 0.85 is the limit', fontsize=10, fontweight='bold')
+    ax.legend(fontsize=8)
+    ax.set_ylim(0, 1.0)
 
-    # Law 2: Entropy of Complexity
-    ax2 = axes[0, 1]
-    K = np.linspace(0.1, 1.0, 100)
-    maintenance = 0.1 * (1/K)**1.5
-    ax2.plot(K, maintenance, 'b-', linewidth=2)
-    ax2.fill_between(K, 0, maintenance, alpha=0.3)
-    ax2.axvline(x=0.40, color=COLORS['threshold'], linestyle='--', label='Threshold')
-    ax2.set_xlabel('K-Index')
-    ax2.set_ylabel('Maintenance Cost (relative)')
-    ax2.set_title('Law 2: Entropy of Complexity\nMaintenance costs increase as K declines', fontweight='bold')
-    ax2.legend()
-
-    # Law 3: Asymmetry of Trust
-    ax3 = axes[1, 0]
-    signals = np.linspace(0, 5, 100)
-    building = 0.3 * np.log(1 + signals)
-    destroying = 0.1 * np.exp(0.5 * signals)
-    ax3.plot(signals, building, 'g-', linewidth=2.5, label='Trust Building (logarithmic)')
-    ax3.plot(signals, destroying, 'r-', linewidth=2.5, label='Trust Destruction (exponential)')
-    ax3.set_xlabel('Signal Intensity')
-    ax3.set_ylabel('Rate of Change')
-    ax3.set_title('Law 3: Asymmetry of Trust\nBuilding slow, destruction fast', fontweight='bold')
-    ax3.legend()
-    ax3.set_ylim(0, 3)
-
-    # Law 4: Trust Attractor
-    ax4 = axes[1, 1]
-    H3 = np.linspace(0.1, 0.9, 100)
-    equilibrium = 0.60
-    restoration_force = 0.02 * (equilibrium - H3)
-    ax4.plot(H3, restoration_force, 'b-', linewidth=2.5)
-    ax4.axhline(y=0, color='gray', linestyle='--', alpha=0.5)
-    ax4.axvline(x=equilibrium, color='green', linestyle='--', label=f'H₃* = {equilibrium}')
-    ax4.fill_between(H3[H3 < equilibrium], restoration_force[H3 < equilibrium], 0,
-                     alpha=0.3, color='green', label='Pull toward equilibrium')
-    ax4.set_xlabel('Current H₃')
-    ax4.set_ylabel('Restoration Force')
-    ax4.set_title('Law 4: Trust Attractor\nNatural pull toward equilibrium', fontweight='bold')
-    ax4.legend()
-
-    plt.suptitle('Figure 6: The Four Laws of Coordination Collapse',
-                 fontsize=14, fontweight='bold', y=1.02)
+    plt.suptitle('Figure 6: The Twelve Laws of Coordination Collapse',
+                 fontsize=16, fontweight='bold', y=1.01)
     plt.tight_layout()
 
     os.makedirs(output_dir, exist_ok=True)
-    plt.savefig(f'{output_dir}/figure_6_four_laws.png')
-    plt.savefig(f'{output_dir}/figure_6_four_laws.pdf')
-    print(f"Saved Figure 6 to {output_dir}/figure_6_four_laws.[png|pdf]")
+    plt.savefig(f'{output_dir}/figure_6_twelve_laws.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'{output_dir}/figure_6_twelve_laws.pdf', bbox_inches='tight')
+    print(f"Saved Figure 6 to {output_dir}/figure_6_twelve_laws.[png|pdf]")
     plt.close()
+
+
+# Keep backward compatibility alias
+def figure_6_four_laws(output_dir: str = 'outputs/figures'):
+    """Alias for backward compatibility - now generates 12 laws figure."""
+    figure_6_twelve_laws(output_dir)
 
 
 def figure_7_cascade_sequence(output_dir: str = 'outputs/figures'):
