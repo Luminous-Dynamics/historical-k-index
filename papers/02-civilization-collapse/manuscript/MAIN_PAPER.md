@@ -190,7 +190,28 @@ All six post-analysis cases (added v7.7-v7.8) confirmed within uncertainty bound
 - Songhai: Predicted 1590 CE ± 20, Actual 1591 CE ✓
 - Hittite: Predicted 1185 BCE ± 30, Actual 1178 BCE ✓
 
-### 4.5 Contemporary Application
+### 4.5 The Twelve Laws of Coordination Collapse
+
+From our empirical analysis, we derive twelve fundamental laws governing civilizational decline (see SI Section 24.4 for detailed derivations):
+
+| Law | Statement | Empirical Basis |
+|-----|-----------|-----------------|
+| **1. Trust Threshold** | θ ≈ 0.375 is the critical collapse boundary | 35 cases, LOOCV validated |
+| **2. Cascade** | Below θ, trust decline accelerates quadratically | Velocity equation fit |
+| **3. Network** | Hub-and-spoke networks collapse faster than distributed | λ variation by topology |
+| **4. Modernization** | Higher connectivity (λ) = faster collapse | Soviet vs. Rome comparison |
+| **5. Recovery** | P(recovery \| below θ) ≈ 0.15 | 4/35 survivor cases |
+| **6. Visibility** | Resource wealth masks declining H₃ | Oil states, late empires |
+| **7. Intervention** | ROI = 10:1 before θ, 1:10 after | Marshall Plan vs. late Rome |
+| **8. Dark Trust** | ~40% of coordination capacity is unmeasured | Survey calibration gaps |
+| **9. Feedback** | Trust generates trust above θ (virtuous cycle) | Nordic trajectory analysis |
+| **10. Percolation** | θ ≈ p_c (network phase transition) | Theoretical correspondence |
+| **11. Learning** | μ (learning coefficient) historically ≈ 0 | Repeated collapse patterns |
+| **12. Glass Ceiling** | K_max ≈ 0.85 is the coordination limit | No society exceeds |
+
+These laws synthesize our findings into predictive principles. Law 7 (Intervention) has particular policy relevance: interventions before threshold crossing are approximately 10× more cost-effective than after, explaining why late-stage rescue efforts consistently fail while early investment succeeds.
+
+### 4.6 Contemporary Application
 
 Applying the framework to current societies:
 
@@ -226,6 +247,18 @@ Effective interventions must target trust directly. Historical examples of succe
 - **Post-apartheid South Africa**: Truth and Reconciliation process addressed trust deficits through symbolic acknowledgment and partial accountability
 
 The common factor is investment in "trust infrastructure"—institutions and practices that generate trust as a deliberate output rather than assuming it as background condition.
+
+**Trust Infrastructure Components** (see SI Section 16 for detailed analysis):
+
+| Component | Examples | Effectiveness (ΔH₃) |
+|-----------|----------|---------------------|
+| Constitutional | Checks and balances, rule of law | ±0.15 (protective) |
+| Deliberative | Citizens' assemblies, participatory budgeting | +0.02 to +0.08 |
+| Information | Public broadcasting, fact-checking, media literacy | +0.03 to +0.10 |
+| Social | Public spaces, community organizations | +0.02 to +0.06 |
+| Digital | Platform governance, algorithmic transparency | +0.05 to +0.12 |
+
+Critically, Law 7 (Intervention Law) indicates that these investments must occur before threshold crossing to be effective. The United States, for instance, shows strong constitutional infrastructure but severely degraded deliberative, information, and social infrastructure—a combination that may be insufficient to prevent continued trust decline.
 
 ### 5.3 Limitations
 
@@ -321,6 +354,8 @@ Turchin, P., & Nefedov, S.A. (2009). *Secular Cycles*. Princeton University Pres
 
 **Figure 5**: Early warning indicator presence across 35 collapsed cases, showing lead times before threshold crossing.
 
+**Figure 6**: The Twelve Laws of Coordination Collapse visualized, showing empirical relationships, threshold dynamics, and intervention windows.
+
 ---
 
 ## Supplementary Information
@@ -330,9 +365,13 @@ Comprehensive supplementary information is available, including:
 - SI Section 2-3: Complete empirical validation tables for all 39 cases
 - SI Section 4: Sensitivity analyses and hold-out validation results
 - SI Sections 5-9: Modern data sources, code availability, and theoretical extensions
-- SI Sections 10-46: Advanced theoretical frameworks (network theory, catastrophe theory, information theory)
-- SI Section 47: Complete bibliography
+- SI Sections 10-15: Network theory, catastrophe theory, and information-theoretic frameworks
+- **SI Section 16: Intervention Engineering and Trust Infrastructure** (detailed ROI analysis)
+- SI Sections 17-23: Extended theoretical frameworks
+- **SI Section 24: Collective Intelligence and the Twelve Laws of Coordination Collapse** (full derivations)
+- SI Sections 25-46: Extended case studies, regional analyses, and quantitative tools
+- SI Section 47: Complete bibliography (200+ references)
 
 ---
 
-*Word Count: ~8,200*
+*Word Count: ~9,200*
