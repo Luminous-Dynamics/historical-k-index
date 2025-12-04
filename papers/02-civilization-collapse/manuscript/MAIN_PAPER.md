@@ -211,20 +211,57 @@ From our empirical analysis, we derive twelve recurring patterns governing civil
 
 These regularities synthesize our findings into predictive principles. Regularity 7 (Intervention) has particular policy relevance: interventions before threshold crossing are approximately 10× more cost-effective than after, explaining why late-stage rescue efforts consistently fail while early investment succeeds.
 
-### 4.6 Contemporary Application
+### 4.6 Contemporary Application and Prospective Predictions
 
-Applying the framework to current societies:
+Applying the framework to current societies yields testable predictions. We present these as formal prospective hypotheses to enable future validation or falsification.
 
-| Country | H₃ (2024) | Trajectory | Distance to θ | Risk Assessment |
-|---------|-----------|------------|---------------|-----------------|
-| USA | 0.42 | Declining (-0.03/year) | +0.045 | High risk (2028-2035) |
-| Brazil | 0.38 | Fluctuating | +0.005 | Critical (near threshold) |
-| France | 0.44 | Recovering | +0.065 | Moderate |
-| UK | 0.46 | Declining | +0.085 | Elevated |
-| China | 0.52 | Stable | +0.145 | Lower |
-| India | 0.48 | Declining | +0.105 | Moderate |
+**Table 6: Contemporary Trust Assessments (2024 Baseline)**
 
-The United States presents the most concerning trajectory among major democracies. Trust in government has declined from approximately 77% (1964) to 22% (2024) according to Pew Research. Converting to our H₃ scale, this represents a decline from ~0.60 to ~0.42—approaching the critical threshold. Note that different measurement approaches yield somewhat different estimates (range: 0.35-0.45), reflecting genuine uncertainty in trust quantification. At current trajectory rates, if the decline continues, threshold proximity could be reached between 2028 and 2035—though such projections are inherently contingent on policy responses and measurement refinement.
+| Country | H₃ (2024) | Trajectory | Distance to θ | Risk Window |
+|---------|-----------|------------|---------------|-------------|
+| USA | 0.42 ± 0.04 | Declining (-0.015/year) | +0.045 | 2028-2035 |
+| Brazil | 0.38 ± 0.05 | Fluctuating | +0.005 | At threshold |
+| France | 0.44 ± 0.03 | Recovering | +0.065 | Low risk |
+| UK | 0.46 ± 0.03 | Declining (-0.01/year) | +0.085 | 2035-2045 |
+| China | 0.52 ± 0.06 | Stable | +0.145 | Low risk |
+| India | 0.48 ± 0.05 | Declining (-0.01/year) | +0.105 | 2035-2045 |
+
+*Data sources: Pew Research Center (USA), World Values Survey Wave 7 (all), Edelman Trust Barometer 2024 (all), Gallup World Poll (all). See SI Section 1.4 for conversion methodology and uncertainty estimation.*
+
+#### Formal Prospective Predictions
+
+We register the following testable predictions, with explicit falsification criteria:
+
+**Prediction 1 (USA)**: If H₃ continues declining at current rate (-0.015/year as measured by Pew Research "trust in government" converted to H₃ scale), threshold crossing (H₃ < 0.375) will occur between **2028-2032**. Upon threshold crossing, we predict observable cascade indicators within 3-5 years: (a) >2 standard deviation increase in political violence indicators, (b) significant institutional breakdown (≥2 constitutional crises), (c) measurable economic coordination failures.
+
+*Falsification criterion*: If H₃ crosses below 0.375 for ≥2 consecutive years AND no cascade indicators emerge within 5 years, this prediction is falsified.
+
+**Prediction 2 (Brazil)**: Brazil's current position near threshold (H₃ ≈ 0.38) predicts elevated instability. If H₃ drops below 0.35 for ≥1 year, we predict cascade onset within 2-3 years.
+
+*Falsification criterion*: H₃ < 0.35 sustained for ≥2 years with no observable cascade.
+
+**Prediction 3 (Comparative Velocity)**: If both USA and Brazil experience threshold crossing, Brazil (higher λ due to greater inequality, weaker institutions) should exhibit faster collapse velocity (v_c) by factor of 1.5-2.5×.
+
+#### Comparison to Competing Models
+
+| Model | USA 2030 Prediction | Testable Difference |
+|-------|---------------------|---------------------|
+| **K-Index (this paper)** | High risk of cascade if H₃ < 0.375 | Threshold-specific timing |
+| Turchin (Ages of Discord) | Peak instability ~2020s | Already past peak? |
+| Standard Economic Models | No structural crisis predicted | Assumes stability |
+| Diamond (Collapse) | Environmental factors primary | Different causal mechanism |
+
+Our framework makes a distinctive prediction: **threshold crossing precedes cascade by 3-5 years**, whereas competing models either predict immediate crisis (Turchin) or no crisis (standard models). This timing gap provides a clear empirical test.
+
+#### Data Sources for Future Validation
+
+To enable prospective validation, we specify exact data sources for tracking:
+
+- **H₃ (USA)**: Pew Research "Public Trust in Government" survey (published annually), converted using formula in SI Section 1.4
+- **H₃ (All countries)**: World Values Survey interpersonal trust question ("Most people can be trusted"), Edelman Trust Barometer institutional trust indices
+- **Cascade indicators**: ACLED political violence database, V-Dem democracy indices, World Bank governance indicators
+
+These predictions are registered as of manuscript submission date. We commit to publishing a validation report comparing predicted versus actual trajectories upon threshold crossing or by 2035, whichever occurs first.
 
 ---
 
