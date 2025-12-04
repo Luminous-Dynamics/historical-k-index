@@ -273,6 +273,8 @@ Our finding that trust (H₃) serves as the "keystone" harmony aligns with theor
 
 The 0.375 threshold has an intuitive interpretation: it represents the point at which defection becomes the rational strategy for a majority of actors. Below this level, the expected cost of cooperation (being exploited by defectors) exceeds the expected benefit, triggering rational exit from cooperative arrangements.
 
+An important distinction emerges between **earned trust** (organic cooperation based on positive-sum expectations) and **manufactured trust** (compliance maintained through coercion, propaganda, or surveillance). Authoritarian regimes can persist with low earned trust by substituting manufactured compliance—the Soviet Union maintained coordination for decades through coercive mechanisms despite low organic trust. However, manufactured trust is fragile: it depends on continuous enforcement costs and collapses rapidly when enforcement weakens. This explains why totalitarian regimes often exhibit "sudden death" collapse patterns (Type II) rather than gradual decline—the manufactured trust evaporates quickly once the coercive apparatus falters. Our H₃ measurements primarily capture earned trust; manufactured trust appears in high governance (H₁) scores that mask underlying coordination fragility.
+
 ### 5.2 Implications for Collapse Prevention
 
 Our framework suggests that collapse prevention should focus on trust maintenance rather than responding to downstream symptoms. Traditional interventions—economic stimulus, military strengthening, institutional reform—address consequences rather than causes. While such measures may provide temporary relief, they cannot reverse the cascade dynamics once H₃ falls below threshold.
@@ -308,6 +310,12 @@ Several limitations warrant acknowledgment:
 **Selection Bias**: Our sample necessarily emphasizes "famous" collapses with sufficient documentation. Societies that collapsed without leaving extensive records are underrepresented.
 
 **Measurement Challenges**: Converting qualitative historical evidence to quantitative scores involves judgment calls. While inter-coder reliability (α > 0.85) is acceptable, systematic biases may persist.
+
+**Cross-Era Calibration**: Ancient H₃ measurement relies on behavioral inference (institutional records, archaeological patterns of cooperation/conflict), while modern H₃ measurement relies on sentiment surveys (stated trust levels). These are ontologically different: ancient measures capture revealed trust through actions; modern measures capture reported trust through self-assessment. While calibration using "anchor cases" (British Empire, Weimar Germany, Soviet Union) shows reasonable alignment (factor = 1.046 ± 0.02), the underlying constructs may not be perfectly equivalent. This represents a fundamental limitation of any cross-temporal comparison.
+
+**Dark Trust Uncertainty**: Our "Dark Trust" concept—unmeasured coordination capacity including habitual trust (routine expectations), narrative trust (shared identity stories), and network trust (relational capital)—represents approximately 40% of total trust infrastructure based on survey calibration gaps. However, this estimate is indirect and may vary significantly across cultures and eras. The methodology for estimating unmeasured trust remains imprecise.
+
+**Marginal Cases**: While LOOCV accuracy is 89%, some cases fit poorly. The Carolingian Empire prediction erred by 25 years (predicted 843 CE, actual collapse process 840-888 CE), likely due to the unusual "negotiated partition" rather than coordination failure. The Sassanid Empire shows similar ambiguity—the Arab conquest (651 CE) may represent external military defeat rather than internal collapse dynamics.
 
 ### 5.4 Theoretical Extensions
 
