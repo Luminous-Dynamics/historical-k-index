@@ -28,6 +28,8 @@ from matplotlib.lines import Line2D
 from dataclasses import dataclass
 from typing import List, Dict, Tuple, Optional
 import os
+import csv
+from pathlib import Path
 
 # Style settings for publication
 plt.style.use('seaborn-v0_8-whitegrid')
@@ -70,65 +72,136 @@ class HistoricalCase:
     H3_values: List[float]
     collapsed: bool
     threshold_crossing: Optional[float] = None
+    harmonies: Optional[Dict[str, List[float]]] = None  # All 7 harmonies
 
 
-# Historical case data (stylized for visualization)
-CASES = {
-    'rome': HistoricalCase(
-        name='Western Roman Empire',
-        color=COLORS['rome'],
-        times=[150, 200, 235, 270, 284, 320, 350, 380, 410, 450, 476],
-        K_values=[0.78, 0.70, 0.55, 0.35, 0.45, 0.48, 0.50, 0.45, 0.38, 0.28, 0.20],
-        H3_values=[0.70, 0.60, 0.40, 0.30, 0.38, 0.40, 0.42, 0.38, 0.32, 0.25, 0.18],
-        collapsed=True,
-        threshold_crossing=235
-    ),
-    'maya': HistoricalCase(
-        name='Classic Maya (Southern)',
-        color=COLORS['maya'],
-        times=[600, 650, 700, 750, 800, 830, 860, 900],
-        K_values=[0.76, 0.74, 0.70, 0.60, 0.45, 0.35, 0.28, 0.22],
-        H3_values=[0.65, 0.62, 0.58, 0.50, 0.40, 0.32, 0.26, 0.20],
-        collapsed=True,
-        threshold_crossing=800
-    ),
-    'bronze': HistoricalCase(
-        name='Bronze Age Mediterranean',
-        color=COLORS['bronze'],
-        times=[-1250, -1225, -1200, -1177, -1150, -1100],
-        K_values=[0.75, 0.70, 0.58, 0.40, 0.30, 0.25],
-        H3_values=[0.60, 0.55, 0.48, 0.35, 0.28, 0.22],
-        collapsed=True,
-        threshold_crossing=-1200
-    ),
-    'soviet': HistoricalCase(
-        name='Soviet Union',
-        color=COLORS['soviet'],
-        times=[1960, 1970, 1975, 1980, 1985, 1988, 1989, 1990, 1991],
-        K_values=[0.65, 0.60, 0.55, 0.50, 0.45, 0.38, 0.32, 0.28, 0.20],
-        H3_values=[0.50, 0.45, 0.40, 0.38, 0.32, 0.28, 0.25, 0.22, 0.18],
-        collapsed=True,
-        threshold_crossing=1985
-    ),
-    'egypt': HistoricalCase(
-        name='Ancient Egypt',
-        color=COLORS['egypt'],
-        times=[-1300, -1250, -1200, -1150, -1100, -1050, -1000],
-        K_values=[0.70, 0.68, 0.55, 0.50, 0.52, 0.55, 0.58],
-        H3_values=[0.60, 0.58, 0.48, 0.45, 0.48, 0.50, 0.52],
-        collapsed=False,
-        threshold_crossing=None
-    ),
-    'byzantium': HistoricalCase(
-        name='Byzantine Empire',
-        color=COLORS['byzantium'],
-        times=[400, 500, 600, 700, 800, 900, 1000, 1100],
-        K_values=[0.52, 0.58, 0.60, 0.48, 0.52, 0.58, 0.65, 0.55],
-        H3_values=[0.45, 0.50, 0.52, 0.42, 0.45, 0.50, 0.55, 0.48],
-        collapsed=False,
-        threshold_crossing=None
-    )
-}
+def load_empirical_data(csv_path: str = None) -> Dict[str, HistoricalCase]:
+    """
+    Load empirical case study data from CSV file.
+
+    Data source: papers/02-civilization-collapse/data/collapse_cases_empirical.csv
+    Based on peer-reviewed archaeological and historical scholarship.
+    """
+    if csv_path is None:
+        # Find the data directory relative to this script
+        script_dir = Path(__file__).parent
+        csv_path = script_dir.parent / 'data' / 'collapse_cases_empirical.csv'
+
+    cases = {}
+    case_names = {
+        'rome': 'Western Roman Empire',
+        'bronze': 'Bronze Age Mediterranean',
+        'maya': 'Classic Maya',
+        'soviet': 'Soviet Union',
+        'egypt_fip': 'Egypt (First Intermediate)',
+        'egypt_sip': 'Egypt (Second Intermediate)',
+        'egypt_sea': 'Egypt (Sea Peoples Era)',
+        'byzantium': 'Byzantine Empire'
+    }
+
+    # Read data
+    data_by_case = {}
+    try:
+        with open(csv_path, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row['case'].startswith('#'):
+                    continue
+                case_id = row['case']
+                if case_id not in data_by_case:
+                    data_by_case[case_id] = {
+                        'years': [],
+                        'K_values': [],
+                        'H3_values': [],
+                        'H1': [], 'H2': [], 'H4': [], 'H5': [], 'H6': [], 'H7': [],
+                        'collapsed': row['collapsed'] == 'TRUE',
+                        'threshold_year': row['threshold_year'] if row['threshold_year'] else None
+                    }
+                data_by_case[case_id]['years'].append(float(row['year']))
+                data_by_case[case_id]['K_values'].append(float(row['K_index']))
+                data_by_case[case_id]['H3_values'].append(float(row['H3']))
+                for h in ['H1', 'H2', 'H4', 'H5', 'H6', 'H7']:
+                    data_by_case[case_id][h].append(float(row[h]))
+    except FileNotFoundError:
+        print(f"Warning: Empirical data file not found at {csv_path}")
+        print("Using fallback hardcoded data")
+        return get_fallback_cases()
+
+    # Build case objects
+    for case_id, data in data_by_case.items():
+        base_case = case_id.split('_')[0]  # Handle egypt_fip -> egypt
+        color_key = base_case if base_case in COLORS else 'egypt'
+
+        threshold = None
+        if data['threshold_year']:
+            threshold = float(data['threshold_year'])
+
+        cases[case_id] = HistoricalCase(
+            name=case_names.get(case_id, case_id.replace('_', ' ').title()),
+            color=COLORS.get(color_key, '#808080'),
+            times=data['years'],
+            K_values=data['K_values'],
+            H3_values=data['H3_values'],
+            collapsed=data['collapsed'],
+            threshold_crossing=threshold,
+            harmonies={
+                'H1': data['H1'],
+                'H2': data['H2'],
+                'H3': data['H3_values'],
+                'H4': data['H4'],
+                'H5': data['H5'],
+                'H6': data['H6'],
+                'H7': data['H7']
+            }
+        )
+
+    return cases
+
+
+def get_fallback_cases() -> Dict[str, HistoricalCase]:
+    """Fallback hardcoded data if CSV not available"""
+    return {
+        'rome': HistoricalCase(
+            name='Western Roman Empire',
+            color=COLORS['rome'],
+            times=[200, 284, 350, 400, 430, 476],
+            K_values=[0.82, 0.56, 0.59, 0.49, 0.37, 0.22],
+            H3_values=[0.75, 0.40, 0.50, 0.38, 0.35, 0.20],
+            collapsed=True,
+            threshold_crossing=430
+        ),
+        'maya': HistoricalCase(
+            name='Classic Maya',
+            color=COLORS['maya'],
+            times=[750, 800, 830, 850, 900],
+            K_values=[0.69, 0.54, 0.42, 0.36, 0.23],
+            H3_values=[0.65, 0.50, 0.35, 0.30, 0.20],
+            collapsed=True,
+            threshold_crossing=830
+        ),
+        'bronze': HistoricalCase(
+            name='Bronze Age Mediterranean',
+            color=COLORS['bronze'],
+            times=[1250, 1207, 1177, 1150],
+            K_values=[0.79, 0.64, 0.43, 0.25],
+            H3_values=[0.75, 0.45, 0.30, 0.20],
+            collapsed=True,
+            threshold_crossing=1177
+        ),
+        'soviet': HistoricalCase(
+            name='Soviet Union',
+            color=COLORS['soviet'],
+            times=[1985, 1988, 1989, 1990, 1991],
+            K_values=[0.63, 0.55, 0.50, 0.44, 0.32],
+            H3_values=[0.45, 0.40, 0.35, 0.30, 0.20],
+            collapsed=True,
+            threshold_crossing=1989
+        )
+    }
+
+
+# Load empirical data (falls back to hardcoded if CSV not found)
+CASES = load_empirical_data()
 
 
 def figure_1_k_index_trajectories(output_dir: str = 'outputs/figures'):
@@ -325,8 +398,9 @@ def figure_4_survivor_comparison(output_dir: str = 'outputs/figures'):
         ax.plot(normalized_times, case.H3_values, '-', color=case.color,
                 linewidth=2, alpha=0.8, label=f'{case.name} (Collapsed)')
 
-    # Plot survivors
-    for case_key in ['egypt', 'byzantium']:
+    # Plot survivors - use egypt_sea (Sea Peoples Era) for comparison with Bronze Age
+    survivor_keys = [k for k in ['egypt_sea', 'byzantium'] if k in CASES]
+    for case_key in survivor_keys:
         case = CASES[case_key]
         normalized_times = np.linspace(0, 100, len(case.times))
         ax.plot(normalized_times, case.H3_values, '--', color=case.color,
