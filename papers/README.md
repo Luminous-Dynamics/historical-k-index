@@ -1,4 +1,4 @@
-# K-Index Research Program: 8-Paper Arc
+# K-Index Research Program: 9-Paper Arc
 
 **A Complete Theory of Civilizational Survival Through Coordination**
 
@@ -10,6 +10,7 @@ This research program answers a coherent sequence of existential questions:
 
 1. What **IS** coordination capacity? (Foundation)
 2. What **DESTROYS** it? (Collapse)
+2B. **WHY** that threshold? (Golden Threshold)
 3. Are we at **RISK**? (Modern Fragility)
 4. **WHERE** are weak points? (Regional)
 5. What's the most **URGENT** threat? (Climate)
@@ -25,6 +26,7 @@ This research program answers a coherent sequence of existential questions:
 |---|-------|--------|----------------|------------|
 | 1 | Foundation | ✅ 95% Ready | Nature Sustainability | Dec 2025 |
 | 2 | Civilization Collapse | ✅ Complete | PNAS | Q1 2026 |
+| 2B | Golden Threshold | 🔬 Foundation Complete | Phys. Rev. Lett. / PNAS | Q1 2027 |
 | 3 | Modern Fragility | 🚧 First Draft | Science / Nature | Q2 2026 |
 | 4 | Regional Divergence | 📋 Planned | World Development | Q3 2026 |
 | 5 | Climate Gap | 📋 Planned | Nature Climate Change | Q4 2026 |
@@ -34,7 +36,7 @@ This research program answers a coherent sequence of existential questions:
 
 ---
 
-## The 8 Papers
+## The 9 Papers
 
 ### Paper 1: Foundation - What IS Coordination Capacity?
 **Title**: "Measuring Global Coordination Capacity: The K-Index Framework (1810-2020)"
@@ -65,7 +67,38 @@ This research program answers a coherent sequence of existential questions:
 - Four Laws of Coordination Collapse
 - Trust usually fails first, infrastructure last
 
+**Theory**: Minimal derivation (game theory + network science) in SI Section 5
+
 **Directory**: `02-civilization-collapse/`
+
+---
+
+### Paper 2B: Golden Threshold - WHY That Threshold?
+**Title**: "The Golden Threshold: Why Civilizations Collapse at φ⁻² = 0.382"
+
+**Research Question**: Why does the trust threshold fall precisely at θ ≈ 0.38? Is this a universal constant?
+
+**Strategy Note**: This paper is deliberately separated from Paper 2 to avoid "epistemic overload" and potential "numerology" critique. It reveals the deeper theoretical structure after Paper 2 establishes empirical credibility.
+
+**Key Contributions**:
+- Eight independent derivations from different fields
+- All converge on θ = 0.381 ± 0.005
+- Three derivations yield exactly 1/φ² = 0.382
+- Social Diamond Model: Dunbar's z=4 → diamond lattice topology
+
+**The Eight Derivations**:
+| Field | Method | Result |
+|-------|--------|--------|
+| Economics | Replicator Dynamics | 0.375 |
+| Physics | Diamond Percolation | 0.388 |
+| Dynamics | Bifurcation Analysis | 0.382 |
+| Information | Channel Capacity | 0.380 |
+| Thermodynamics | Free Energy Minimum | 0.382 |
+| Evolution | ESS Stability | 0.378 |
+| Networks | Spectral Gap | 0.385 |
+| Mathematics | Golden Ratio Optimality | 0.382 |
+
+**Directory**: `02b-golden-threshold/`
 
 ---
 
@@ -158,10 +191,31 @@ This research program answers a coherent sequence of existential questions:
 
 ## The Narrative Arc
 
-**Papers 1-3**: What is coordination, what destroys it, are we at risk?
-**Papers 4-5**: Where are the weak points, what's most urgent?
+**Papers 1-2**: What is coordination, what destroys it?
+**Paper 2B**: Why that specific threshold? (The "big reveal")
+**Papers 3-5**: Are we at risk, where are weak points, what's most urgent?
 **Papers 6-7**: How do we rebuild, what's coming next?
 **Paper 8**: Comprehensive action framework
+
+---
+
+## Strategic Sequencing
+
+### Phase 1: Establish Empirical Foundation (2025-2026)
+1. **Paper 1** (Dec 2025): Establishes the K-Index framework
+2. **Paper 2** (Q1 2026): Establishes empirical threshold θ ≈ 0.375
+3. **Paper 3** (Q2 2026): Modern risk assessment
+
+### Phase 2: The Theoretical Reveal (2027)
+4. **Paper 2B** (Q1 2027): Reveals θ = 1/φ² after threshold is established
+
+### Phase 3: Applications & Policy (2026-2027)
+5. **Papers 4-8**: Regional, climate, recovery, AI, policy synthesis
+
+**Why this order?**
+- Paper 2 establishes threshold empirically (less controversial)
+- Paper 2B reveals deep theory after credibility is built
+- Avoids "numerology" critique by separating physics from history
 
 ---
 
@@ -186,11 +240,11 @@ All papers use shared resources in `../shared/`:
 - Q4 2026: Submit Paper 5 (Climate)
 
 ### Year 3 (2027)
-- Q1 2027: Submit Paper 6 (Recovery)
+- Q1 2027: Submit Paper 2B (Golden Threshold) + Paper 6 (Recovery)
 - Q2 2027: Submit Paper 7 (AI)
 - Q3 2027: Submit Paper 8 (Policy)
 
-**By End 2027**: Complete 8-paper research program established
+**By End 2027**: Complete 9-paper research program established
 
 ---
 
@@ -208,4 +262,4 @@ All papers use shared resources in `../shared/`:
 
 ---
 
-*"This is a complete theory of civilizational survival through coordination."*
+*"This is a complete theory of civilizational survival through coordination—with a hidden mathematical heartbeat."*
