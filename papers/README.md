@@ -24,8 +24,8 @@ This research program answers a coherent sequence of existential questions:
 | # | Paper | Status | Target Journal | Submission |
 |---|-------|--------|----------------|------------|
 | 1 | Foundation | ✅ 95% Ready | Nature Sustainability | Dec 2025 |
-| 2 | Civilization Collapse | 🚧 In Progress | PNAS | Q1 2026 |
-| 3 | Modern Fragility | 📋 Planned | Science / Nature | Q2 2026 |
+| 2 | Civilization Collapse | ✅ Complete | PNAS | Q1 2026 |
+| 3 | Modern Fragility | 🚧 First Draft | Science / Nature | Q2 2026 |
 | 4 | Regional Divergence | 📋 Planned | World Development | Q3 2026 |
 | 5 | Climate Gap | 📋 Planned | Nature Climate Change | Q4 2026 |
 | 6 | Recovery Mechanisms | 📋 Planned | J. Development Economics | Q1 2027 |
