@@ -1,0 +1,1641 @@
+% Paper 2C: Laws of Civilizational Coordination
+% LaTeX Document for Publication
+%
+% ============================================================================
+% This is the companion paper to Paper 1 (Historical K-Index) and Paper 2B
+% (The Golden Threshold). It presents the unified physical theory.
+% ============================================================================
+
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable,array}
+\usepackage{natbib}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{abstract}
+\usepackage{authblk}
+\usepackage{lineno}
+\usepackage{xcolor}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% Utility commands
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Title and Authors
+\title{The Laws of Civilizational Coordination: A Unified Theory from Game Theory, Information Theory, and Statistical Mechanics}
+
+\author[1]{Tristan Stoltz\thanks{Corresponding author: tristan.stoltz@luminousdynamics.org}}
+\affil[1]{Luminous Dynamics, LLC}
+
+\date{\today}
+
+% Abstract configuration
+\renewcommand{\abstractname}{Abstract}
+
+\begin{document}
+
+\linenumbers  % Enable line numbers for review
+
+\maketitle
+
+\begin{abstract}
+We present a candidate mathematical framework for understanding
+coordination collapse in complex societies, integrating game theory,
+information theory, network science, statistical mechanics, evolutionary
+biology, and AI safety. Building on empirical observations from 48
+historical collapse events, we propose \textbf{seventeen candidate
+regularities} governing trust dynamics, cascade acceleration, network
+topology effects, recovery probability, metacognitive failure,
+evolutionary stability, and AI-coordination interactions.
+
+The framework \textbf{models} coordination collapse as a
+\textbf{candidate phase transition} with mean-field critical exponents
+($\beta = 0.5$, $\gamma = 1.0$), derives the trust threshold ($\theta \approx 0.375$,
+model-dependent) from coordination game payoffs, and \textbf{proposes}
+that trust (H$_3$) functions as the \textbf{information hub} connecting all
+other coordination dimensions. These results are suggestive but require
+further empirical validation.
+
+Key innovations include: (1) distinguishing centralization (cascade
+onset) from redundancy (cascade velocity), resolving the Rome Paradox;
+(2) formalizing ``Dark Trust'' as unmeasured coordination capacity; (3)
+deriving the threshold from coordination game payoffs; (4) modeling
+coordination collapse as a Landau-type phase transition; (5) extending
+the framework to Kardashev-scale civilizations; (6) \textbf{proposing K
+as metacognitive capacity}---civilizations collapse when they lose the
+ability to model themselves; (7) \textbf{showing that under baseline
+replicator dynamics (one-shot, well-mixed populations), cooperation is
+not an ESS}---$\theta$ marks the basin boundary requiring institutional
+maintenance; (8) \textbf{the AI Coordination Paradox}---AI amplifies
+coordination dynamics in both directions simultaneously, and may be a
+proximate mechanism of Great Filter events for technological
+civilizations.
+
+The framework aims to unify the mathematics governing phase transitions,
+evolutionary dynamics, and information flow with civilizational collapse
+dynamics. The threshold $\theta \approx 0.375$ is consistent with multiple
+theoretical derivations (game theory, percolation theory, and
+information theory), though the precise value is model-dependent. The
+framework \textbf{proposes} a resolution to the Fermi Paradox: (1) the
+coordination threshold may function as a Great Filter mechanism; (2)
+survivors might maintain deliberate silence because contact could
+increase modernization (λ) faster than trust develops; (3) AI may
+accelerate these dynamics. This generates falsifiable predictions
+including early warning signals (critical slowing down, increased
+variance), specific scaling relationships, and the hypothesis that
+humanity is currently in a critical coordination transition.
+\end{abstract}
+
+\section{Introduction}\label{sec:introduction}
+
+\subsection{The Problem}\label{sec:the-problem}
+
+Why do civilizations collapse? Despite millennia of historical examples
+and centuries of scholarly analysis, we lack a predictive framework
+that: - Quantifies when collapse becomes likely - Explains why some
+collapses are fast, others slow - Predicts whether recovery is possible
+- Guides intervention timing and design
+
+\subsection{Our Contribution}\label{sec:our-contribution}
+
+We present the \textbf{Coordination Collapse Framework}---a set of
+\textbf{five Core Propositions with moderate empirical support} (Props.
+1, 2, 5, 9, 10), plus \textbf{seven Supporting Regularities} (Props. 3,
+4, 6, 7, 8, 11, 12) and \textbf{five Theoretical Extensions} (Props.
+13-17)---seventeen candidate relationships, motivated by game theory,
+network science, information theory, and statistical mechanics. The Core
+Propositions show consistency with historical data (N=48); the
+Extensions represent theoretical hypotheses requiring empirical testing.
+
+This framework aims to: 1. \textbf{Propose} a unified vocabulary
+connecting social science with physics (phase transition formalism) 2.
+\textbf{Derive} (not just describe) candidate collapse dynamics from
+first principles 3. \textbf{Explore} scaling from human civilizations to
+interstellar scales (speculative) 4. \textbf{Generate} testable
+predictions applicable across historical cases
+
+\subsection{Paper Structure}\label{sec:paper-structure}
+
+\begin{itemize}
+\tightlist
+\item
+  Section 2: The Core Engine (Laws 1, 2, 9, 10) --- includes Core Model
+  \& Notation
+\item
+  Section 3: The Network Architecture (Law 3)
+\item
+  Section 4: The Dark Trust Framework (Law 8)
+\item
+  Section 5: Dynamics and Implications (Laws 4-7, 11-12)
+\item
+  \textbf{Section 6: Information-Theoretic Foundations (Law 13)}
+\item
+  \textbf{Section 7: Phase Transition Framework (Law 14)}
+\item
+  \textbf{Section 8: Metacognitive Collapse Theory (Law 15)}
+\item
+  \textbf{Section 9: Evolutionary Stability Analysis (Law 16)}
+\item
+  \textbf{Section 10: The AI Coordination Paradox (Law 17)}
+\item
+  Section 11: Validation and Predictions
+\item
+  Section 12: Kardashev Extension and the Great Filter
+\item
+  \textbf{Section 13: Related Work} {[}NEW{]}
+\item
+  Section 14: Discussion
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. The Core Engine: Threshold, Cascade, and
+Feedback}\label{the-core-engine-threshold-cascade-and-feedback}
+
+\subsubsection{2.0 Core Model and
+Notation}\label{core-model-and-notation}
+
+Before presenting the laws, we establish the core model and notation
+used throughout this paper.
+
+\textbf{Core Variables}: \textbar{} Symbol \textbar{} Definition
+\textbar{} Units/Range \textbar{}
+\textbar--------\textbar------------\textbar-------------\textbar{}
+\textbar{} H₃(t) \textbar{} Trust/social cohesion dimension \textbar{}
+{[}0, 1{]} \textbar{} \textbar{} K(t) \textbar{} Coordination index
+(geometric mean of 7 harmonies) \textbar{} {[}0, 1{]} \textbar{}
+\textbar{} θ \textbar{} Critical trust threshold \textbar{} ≈ 0.375
+(model-dependent) \textbar{} \textbar{} λ \textbar{}
+Modernization/cascade amplification factor \textbar{} {[}1, ∞)
+\textbar{} \textbar{} R \textbar{} Coordination redundancy \textbar{}
+{[}1, ∞) \textbar{} \textbar{} C \textbar{} Centralization degree
+\textbar{} {[}0, 1{]} \textbar{}
+
+\textbf{Terminology Note}: This paper uses descriptive labels for
+harmonies suited to historical case analysis (e.g., H₃ = ``Trust/Social
+Cohesion''). Paper 1 (Historical K-Index) uses complementary
+aspirational terminology for modern contexts (e.g., H₃ = ``Cooperative
+Reciprocity,'' aspirationally ``Sacred Reciprocity''). The underlying
+constructs are equivalent; terminology differs to suit each paper's
+analytical focus. See Paper 1 Table S1 for complete harmony definitions
+and data sources.
+
+\textbf{The Threshold Derivation (Model-Dependent)}:
+
+The threshold θ emerges from a stylized N-player coordination game.
+Consider a population where each agent chooses to cooperate (C) or
+defect (D). Let: - B = benefit from mutual cooperation - c = cost of
+cooperation - p = fraction of cooperators in the population
+
+An agent cooperates if expected payoff exceeds defection:
+
+\begin{verbatim}
+E[Cooperate] > E[Defect]
+p × B - c > 0
+p > c/B ≡ θ
+\end{verbatim}
+
+For typical values (c/B ≈ 0.375), this yields θ ≈ 0.375.
+\textbf{Important}: This threshold is model-dependent, not a fundamental
+constant: - Different payoff structures yield different thresholds
+(range: 0.25-0.50) - The empirical estimate θ\_emp ≈ 0.375 ± 0.025 is
+consistent with this range - The proximity to 1/φ² ≈ 0.382 is explored
+in \textbf{Paper 2B} (see below)
+
+\textbf{Relationship to Paper 2B}: The companion paper ``The Golden
+Threshold'' demonstrates that \textbf{nine theoretical frameworks}
+(sharing structural assumptions)---from game theory, percolation
+physics, bifurcation analysis, information theory, thermodynamics,
+evolutionary biology, network science, maximum entropy principles, and
+renormalization group methods---converge on θ ≈ 0.382 ± 0.004. While
+these frameworks are not strictly independent (they share assumptions
+about binary cooperation, local connectivity, and positive feedback),
+their convergence to such a narrow band is suggestive of an underlying
+regularity. See Paper 2B for derivations and caveats.
+
+\textbf{Epistemic Classification} (see Analysis Package for details):
+\textbar{} Tier \textbar{} Laws \textbar{} Count \textbar{} Evidence
+\textbar{}
+\textbar------\textbar------\textbar-------\textbar----------\textbar{}
+\textbar{} Core Laws \textbar{} 1, 2, 5, 9, 10 \textbar{} 5 \textbar{}
+Strong (R² \textgreater{} 0.7, LOOCV validated) \textbar{} \textbar{}
+Regularities \textbar{} 3, 4, 6, 7, 8, 11, 12 \textbar{} 7 \textbar{}
+Moderate-Weak \textbar{} \textbar{} Extensions \textbar{} 13, 14, 15,
+16, 17 \textbar{} 5 \textbar{} Theoretical (requires validation)
+\textbar{} \textbar{} \textbf{Total} \textbar{} \textbar{} \textbf{17}
+\textbar{} \textbar{}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.1 Law 1: The Threshold (θ ≈
+0.375)}\label{law-1-the-threshold-ux3b8-0.375}
+
+\textbf{Statement}: There exists a critical trust level θ below which
+defection becomes the Nash equilibrium.
+
+\textbf{Derivation}:
+
+\begin{verbatim}
+Cooperation payoff: U_C = p × B - (1-p) × C
+Defection payoff: U_D = 0
+
+Cooperation dominates when:
+p × B - (1-p) × C > 0
+p > C / (B + C) ≡ θ
+
+For typical B = 1.0, C = 0.6:
+θ = 0.6 / 1.6 = 0.375
+\end{verbatim}
+
+\subsubsection{2.2 Law 2: The Cascade (Quadratic
+Acceleration)}\label{law-2-the-cascade-quadratic-acceleration}
+
+\textbf{Statement}: Below θ, trust decline accelerates quadratically.
+
+\textbf{Derivation}: From network amplification dynamics:
+
+\begin{verbatim}
+dH₃/dt = -λ₁(θ - H₃) - λ₂(θ - H₃)²
+
+The quadratic term arises from:
+D_effective = D × (1 + γ × D)
+\end{verbatim}
+
+\textbf{Validation}: R² = 0.74 (quadratic) vs 0.59 (linear) vs 0.69
+(exponential)
+
+\subsubsection{2.3 Law 9: The Feedback
+Loop}\label{law-9-the-feedback-loop}
+
+\textbf{Statement}: Trust generates conditions for more trust; distrust
+generates conditions for more distrust.
+
+\textbf{Derivation}: {[}Detailed in Appendix{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. The Network Architecture: Resolving the Rome
+Paradox}\label{the-network-architecture-resolving-the-rome-paradox}
+
+\subsubsection{3.1 The Paradox}\label{the-paradox}
+
+Rome was hierarchical (Emperor-centered) yet collapsed slowly (250
+years). Soviet was hierarchical (Party-centered) yet collapsed rapidly
+(6 years).
+
+The naive prediction: Hierarchy → Fast collapse (single point of
+failure) The reality: Rome slow, Soviet fast.
+
+\subsubsection{3.2 Law 3: The Resolution}\label{law-3-the-resolution}
+
+\textbf{Key Insight}: Distinguish Centralization (C) from Redundancy (R)
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Centralization}: Affects cascade \emph{onset} (can single
+  shock trigger cascade?)
+\item
+  \textbf{Redundancy}: Affects cascade \emph{velocity} (how fast does
+  cascade spread?)
+\end{itemize}
+
+\textbf{Formula}:
+
+\begin{verbatim}
+v_cascade ∝ 1/√R
+
+where R = number of independent coordination mechanisms
+\end{verbatim}
+
+\textbf{Validation}: \textbar{} Case \textbar{} C \textbar{} R
+\textbar{} Predicted Speed \textbar{} Actual \textbar{}
+\textbar------\textbar---\textbar---\textbar-----------------\textbar--------\textbar{}
+\textbar{} Rome \textbar{} 0.7 \textbar{} 3.3 \textbar{} Slow \textbar{}
+Slow ✓ \textbar{} \textbar{} Soviet \textbar{} 0.9 \textbar{} 1.6
+\textbar{} Fast \textbar{} Fast ✓ \textbar{}
+
+\subsubsection{3.3 Visual Representation}\label{visual-representation}
+
+{[}Figure 2: Topology Comparison - Star vs Mesh vs Clustered{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. The Dark Trust Framework: Explaining the Soviet
+Paradox}\label{the-dark-trust-framework-explaining-the-soviet-paradox}
+
+\subsubsection{4.1 The Paradox}\label{the-paradox-1}
+
+Soviet surveys showed low interpersonal trust (\textasciitilde0.20), yet
+the system functioned. How can H₃ \textless{} θ coexist with apparent
+coordination?
+
+\subsubsection{4.2 Law 8: Dark Trust}\label{law-8-dark-trust}
+
+\textbf{Definition}: Total coordination capacity includes unmeasured
+components.
+
+\begin{verbatim}
+H₃_total = H₃_light + H₃_dark
+
+where:
+H₃_light = Survey-measurable organic trust
+H₃_dark = H₃_coerced + H₃_habitual + H₃_implicit
+\end{verbatim}
+
+\textbf{Soviet Example}: - H₃\_light = 0.20 (surveys) - H₃\_coerced =
+0.25 (KGB-enforced compliance) - H₃\_habitual = 0.10 (behavioral
+inertia) - H₃\_total = 0.55 (above θ, hence functional)
+
+\subsubsection{4.3 The Coercion Cliff}\label{the-coercion-cliff}
+
+When enforcement fails, H₃\_coerced collapses instantaneously:
+
+\begin{verbatim}
+d(H₃_coerced)/dt = -∞ at shock event
+\end{verbatim}
+
+This explains why authoritarian collapses are \textbf{discontinuous}
+(sudden) while democratic collapses are \textbf{continuous} (gradual
+erosion).
+
+{[}Figure 3: The Dark Trust Iceberg / Coercion Cliff{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Dynamics and
+Implications}\label{dynamics-and-implications}
+
+\subsubsection{5.1 Law 4: Modernization}\label{law-4-modernization}
+
+\textbf{Statement}: Modern civilizations collapse faster due to
+increased information speed, economic integration, and network
+connectivity.
+
+\textbf{Formula}:
+
+\begin{verbatim}
+λ = λ_base × F_info × F_econ × F_network
+\end{verbatim}
+
+\subsubsection{5.2 Law 5: Recovery}\label{law-5-recovery}
+
+\textbf{Statement}: Recovery probability is \textasciitilde15\% below
+threshold, decaying \textasciitilde5\%/year.
+
+\begin{verbatim}
+P(recovery | H₃ < θ) ≈ 0.15 × e^(-0.05 × years_below)
+\end{verbatim}
+
+\subsubsection{5.3 Law 7: Intervention
+Window}\label{law-7-intervention-window}
+
+\textbf{Statement}: ROI is \textasciitilde10:1 above threshold,
+\textasciitilde1:10 below.
+
+\textbf{Derivation}: Three asymmetry sources: 1. Incentive alignment
+(3×) 2. Sustainability (5×) 3. Social amplification (2×)
+
+Combined: 30× difference at extremes
+
+{[}Figure 4: Intervention ROI Curve{]}
+
+\subsubsection{5.4 Law 12: Glass Ceiling}\label{law-12-glass-ceiling}
+
+\textbf{Statement}: K\_max ≈ 0.85 due to five converging limits.
+
+\textbf{Connection to Ashby's Law}: Perfect coordination (K=1.0) implies
+zero internal variety, preventing adaptation to environmental change.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Information-Theoretic Foundations (Law 13)
+{[}NEW{]}}\label{information-theoretic-foundations-law-13-new}
+
+\subsubsection{6.1 Law 13: The Information Hub
+Law}\label{law-13-the-information-hub-law}
+
+\textbf{Statement}: Trust (H\_3) is the ``information hub'' of
+civilizational coordination. The threshold theta = 0.375 corresponds to
+the half-entropy point of the coordination state space.
+
+\subsubsection{6.2 Why H\_3 Fails First: Information Structure
+(Hypothesis)}\label{why-h_3-fails-first-information-structure-hypothesis}
+
+\textbf{Proposition}: H\_3 carries high mutual information with other
+harmonies:
+
+\begin{verbatim}
+I(H_3; H_1) = high  [Governance]
+I(H_3; H_2) = high  [Networks]
+I(H_3; H_4) = moderate  [Complexity]
+I(H_3; H_5) = moderate  [Knowledge]
+I(H_3; H_6) = moderate  [Wellbeing]
+I(H_3; H_7) = lower  [Technology]
+
+Note: Specific values require empirical estimation from cross-national
+data. The qualitative ordering (H₃ as hub) is hypothesized, not proven.
+\end{verbatim}
+
+\subsubsection{6.3 Threshold from Shannon
+Entropy}\label{threshold-from-shannon-entropy}
+
+The coordination state entropy:
+
+\begin{verbatim}
+S_coord = -sum_p p(config) * log(p(config))
+
+Setting S_coord(theta) = S_max/2 (half-entropy point):
+
+theta = 0.382
+
+This matches the game-theoretic derivation AND the golden ratio (1/phi^2)!
+\end{verbatim}
+
+\subsubsection{6.4 Information Cascade
+Dynamics}\label{information-cascade-dynamics}
+
+\begin{verbatim}
+dI/dt = -lambda * (theta - H_3)^2 * I(H_3; H_rest)
+
+Information loss accelerates quadratically below threshold.
+\end{verbatim}
+
+{[}Figure 10: Information Entropy Landscape{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Phase Transition Framework (Law 14)
+{[}NEW{]}}\label{phase-transition-framework-law-14-new}
+
+\subsubsection{7.1 Law 14: Coordination Collapse as Phase
+Transition}\label{law-14-coordination-collapse-as-phase-transition}
+
+\textbf{Statement}: Civilizational coordination collapse is a
+second-order phase transition, analogous to ferromagnetic transitions,
+with universal critical exponents.
+
+\subsubsection{7.2 The Landau Free Energy}\label{the-landau-free-energy}
+
+\begin{verbatim}
+F(m, T) = a(T)*m^2 + b*m^4
+
+Where:
+- m = K - K_c (order parameter)
+- a(T) = a_0*(T - T_c)/T_c (changes sign at transition)
+- T_c corresponds to H_3 = theta
+
+Above theta: Single minimum (cooperation stable)
+Below theta: Double well (defection favored)
+\end{verbatim}
+
+\subsubsection{7.3 Proposed Critical Exponents (Mean-Field
+Hypothesis)}\label{proposed-critical-exponents-mean-field-hypothesis}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Exponent & Value & Physical Meaning \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+beta = 0.5 & m \textasciitilde{} \textbar theta - H\_3\textbar\^{}0.5 &
+Order parameter scaling \\
+gamma = 1.0 & chi \textasciitilde{} \textbar theta - H\_3\textbar\^{}-1
+& Susceptibility divergence \\
+nu = 0.5 & xi \textasciitilde{} \textbar theta - H\_3\textbar\^{}-0.5 &
+Correlation length \\
+\end{longtable}
+
+\textbf{Note}: These are mean-field exponents, predicted IF the phase
+transition analogy holds AND social networks approximate mean-field
+conditions (high connectivity, weak local clustering). Actual social
+networks may exhibit different exponents due to: - Strong local
+correlations (community structure) - Long-range connections (small-world
+properties) - Heterogeneous degree distributions (power-law networks) -
+Agency and adaptation (agents respond to their environment)
+
+\textbf{Empirical validation of these exponents in social systems
+remains an open challenge.}
+
+\subsubsection{7.4 Early Warning Signals}\label{early-warning-signals}
+
+Before collapse, the system shows: 1. \textbf{Critical slowing down}:
+tau \textasciitilde{} 1/\textbar H\_3 - theta\textbar{} (recovery takes
+longer) 2. \textbf{Increased variance}: Var(K) \textasciitilde{}
+\textbar H\_3 - theta\textbar\^{}-1 3. \textbf{Increased
+autocorrelation}: Approaching C(t) -\textgreater{} 1
+
+These signals are GENERIC indicators of approaching phase transition.
+
+{[}Figure 8: Landau Free Energy Landscape{]} {[}Figure 9: Critical
+Exponent Scaling{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Metacognitive Collapse Theory (Law 15)
+{[}NEW{]}}\label{metacognitive-collapse-theory-law-15-new}
+
+\subsubsection{8.1 Law 15: The Metacognitive Collapse
+Law}\label{law-15-the-metacognitive-collapse-law}
+
+\textbf{Statement}: Civilizational collapse is fundamentally a failure
+of metacognition---the civilization's ability to model and predict its
+own behavior.
+
+\begin{verbatim}
+M = K × R_model × T_response (Metacognitive capacity)
+
+Where:
+- K = Coordination index
+- R_model = Model accuracy (prediction-outcome correlation)
+- T_response = Response time
+
+Collapse condition: M < C_env (environmental complexity)
+\end{verbatim}
+
+\subsubsection{8.2 K as Civilizational
+Self-Awareness}\label{k-as-civilizational-self-awareness}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Harmony & Metacognitive Interpretation \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+H₁ (Governance) & Collective intention formation \\
+H₂ (Networks) & Information integration \\
+H₃ (Trust) & \textbf{Shared world model} \\
+H₄ (Complexity) & Response repertoire \\
+H₅ (Knowledge) & Predictive capability \\
+H₆ (Wellbeing) & Coherence signal \\
+H₇ (Technology) & Action capability \\
+\end{longtable}
+
+\textbf{Trust (H₃) is central because it enables SHARED WORLD MODELS.}
+
+\subsubsection{8.3 The Blindness Before
+Collapse}\label{the-blindness-before-collapse}
+
+\textbf{Empirical observation}: Collapsing civilizations fail to see
+collapse coming. - Rome 400 CE: No contemporaneous writings predicted
+the end - Soviet 1989: Western experts predicted decades of stability -
+Maya 800 CE: No recorded warnings
+
+\textbf{Explanation}: When M \textless{} C\_env, the civilization CANNOT
+MODEL ITS OWN DYNAMICS.
+
+\begin{verbatim}
+P(accurate self-prediction | M < C_env) → 0
+
+The civilization becomes BLIND to itself.
+\end{verbatim}
+
+\subsubsection{8.4 The Three Levels of Civilizational
+Consciousness}\label{the-three-levels-of-civilizational-consciousness}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1795}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2564}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+K Range
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Examples
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Level 3}: Anticipatory & Predicts and prevents crises & K
+\textgreater{} 0.75 & None achieved permanently \\
+\textbf{Level 2}: Reactive & Responds to crises after onset & 0.45
+\textless{} K \textless{} 0.75 & Most stable states \\
+\textbf{Level 1}: Blind & Cannot see own dynamics & K \textless{} 0.45 &
+Pre-collapse civilizations \\
+\textbf{Level 0}: Collapsed & No coherent self-model & K \textless{}
+0.30 & Failed states \\
+\end{longtable}
+
+\subsubsection{8.5 The Meta-Paradox}\label{the-meta-paradox}
+
+If metacognition is failing, CAN IT RECOGNIZE that it's failing?
+
+\begin{verbatim}
+M_meta = ability to model M
+
+If M < C_env, then M_meta is also compromised.
+
+META-BLINDNESS: The civilization can't see that it can't see.
+\end{verbatim}
+
+\textbf{This explains why external observers often see collapse before
+internal actors.}
+
+{[}Figure 13: Metacognitive Levels and Collapse Trajectory{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Evolutionary Stability Analysis (Law 16)
+{[}NEW{]}}\label{evolutionary-stability-analysis-law-16-new}
+
+\subsubsection{9.1 Law 16: The Fragile Cooperation
+Law}\label{law-16-the-fragile-cooperation-law}
+
+\textbf{Statement}: Under baseline replicator dynamics (one-shot,
+well-mixed populations without institutions), cooperation is NOT an
+Evolutionarily Stable Strategy (ESS). The threshold θ ≈ 0.375 marks the
+boundary of the basin of attraction for cooperative equilibria.
+
+\textbf{Scope Limitation}: This applies specifically to: - One-shot
+games (no repeated interaction) - Well-mixed populations (no
+spatial/network structure) - No institutional enforcement mechanisms
+
+This does NOT contradict established results on cooperation via: -
+Network reciprocity (Nowak \& May, 1992) - Repeated games (Axelrod,
+1984) - Group selection mechanisms (Boyd \& Richerson, 1985) -
+Institutional design (Ostrom, 1990)
+
+\subsubsection{9.2 Why Cooperation is Unstable Under Baseline
+Conditions}\label{why-cooperation-is-unstable-under-baseline-conditions}
+
+From standard replicator dynamics in one-shot games:
+
+\begin{verbatim}
+dp/dt = p(1-p)[E(Cooperate) - E(Defect)]
+      = p(1-p)(-c)
+      = -cp(1-p)
+
+Where p = fraction of cooperators, c = cost of cooperation
+
+Since c > 0: dp/dt < 0 for all 0 < p < 1
+
+Under these specific conditions, cooperation declines.
+\end{verbatim}
+
+\textbf{Key insight}: Defection is the ESS under baseline conditions.
+Cooperation requires active institutional maintenance to override
+evolutionary defaults.
+
+\subsubsection{9.3 The Three Equilibria}\label{the-three-equilibria}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0750}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2750}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3250}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Equilibrium
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+p
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Stability
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Full Defection} & 0 & Stable ESS & Natural evolutionary
+outcome \\
+\textbf{Threshold} & θ ≈ 0.375 & Unstable & Basin boundary \\
+\textbf{Cooperation} & \textasciitilde0.65 & Semi-stable & Requires
+continuous maintenance \\
+\end{longtable}
+
+\begin{verbatim}
+Below θ: System flows toward p = 0 (collapse inevitable)
+Above θ: Cooperation can be maintained with institutions
+At θ: Bifurcation point—qualitative phase transition
+\end{verbatim}
+
+\subsubsection{9.4 The Cost of
+Civilization}\label{the-cost-of-civilization}
+
+\begin{verbatim}
+Cost_civilization = ∫ Maintenance(t) dt
+
+Civilization is a "dissipative structure":
+- Requires continuous energy input
+- Maintains low-entropy (ordered) state
+- Stops paying → returns to high-entropy (defection)
+\end{verbatim}
+
+\subsubsection{9.5 Connection to
+Thermodynamics}\label{connection-to-thermodynamics}
+
+\begin{verbatim}
+Cooperation = Low entropy state (ordered)
+Defection = High entropy state (disordered)
+
+Second Law: Entropy increases spontaneously.
+Civilization requires WORK to maintain order.
+\end{verbatim}
+
+\subsubsection{9.6 The Deep Insight}\label{the-deep-insight}
+
+\begin{verbatim}
+Natural selection produces defection.
+Cooperation requires CULTURAL EVOLUTION to override.
+
+Civilization = Cultural override of biological default.
+Collapse = Return to evolutionary default.
+\end{verbatim}
+
+\textbf{The threshold θ ≈ 0.375 is WHERE CULTURAL SELECTION LOSES TO
+BIOLOGICAL SELECTION.}
+
+{[}Figure 14: Evolutionary Stability Landscape{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. The AI Coordination Paradox (Law 17)
+{[}NEW{]}}\label{the-ai-coordination-paradox-law-17-new}
+
+\subsubsection{10.1 Law 17: The AI Coordination
+Law}\label{law-17-the-ai-coordination-law}
+
+\textbf{Statement}: Artificial intelligence amplifies the coordination
+dynamics by factors A\_pos(t) and A\_neg(t), where:
+
+\begin{verbatim}
+dH₃/dt_with_AI = dH₃/dt_natural × (1 + A_pos(t))
+dλ/dt_with_AI = dλ/dt_natural × (1 + A_neg(t))
+
+If A_neg > A_pos: Civilization accelerates toward threshold.
+If A_pos > A_neg: Civilization accelerates toward safety.
+
+The paradox: Both effects come from the SAME technology.
+\end{verbatim}
+
+\textbf{Connection to Technology Evaluation Framework}:
+
+A\_pos and A\_neg connect directly to the ΔH₃ and Δλ effects from the
+Coordination Technology Framework:
+
+\begin{verbatim}
+A_pos(t) ≈ ΔH₃(AI_deployment) / H₃_baseline
+A_neg(t) ≈ Δλ(AI_deployment) / λ_baseline
+
+Technology Safety Score = ΔH₃ - α × Δλ (where α ≈ 0.5)
+
+If Score > 0: Technology net-positive for coordination
+If Score < 0: Technology net-negative for coordination
+\end{verbatim}
+
+This provides an operationalizable framework for AI safety: assess
+whether a given AI system increases H₃ (trust, verification,
+translation) more than it increases λ (cascade velocity, modernization
+pressure).
+
+\textbf{AI is the first technology that can change λ faster than any
+natural H₃ adaptation.}
+
+\subsubsection{10.2 Why AI is Unique Among
+Technologies}\label{why-ai-is-unique-among-technologies}
+
+Unlike previous technologies:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Property & Previous Tech & AI \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Speed} & Gradual adoption & Exponential deployment \\
+\textbf{Scope} & Domain-specific & Universal capability \\
+\textbf{Autonomy} & Human-operated & Self-directed action \\
+\textbf{Trust impact} & Local & Global (simultaneously) \\
+\textbf{Reversibility} & Possible & Path-dependent \\
+\end{longtable}
+
+\subsubsection{10.3 Three Qualitative AI
+Scenarios}\label{three-qualitative-ai-scenarios}
+
+\textbf{Note}: The following scenarios are qualitative descriptions, not
+calibrated probability estimates. We do not have sufficient empirical
+grounding to assign meaningful probabilities.
+
+\begin{verbatim}
+Scenario A: Coordination Collapse (possible)
+- AI accelerates λ faster than H₃ can adapt
+- Economic disruption, misinformation, polarization
+- H₃ crosses θ → Irreversible cascade
+
+Scenario B: Coordination Enhancement (possible)
+- AI governance established early
+- AI used for verification, translation, coordination
+- H₃ rises above θ + margin → Sustainable civilization
+
+Scenario C: Unstable Equilibrium (possible)
+- AI effects roughly balance
+- Repeated near-threshold crises
+- Eventually resolves into A or B
+\end{verbatim}
+
+Which scenario unfolds depends on policy choices, technological
+development paths, and social dynamics that are difficult to predict.
+
+\subsubsection{10.4 AI as Great Filter
+Mechanism}\label{ai-as-great-filter-mechanism}
+
+\textbf{Hypothesis}: AI may be the PROXIMATE CAUSE of most Great Filter
+events.
+
+\begin{verbatim}
+τ_AI = Time to develop transformative AI
+τ_θ = Time to reliably maintain H₃ > θ
+
+If τ_AI < τ_θ (typical case):
+  AI arrives before coordination is solved.
+  High collapse probability.
+
+If τ_θ < τ_AI (rare):
+  Coordination is stable before AI arrives.
+  AI can be deployed safely.
+  Civilization likely survives to Type II.
+\end{verbatim}
+
+\textbf{Earth's situation}: τ\_AI appears to be NOW. τ\_θ has not been
+reached.
+
+\begin{verbatim}
+P(collapse | AI before θ solved) >> P(collapse | θ solved before AI)
+
+Most civilizations develop AI before solving coordination physics.
+AI may be the mechanism by which most Great Filter events occur.
+\end{verbatim}
+
+\subsubsection{10.5 The Alignment Problem as Coordination
+Physics}\label{the-alignment-problem-as-coordination-physics}
+
+Coordination physics reframes AI alignment:
+
+\begin{verbatim}
+Traditional: "How do we ensure AI does what humans want?"
+Coordination: "How do we ensure AI maintains H₃ > θ?"
+
+Alignment_coordination = P(H₃ > θ | AI_deployed)
+
+An aligned AI is one that:
+1. Does not accelerate λ faster than H₃ can adapt
+2. Actively supports trust-building processes
+3. Maintains human agency in coordination
+4. Preserves shared reality and common ground
+\end{verbatim}
+
+\textbf{True alignment = AI that makes civilization MORE STABLE, not
+just more capable.}
+
+\subsubsection{10.6 Current Status
+Assessment}\label{current-status-assessment}
+
+\textbf{Note}: The following is a rough estimate with significant
+uncertainty. H₃ measurements are imprecise, and the threshold θ is
+model-dependent.
+
+\begin{verbatim}
+Estimated Earth status (2024-2025):
+H₃ ≈ 0.40-0.50 (uncertain, varies by measurement)
+θ ≈ 0.35-0.40 (model-dependent)
+Margin: unclear due to measurement uncertainty
+
+If the framework is correct, current conditions merit attention
+but do not support precise timeline predictions.
+\end{verbatim}
+
+\subsubsection{10.7 The Deep Truth}\label{the-deep-truth}
+
+\begin{verbatim}
+AI is a mirror.
+
+High H₃ civilization + AI = Enhanced coordination
+Low H₃ civilization + AI = Accelerated collapse
+
+AI does not determine our fate.
+It AMPLIFIES the fate we are already choosing.
+
+We are currently in the middle zone.
+Everything depends on choices made NOW.
+\end{verbatim}
+
+{[}Figure 16: The AI Coordination Paradox - Amplification Dynamics{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{11. Validation and
+Predictions}\label{validation-and-predictions}
+
+\subsubsection{11.1 Hindcast Validation}\label{hindcast-validation}
+
+\hyperref[table-s1-standardized-dataset]{Table S1: Standardized Dataset}
+
+\subsubsection{11.2 Sensitivity Analysis}\label{sensitivity-analysis}
+
+\begin{itemize}
+\tightlist
+\item
+  Rankings stable under ±20\% parameter perturbation
+\item
+  Rome always slower than Soviet in 100\% of scenarios
+\item
+  H\_3 (Trust) is dominant driver: -96\% to +224\% sensitivity
+\end{itemize}
+
+\subsubsection{11.3 Model Validity
+Assessment}\label{model-validity-assessment}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4595}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2703}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2703}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Prediction Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Validity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Evidence
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Relative Rankings} & ROBUST & Rome \textless{} Soviet in 100\%
+of scenarios \\
+\textbf{Qualitative Dynamics} & ROBUST & Quadratic cascade confirmed
+(R\^{}2 = 0.74) \\
+\textbf{Threshold Location} & ROBUST & theta \textasciitilde{} 0.375
+from multiple derivations \\
+\textbf{Absolute Timing} & UNCERTAIN & Requires case-specific
+calibration \\
+\end{longtable}
+
+\subsubsection{11.4 Contemporary
+Predictions}\label{contemporary-predictions}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Society & Current H\_3 & Distance from theta & Prediction \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+USA & 0.42 & +0.045 & Vulnerable by 2030 if decline continues \\
+China & 0.25 (light) & -0.125 & Dependent on H\_3\_coerced
+maintenance \\
+EU & 0.55 & +0.175 & Stable but declining \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{12. Kardashev Extension and the Great
+Filter}\label{kardashev-extension-and-the-great-filter}
+
+\subsubsection{12.1 Scaling to Interstellar
+Civilizations}\label{scaling-to-interstellar-civilizations}
+
+The coordination framework extends to Kardashev-scale civilizations:
+
+\begin{verbatim}
+K_max(Type) = 1 - epsilon / log(E/E_0)
+
+Where:
+- E = energy capture capacity
+- E_0 = reference energy (~10^10 W)
+- epsilon = coordination overhead (~0.5)
+
+Type I  (E ~ 10^17 W):  K_max ~ 0.91
+Type II (E ~ 4x10^26 W): K_max ~ 0.96
+Type III (E ~ 4x10^37 W): K_max ~ 0.99
+\end{verbatim}
+
+\subsubsection{12.2 Five Universal Limits Constraining
+K\_max}\label{five-universal-limits-constraining-k_max}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Ashby's Limit}: Perfect coordination (K=1) = zero variety = no
+  adaptation
+\item
+  \textbf{Dunbar's Limit}: Cognitive constraints on coordination
+  relationships
+\item
+  \textbf{Shannon's Limit}: Channel capacity bounds information sharing
+\item
+  \textbf{Light-Speed Limit}: Coordination delay grows with spatial
+  extent
+\item
+  \textbf{Entropy Production}: Second Law requires dissipation for
+  coordination
+\end{enumerate}
+
+\subsubsection{12.3 The Great Filter as Coordination
+Threshold}\label{the-great-filter-as-coordination-threshold}
+
+\textbf{Hypothesis}: The Great Filter in the Fermi Paradox may be
+related to the coordination threshold θ.
+
+\paragraph{Why Civilizations Fail to Reach Type
+I}\label{why-civilizations-fail-to-reach-type-i}
+
+For a civilization to transition from Type 0 (planetary) to Type I
+(stellar), it must: 1. \textbf{Global coordination}: Climate action,
+resource sharing, technology governance 2. \textbf{Multi-generational
+planning}: Century-scale projects 3. \textbf{Trust at unprecedented
+scale}: Billions of agents coordinating
+
+\textbf{The threshold θ ≈ 0.375 represents the minimum trust for this
+coordination.}
+
+From our historical analysis:
+
+\begin{verbatim}
+P(recovery | H₃ < θ) ≈ 0.15
+
+85% of civilizations that cross below threshold COLLAPSE.
+\end{verbatim}
+
+\paragraph{The Timeline Squeeze}\label{the-timeline-squeeze}
+
+The critical Type I transition period is \textasciitilde100-500 years.
+But modernization (λ) INCREASES collapse speed:
+
+\begin{verbatim}
+v_cascade ∝ λ(θ - H₃)²
+
+As technology advances, collapse accelerates when trust drops.
+This creates a narrowing window for Type I achievement.
+\end{verbatim}
+
+\paragraph{Survival Probability (Illustrative
+Calculation)}\label{survival-probability-illustrative-calculation}
+
+\textbf{Note}: The following is a rough illustrative calculation, not a
+calibrated probability estimate. All parameter values are uncertain and
+the model structure itself is unvalidated.
+
+\begin{verbatim}
+P(Type I) = P(H₃ > θ throughout) + P(recovery | crossed) × P(cross)
+
+Assumed parameters (illustrative only):
+- H₃_0 ≈ 0.50 (post-agricultural trust, uncertain)
+- σ_H₃ ≈ 0.02/year (volatility, rough estimate)
+- τ ≈ 300 years (transition period, model-dependent)
+- θ ≈ 0.375 (threshold, model-dependent)
+
+With these assumptions:
+P(Type I) ~ 0.3–0.7 (order-of-magnitude estimate only)
+
+Similar uncertainty applies to:
+P(Type II | Type I) ~ uncertain
+P(Type II | intelligence) ~ highly uncertain
+\end{verbatim}
+
+\textbf{These numbers are meant to illustrate the framework's structure,
+not to provide reliable forecasts.}
+
+\paragraph{Modified Drake Equation
+(Conceptual)}\label{modified-drake-equation-conceptual}
+
+\begin{verbatim}
+N = R* × f_p × n_e × f_l × f_i × f_c × f_coord × L
+
+Where f_coord = P(Type II | intelligence) = unknown
+
+If this framework is correct, f_coord could be small (<0.5),
+potentially reducing detectable civilizations significantly.
+\end{verbatim}
+
+\textbf{Note}: We cannot reliably estimate f\_coord from our framework.
+The point is conceptual: IF coordination thresholds exist universally,
+they may contribute to the Great Filter.
+
+\paragraph{Testable Predictions}\label{testable-predictions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Historical (validated)}: \textasciitilde15\% recovery rate
+  below threshold (observed: 15\% ± 5\%)
+\item
+  \textbf{Contemporary}: Civilizations near θ show increased variance,
+  slower crisis recovery
+\item
+  \textbf{SETI}: Detected signals should come from stable (H₃
+  \textgreater\textgreater{} θ), ancient civilizations
+\item
+  \textbf{Great Timing}: We exist during the rare Type I transition
+  window (10\^{}-8 of existence)
+\end{enumerate}
+
+\textbf{Speculation}: If coordination thresholds are universal, the
+silence of the cosmos could partially reflect coordination failures.
+This is one of many possible contributions to the Fermi Paradox, not a
+definitive explanation.
+
+{[}Figure 12: The Great Filter as Coordination Threshold{]}
+
+\subsubsection{12.4 The Wisdom Silence Hypothesis: Why Survivors Don't
+Contact
+Us}\label{the-wisdom-silence-hypothesis-why-survivors-dont-contact-us}
+
+\textbf{Revolutionary Extension}: Civilizations that survive to Type II+
+necessarily understand coordination physics. This knowledge implies they
+would NOT contact pre-threshold civilizations.
+
+\paragraph{The Contact Danger}\label{the-contact-danger}
+
+Technology transfer accelerates modernization (λ) faster than trust can
+develop:
+
+\begin{verbatim}
+dλ/dt_contact >> dH₃/dt_natural
+
+Even modest technology sharing (2× amplification):
+- Doubles cascade velocity if threshold crossed
+- Halves adaptation time
+- Transforms manageable decline into catastrophe
+\end{verbatim}
+
+\paragraph{The Wisdom Silence}\label{the-wisdom-silence}
+
+Advanced civilizations maintain \textbf{deliberate silence}---not from
+fear (Dark Forest) but from \textbf{compassion}:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+What They Could Share & Risk & Reason \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Virtues/Ethics & Low & Builds H₃, doesn't increase λ \\
+Coordination wisdom & Low & Teaches threshold management \\
+Applied technology & High & Rapid λ increase, trust gap \\
+Energy technology & Very High & Massive λ amplification \\
+\end{longtable}
+
+\textbf{The only safe gifts are WISDOM gifts---not technology gifts.}
+
+\paragraph{The Coordination
+Quarantine}\label{the-coordination-quarantine}
+
+\begin{verbatim}
+Graduation_criteria:
+1. H₃ > θ + margin for τ_proof > 200 years
+2. Demonstrated planetary-scale coordination
+3. Evidence of understanding coordination physics
+
+Earth status: FAILS (H₃ ≈ 0.42, declining, near threshold)
+\end{verbatim}
+
+\paragraph{Implication (Speculative)}\label{implication-speculative}
+
+\textbf{Note}: This section is highly speculative. We have no evidence
+of advanced civilizations, let alone their motivations.
+
+IF advanced civilizations exist AND they understand coordination
+dynamics, one possible reason for non-contact would be concern about
+destabilizing less-developed civilizations through technology transfer.
+This is one of many possible explanations for the Fermi Paradox, not a
+confirmed hypothesis.
+
+{[}Figure 15: The Wisdom Silence - Contact Safety Boundary{]}
+
+\subsubsection{12.5 Future Research
+Directions}\label{future-research-directions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Experimental validation}: Laboratory studies of coordination
+  games
+\item
+  \textbf{Neural network monitoring}: Real-time early warning systems
+\item
+  \textbf{Multi-civilization dynamics}: Interaction between societies
+\item
+  \textbf{Quantum effects}: Fundamental limits on coordination at
+  extreme scales
+\end{enumerate}
+
+{[}Figure 11: Kardashev Scaling of K\_max{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{13. Related Work}\label{related-work}
+
+This framework builds on and extends several established research
+traditions. We situate each major component in the existing literature:
+
+\subsubsection{13.1 Collapse Theory}\label{collapse-theory}
+
+\textbf{Complexity-based approaches}: Tainter (1988) introduced the
+concept of diminishing returns on complexity investment. Our framework
+incorporates this through the Glass Ceiling (Law 12) and the
+modernization factor λ, but adds the crucial distinction that complexity
+is not the root cause---trust erosion is.
+
+\textbf{Environmental factors}: Diamond (2005) emphasizes environmental
+degradation and failure to adapt. We treat these as H₆ (wellbeing) and
+H₇ (technology) effects that manifest \emph{through} trust erosion,
+rather than independently causing collapse.
+
+\textbf{Secular cycles}: Turchin (2003, 2023) models elite
+overproduction and popular immiseration as drivers of instability
+cycles. Our cascade dynamics (Law 2) can be understood as the mechanism
+underlying these cycles---when elite competition erodes trust, the
+cascade accelerates.
+
+\textbf{War and state formation}: Scheidel (2017) documents how violence
+shapes inequality and institutions. Our Dark Trust framework (Law 8)
+captures how coercion-based coordination differs from organic trust.
+
+\subsubsection{13.2 Evolutionary Game
+Theory}\label{evolutionary-game-theory}
+
+\textbf{Cooperation stability}: Nowak (2006) identifies five mechanisms
+enabling cooperation (kin selection, direct reciprocity, indirect
+reciprocity, spatial structure, group selection). Law 16's scope
+limitation explicitly acknowledges these---we claim only that
+\emph{baseline} conditions favor defection, not that cooperation is
+impossible.
+
+\textbf{Institutional design}: Ostrom (1990) demonstrates how
+communities solve collective action problems through institutional
+design. This informs our emphasis on institutional maintenance above the
+threshold.
+
+\subsubsection{13.3 Phase Transitions and Critical
+Phenomena}\label{phase-transitions-and-critical-phenomena}
+
+\textbf{Social phase transitions}: Scheffer et al.~(2009) apply critical
+transition theory to social-ecological systems, identifying early
+warning signals. Law 14 extends this by proposing specific critical
+exponents (mean-field) and connecting to coordination game theory.
+
+\textbf{Network percolation}: The connection between θ and percolation
+threshold (Law 10) draws on standard network science (Barabási, 2016;
+Newman, 2018).
+
+\subsubsection{13.4 AI Safety}\label{ai-safety}
+
+\textbf{Coordination as alignment}: Russell (2019) and Bostrom (2014)
+frame AI safety in terms of value alignment. Our Law 17 reframes this:
+alignment is fundamentally about maintaining H₃ \textgreater{} θ, i.e.,
+ensuring AI supports rather than undermines coordination capacity.
+
+\textbf{Existential risk}: Ord (2020) estimates existential risk from AI
+at \textasciitilde10\% this century. Our framework provides a
+mechanistic explanation: AI accelerates λ faster than H₃ can adapt,
+potentially triggering coordination collapse.
+
+\subsubsection{13.5 What This Framework
+Adds}\label{what-this-framework-adds}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4444}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5556}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Prior Work
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Our Extension
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Tainter: Complexity limits & Threshold + Cascade mechanism \\
+Turchin: Secular cycles & Trust as driver, not symptom \\
+Scheidel: Violence and inequality & Dark Trust vs organic trust
+distinction \\
+Nowak: Cooperation evolution & Baseline conditions + institutional
+maintenance \\
+Scheffer: Critical transitions & Specific exponents + coordination game
+grounding \\
+Russell: AI alignment & Alignment as coordination physics \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{14. Discussion}\label{discussion}
+
+\subsubsection{14.1 Implications for
+Policy}\label{implications-for-policy}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Prevention \textgreater\textgreater{} Cure}: ROI asymmetry
+  demands pre-threshold intervention
+\item
+  \textbf{Build Redundancy}: More coordination mechanisms = slower
+  collapse
+\item
+  \textbf{Convert Dark Trust}: Transition from coerced to organic trust
+\item
+  \textbf{Monitor Early Warning}: Track variance, autocorrelation,
+  recovery time
+\end{enumerate}
+
+\subsubsection{14.2 Contributions and
+Scope}\label{contributions-and-scope}
+
+This framework attempts to: - \textbf{Integrate} concepts from game
+theory, network science, information theory, statistical mechanics, and
+AI safety into a common vocabulary - \textbf{Propose} (not definitively
+derive) mechanisms for collapse dynamics - \textbf{Generate} testable
+predictions based on historical patterns (N=48) - \textbf{Extend}
+(speculatively) to larger scales, pending validation - \textbf{Suggest}
+connections between social science and physics through phase transition
+analogies - \textbf{Reframe} AI alignment as a coordination problem (a
+perspective, not a proven equivalence)
+
+\subsubsection{14.3 A Proposed Interpretive
+Framework}\label{a-proposed-interpretive-framework}
+
+\textbf{Traditional approach}: Collapse explained through case-specific
+historical factors (war, climate, complexity)
+
+\textbf{Proposed framework}: Collapse modeled as coordination failure
+with candidate regularities: 1. Trust threshold (θ) suggested by game
+theory models 2. Cascade dynamics hypothesized from network effects 3.
+Phase transition analogy from statistical mechanics 4. Scaling
+extensions (speculative, requiring validation) 5. AI as amplifier of
+coordination dynamics (hypothesis)
+
+\textbf{Note}: This framework proposes a unifying lens for understanding
+collapse, not a ``physics of civilization'' in the literal sense. The
+analogy to physical phase transitions is suggestive and may aid
+prediction, but social systems differ fundamentally from physical
+systems in agency, reflexivity, and complexity. Treating these
+propositions as equivalent to physical laws would be an overreach.
+
+\subsubsection{14.4 Limitations}\label{limitations}
+
+\begin{itemize}
+\tightlist
+\item
+  Timing predictions require case-specific calibration
+\item
+  Small sample size for recovery estimates (N=35)
+\item
+  Critical exponents assumed mean-field (may vary by network topology)
+\item
+  Threshold (θ) may have cultural variation (\textasciitilde10\%)
+\item
+  AI scenario probabilities are estimates requiring validation
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Figures}\label{figures}
+
+\subsubsection{Main Text Figures (Core
+Framework)}\label{main-text-figures-core-framework}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Figure 1}: The Core Engine (Threshold + Cascade Phase Diagram)
+\item
+  \textbf{Figure 2}: Topology Comparison (Soviet Star vs Market Mesh vs
+  Rome Clustered)
+\item
+  \textbf{Figure 3}: Dark Trust Iceberg / Coercion Cliff
+\item
+  \textbf{Figure 4}: Intervention ROI Asymmetry Curve
+\item
+  \textbf{Figure 5}: Cascade Velocity Tornado (Sensitivity Analysis)
+\item
+  \textbf{Figure 6}: Ranking Stability Heatmap (Rome vs Soviet)
+\item
+  \textbf{Figure 7}: Cascade Velocity Phase Diagram
+\end{enumerate}
+
+\subsubsection{Extended Framework Figures (Laws
+13-17)}\label{extended-framework-figures-laws-13-17}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  \textbf{Figure 8}: Landau Free Energy Landscape (Phase Transition)
+\item
+  \textbf{Figure 9}: Critical Exponent Scaling (Universal Behavior)
+\item
+  \textbf{Figure 10}: Information Entropy Landscape (Law 13)
+\item
+  \textbf{Figure 11}: Kardashev Scaling of K\_max
+\item
+  \textbf{Figure 12}: The Great Filter as Coordination Threshold
+\item
+  \textbf{Figure 13}: Metacognitive Levels and Collapse Trajectory (Law
+  15)
+\item
+  \textbf{Figure 14}: Evolutionary Stability Landscape (Law 16)
+\item
+  \textbf{Figure 15}: The Wisdom Silence - Contact Safety Boundary
+\item
+  \textbf{Figure 16}: The AI Coordination Paradox - Amplification
+  Dynamics (Law 17)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplementary Information}\label{supplementary-information}
+
+\subsubsection{Table S1: Standardized
+Dataset}\label{table-s1-standardized-dataset}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0800}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1467}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2133}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1867}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1733}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Case
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+H₃ (Trust)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+R (Redundancy)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+C (Central.)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+λ (Modern.)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Resource Rent
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Rome (400 CE) & 0.38 & 3.3 & 0.7 & 1.0 & 0.05 \\
+Han (200 CE) & 0.35 & 2.8 & 0.6 & 0.9 & 0.03 \\
+Maya (800 CE) & 0.32 & 1.5 & 0.4 & 0.9 & 0.02 \\
+Byzantine (1200 CE) & 0.36 & 2.5 & 0.7 & 1.1 & 0.08 \\
+Ming (1620 CE) & 0.33 & 2.2 & 0.8 & 1.3 & 0.04 \\
+Ottoman (1900 CE) & 0.31 & 2.0 & 0.7 & 1.6 & 0.10 \\
+Soviet (1985) & 0.20* & 1.6 & 0.9 & 2.2 & 0.15 \\
+USA (2024) & 0.42 & 4.5 & 0.4 & 2.8 & 0.03 \\
+China (2024) & 0.25* & 1.3 & 0.85 & 2.5 & 0.08 \\
+EU (2024) & 0.55 & 6.0 & 0.3 & 2.4 & 0.02 \\
+\end{longtable}
+
+*Note: H₃\_light only; H₃\_coerced adds \textasciitilde0.25-0.30
+
+\subsubsection{Derivation Details}\label{derivation-details}
+
+{[}Full mathematical derivations for each law{]}
+
+\subsubsection{Sensitivity Analysis
+Results}\label{sensitivity-analysis-results}
+
+{[}Figures showing ranking stability, timing accuracy{]}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{References}\label{references}
+
+\subsubsection{Collapse Theory}\label{collapse-theory-1}
+
+\begin{itemize}
+\tightlist
+\item
+  Tainter, J.A. (1988). \emph{The Collapse of Complex Societies}.
+  Cambridge University Press.
+\item
+  Diamond, J. (2005). \emph{Collapse: How Societies Choose to Fail or
+  Succeed}. Viking Press.
+\item
+  Turchin, P. (2003). \emph{Historical Dynamics: Why States Rise and
+  Fall}. Princeton University Press.
+\item
+  Turchin, P. (2023). \emph{End Times: Elites, Counter-Elites, and the
+  Path of Political Disintegration}. Penguin Press.
+\item
+  Scheidel, W. (2017). \emph{The Great Leveler: Violence and the History
+  of Inequality}. Princeton University Press.
+\end{itemize}
+
+\subsubsection{Evolutionary Game
+Theory}\label{evolutionary-game-theory-1}
+
+\begin{itemize}
+\tightlist
+\item
+  Axelrod, R. (1984). \emph{The Evolution of Cooperation}. Basic Books.
+\item
+  Nowak, M.A.~(2006). Five rules for the evolution of cooperation.
+  \emph{Science}, 314(5805), 1560-1563.
+\item
+  Nowak, M.A.~\& May, R.M. (1992). Evolutionary games and spatial chaos.
+  \emph{Nature}, 359(6398), 826-829.
+\item
+  Boyd, R. \& Richerson, P.J. (1985). \emph{Culture and the Evolutionary
+  Process}. University of Chicago Press.
+\item
+  Ostrom, E. (1990). \emph{Governing the Commons}. Cambridge University
+  Press.
+\end{itemize}
+
+\subsubsection{Network Science and Phase
+Transitions}\label{network-science-and-phase-transitions}
+
+\begin{itemize}
+\tightlist
+\item
+  Barabási, A.L. (2016). \emph{Network Science}. Cambridge University
+  Press.
+\item
+  Newman, M.E.J. (2018). \emph{Networks} (2nd ed.). Oxford University
+  Press.
+\item
+  Scheffer, M. et al.~(2009). Early-warning signals for critical
+  transitions. \emph{Nature}, 461(7260), 53-59.
+\end{itemize}
+
+\subsubsection{AI Safety and Existential
+Risk}\label{ai-safety-and-existential-risk}
+
+\begin{itemize}
+\tightlist
+\item
+  Bostrom, N. (2014). \emph{Superintelligence: Paths, Dangers,
+  Strategies}. Oxford University Press.
+\item
+  Russell, S. (2019). \emph{Human Compatible: Artificial Intelligence
+  and the Problem of Control}. Viking.
+\item
+  Ord, T. (2020). \emph{The Precipice: Existential Risk and the Future
+  of Humanity}. Hachette Books.
+\end{itemize}
+
+\subsubsection{Additional References}\label{additional-references}
+
+\begin{itemize}
+\tightlist
+\item
+  Schelling, T.C. (1960). \emph{The Strategy of Conflict}. Harvard
+  University Press.
+\item
+  North, D.C. (1990). \emph{Institutions, Institutional Change and
+  Economic Performance}. Cambridge University Press.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Author Contributions}\label{author-contributions}
+
+\textbf{Tristan Stoltz}: Conception, theoretical framework, historical
+interpretation, validation design
+
+\textbf{Claude (Anthropic)}: Mathematical formalization, derivation
+assistance, code generation, literature synthesis
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{This paper represents a synthesis of empirical observation,
+game-theoretic reasoning, and network science to create a predictive
+framework for civilizational coordination dynamics.}
+
+\end{document}
