@@ -76,6 +76,8 @@ Before presenting the laws, we establish the core model and notation used throug
 | R | Coordination redundancy | [1, ∞) |
 | C | Centralization degree | [0, 1] |
 
+**Terminology Note**: This paper uses descriptive labels for harmonies suited to historical case analysis (e.g., H₃ = "Trust/Social Cohesion"). Paper 1 (Historical K-Index) uses complementary aspirational terminology for modern contexts (e.g., H₃ = "Cooperative Reciprocity," aspirationally "Sacred Reciprocity"). The underlying constructs are equivalent; terminology differs to suit each paper's analytical focus. See Paper 1 Table S1 for complete harmony definitions and data sources.
+
 **The Threshold Derivation (Model-Dependent)**:
 
 The threshold θ emerges from a stylized N-player coordination game. Consider a population where each agent chooses to cooperate (C) or defect (D). Let:

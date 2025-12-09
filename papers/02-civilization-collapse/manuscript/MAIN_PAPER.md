@@ -56,6 +56,8 @@ We identify seven dimensions of coordination capacity, termed "harmonies":
 
 **H₇: Technological Infrastructure** — The capacity to maintain and develop physical and technical systems supporting coordination. Ancient measurement relies on infrastructure maintenance and metallurgical capacity; modern measurement uses infrastructure investment, energy capacity, and communications penetration.
 
+**Terminology Note**: This paper uses descriptive labels for harmonies suited to historical case analysis. A companion paper (Paper 1: Historical K-Index) uses complementary aspirational terminology for modern contexts (e.g., H₁ = "Institutional Coherence," H₃ = "Cooperative Reciprocity"). The underlying constructs are equivalent; terminology differs to suit each paper's analytical focus.
+
 ### 2.3 The K-Index Formula
 
 The K-Index is defined as the geometric mean of the seven harmonies:
