@@ -46,7 +46,7 @@ Empirical Result: θ* = 0.375 ± 0.025 (95% CI: 0.35-0.40)
 **Theoretical (Strong)**:
 - Game theory ESS: θ = c/(1+c) ≈ 0.38 for c = 0.6
 - Percolation physics: p_c = 0.388 (diamond lattice)
-- See Paper 2B for 8 independent derivations converging on 0.381 ± 0.005
+- See Paper 2B for 9 independent derivations converging on 0.382 ± 0.004 (p < 10⁻¹⁷)
 
 ### Verdict: ✅ VALIDATED
 This is the strongest law with both empirical and theoretical support.

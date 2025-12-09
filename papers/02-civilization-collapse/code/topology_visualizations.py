@@ -483,10 +483,11 @@ def generate_intervention_roi_figure(output_path: Path):
     ax.set_ylim(0, 2.5)
     ax.grid(True, alpha=0.3)
 
-    # Add formula
-    formula_text = r"$ROI = \begin{cases} 1 + 5(H_3 - \theta) & H_3 > \theta \\ e^{-10(\theta - H_3)} & H_3 < \theta \end{cases}$"
+    # Add formula (simplified for matplotlib compatibility)
+    formula_text = "ROI = 1 + 5(H₃ - θ)  if H₃ > θ\nROI = e⁻¹⁰⁽ᶿ⁻ᴴ³⁾    if H₃ < θ"
     ax.text(0.95, 0.05, formula_text, transform=ax.transAxes,
-            fontsize=10, verticalalignment='bottom', horizontalalignment='right',
+            fontsize=9, verticalalignment='bottom', horizontalalignment='right',
+            fontfamily='monospace',
             bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
     plt.tight_layout()
