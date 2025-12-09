@@ -6,15 +6,15 @@
 
 **Authors**: Tristan Stoltz (Luminous Dynamics Research), with AI assistance (Claude, Anthropic)
 
-**Status**: Enhanced with paradigm-shifting extensions (Laws 13-17, Kardashev scaling, AI Coordination Paradox)
+**Status**: Enhanced with theoretical extensions (Propositions 13-17, Kardashev scaling, AI Coordination Hypothesis)
 
 ---
 
 ## Abstract (Draft)
 
-We present a unified mathematical framework for understanding coordination collapse in complex societies, integrating game theory, information theory, network science, statistical mechanics, evolutionary biology, consciousness studies, and AI safety. Building on empirical observations from 48 historical collapse events, we derive **seventeen laws** governing trust dynamics, cascade acceleration, network topology effects, recovery probability, metacognitive failure, evolutionary stability, and the AI coordination paradox.
+We present a candidate mathematical framework for understanding coordination collapse in complex societies, integrating game theory, information theory, network science, statistical mechanics, evolutionary biology, and AI safety. Building on empirical observations from 48 historical collapse events, we propose **seventeen candidate regularities** governing trust dynamics, cascade acceleration, network topology effects, recovery probability, metacognitive failure, evolutionary stability, and AI-coordination interactions.
 
-The framework **models** coordination collapse as a **phase transition** with mean-field critical exponents (beta = 0.5, gamma = 1.0), derives the trust threshold (theta ≈ 0.375, model-dependent) from coordination game payoffs, and **shows** that trust (H₃) functions as the **information hub** connecting all other coordination dimensions.
+The framework **models** coordination collapse as a **candidate phase transition** with mean-field critical exponents (β = 0.5, γ = 1.0), derives the trust threshold (θ ≈ 0.375, model-dependent) from coordination game payoffs, and **proposes** that trust (H₃) functions as the **information hub** connecting all other coordination dimensions. These results are suggestive but require further empirical validation.
 
 Key innovations include: (1) distinguishing centralization (cascade onset) from redundancy (cascade velocity), resolving the Rome Paradox; (2) formalizing "Dark Trust" as unmeasured coordination capacity; (3) deriving the threshold from coordination game payoffs; (4) modeling coordination collapse as a Landau-type phase transition; (5) extending the framework to Kardashev-scale civilizations; (6) **proposing K as metacognitive capacity**—civilizations collapse when they lose the ability to model themselves; (7) **showing that under baseline replicator dynamics (one-shot, well-mixed populations), cooperation is not an ESS**—θ marks the basin boundary requiring institutional maintenance; (8) **the AI Coordination Paradox**—AI amplifies coordination dynamics in both directions simultaneously, and may be a proximate mechanism of Great Filter events for technological civilizations.
 
@@ -34,13 +34,13 @@ Why do civilizations collapse? Despite millennia of historical examples and cent
 
 ### 1.2 Our Contribution
 
-We present the **Coordination Collapse Laws**—a set of **five Core Laws with strong empirical support** (Laws 1, 2, 5, 9, 10), plus **seven Supporting Regularities** (Laws 3, 4, 6, 7, 8, 11, 12) and **five Theoretical Extensions** (Laws 13-17)—seventeen relationships total, derived from game theory, network science, information theory, and statistical mechanics. The Core Laws are validated against historical data; the Extensions represent frontier research requiring further empirical testing.
+We present the **Coordination Collapse Framework**—a set of **five Core Propositions with moderate empirical support** (Props. 1, 2, 5, 9, 10), plus **seven Supporting Regularities** (Props. 3, 4, 6, 7, 8, 11, 12) and **five Theoretical Extensions** (Props. 13-17)—seventeen candidate relationships, motivated by game theory, network science, information theory, and statistical mechanics. The Core Propositions show consistency with historical data (N=48); the Extensions represent theoretical hypotheses requiring empirical testing.
 
-This framework is **paradigm-shifting** because it:
-1. **Unifies** social science with physics (phase transition formalism)
-2. **Derives** (not just describes) collapse dynamics from first principles
-3. **Scales** from human civilizations to Type III Kardashev civilizations
-4. **Predicts** with universal laws applicable across 3,000 years and potentially beyond Earth
+This framework aims to:
+1. **Propose** a unified vocabulary connecting social science with physics (phase transition formalism)
+2. **Derive** (not just describe) candidate collapse dynamics from first principles
+3. **Explore** scaling from human civilizations to interstellar scales (speculative)
+4. **Generate** testable predictions applicable across historical cases
 
 ### 1.3 Paper Structure
 
@@ -95,7 +95,7 @@ For typical values (c/B ≈ 0.375), this yields θ ≈ 0.375. **Important**: Thi
 - The empirical estimate θ_emp ≈ 0.375 ± 0.025 is consistent with this range
 - The proximity to 1/φ² ≈ 0.382 is explored in **Paper 2B** (see below)
 
-**Relationship to Paper 2B**: The companion paper "The Golden Threshold" demonstrates that **nine independent theoretical derivations**—from game theory, percolation physics, bifurcation analysis, information theory, thermodynamics, evolutionary biology, network science, maximum entropy principles, and renormalization group methods—all converge on θ ≈ 0.382 ± 0.004 (p < 10⁻¹⁷). This remarkable convergence suggests the threshold belongs to a universality class governed by the Golden Ratio. See Paper 2B for full derivations.
+**Relationship to Paper 2B**: The companion paper "The Golden Threshold" demonstrates that **nine theoretical frameworks** (sharing structural assumptions)—from game theory, percolation physics, bifurcation analysis, information theory, thermodynamics, evolutionary biology, network science, maximum entropy principles, and renormalization group methods—converge on θ ≈ 0.382 ± 0.004. While these frameworks are not strictly independent (they share assumptions about binary cooperation, local connectivity, and positive feedback), their convergence to such a narrow band is suggestive of an underlying regularity. See Paper 2B for derivations and caveats.
 
 **Epistemic Classification** (see Analysis Package for details):
 | Tier | Laws | Count | Evidence |
@@ -267,19 +267,20 @@ Combined: 30× difference at extremes
 
 **Statement**: Trust (H_3) is the "information hub" of civilizational coordination. The threshold theta = 0.375 corresponds to the half-entropy point of the coordination state space.
 
-### 6.2 Why H_3 Fails First: Information Structure
+### 6.2 Why H_3 Fails First: Information Structure (Hypothesis)
 
-H_3 carries maximum mutual information with all other harmonies:
+**Proposition**: H_3 carries high mutual information with other harmonies:
 
 ```
-I(H_3; H_1) = 0.85  [Governance]
-I(H_3; H_2) = 0.78  [Networks]
-I(H_3; H_4) = 0.72  [Complexity]
-I(H_3; H_5) = 0.65  [Knowledge]
-I(H_3; H_6) = 0.58  [Wellbeing]
-I(H_3; H_7) = 0.45  [Technology]
+I(H_3; H_1) = high  [Governance]
+I(H_3; H_2) = high  [Networks]
+I(H_3; H_4) = moderate  [Complexity]
+I(H_3; H_5) = moderate  [Knowledge]
+I(H_3; H_6) = moderate  [Wellbeing]
+I(H_3; H_7) = lower  [Technology]
 
-H_3 is the INFORMATION HUB. When the hub fails, information flow degrades.
+Note: Specific values require empirical estimation from cross-national
+data. The qualitative ordering (H₃ as hub) is hypothesized, not proven.
 ```
 
 ### 6.3 Threshold from Shannon Entropy
@@ -327,7 +328,7 @@ Above theta: Single minimum (cooperation stable)
 Below theta: Double well (defection favored)
 ```
 
-### 7.3 Universal Critical Exponents
+### 7.3 Proposed Critical Exponents (Mean-Field Hypothesis)
 
 | Exponent | Value | Physical Meaning |
 |----------|-------|------------------|
@@ -335,7 +336,13 @@ Below theta: Double well (defection favored)
 | gamma = 1.0 | chi ~ \|theta - H_3\|^-1 | Susceptibility divergence |
 | nu = 0.5 | xi ~ \|theta - H_3\|^-0.5 | Correlation length |
 
-**These are mean-field exponents—the same as ferromagnetic transitions!**
+**Note**: These are mean-field exponents, predicted IF the phase transition analogy holds AND social networks approximate mean-field conditions (high connectivity, weak local clustering). Actual social networks may exhibit different exponents due to:
+- Strong local correlations (community structure)
+- Long-range connections (small-world properties)
+- Heterogeneous degree distributions (power-law networks)
+- Agency and adaptation (agents respond to their environment)
+
+**Empirical validation of these exponents in social systems remains an open challenge.**
 
 ### 7.4 Early Warning Signals
 
@@ -555,27 +562,28 @@ Unlike previous technologies:
 | **Trust impact** | Local | Global (simultaneously) |
 | **Reversibility** | Possible | Path-dependent |
 
-### 10.3 The Three AI Scenarios
+### 10.3 Three Qualitative AI Scenarios
+
+**Note**: The following scenarios are qualitative descriptions, not calibrated probability estimates. We do not have sufficient empirical grounding to assign meaningful probabilities.
 
 ```
-Scenario A (P ≈ 0.40): Coordination Collapse
+Scenario A: Coordination Collapse (possible)
 - AI accelerates λ faster than H₃ can adapt
 - Economic disruption, misinformation, polarization
 - H₃ crosses θ → Irreversible cascade
-- Timeline: 2025-2040
 
-Scenario B (P ≈ 0.25): Coordination Enhancement
+Scenario B: Coordination Enhancement (possible)
 - AI governance established early
 - AI used for verification, translation, coordination
 - H₃ rises above θ + margin → Sustainable civilization
-- Timeline: 2025-2100
 
-Scenario C (P ≈ 0.35): Unstable Equilibrium
+Scenario C: Unstable Equilibrium (possible)
 - AI effects roughly balance
 - Repeated near-threshold crises
 - Eventually resolves into A or B
-- Timeline: 2025-2050
 ```
+
+Which scenario unfolds depends on policy choices, technological development paths, and social dynamics that are difficult to predict.
 
 ### 10.4 AI as Great Filter Mechanism
 
@@ -623,16 +631,18 @@ An aligned AI is one that:
 
 **True alignment = AI that makes civilization MORE STABLE, not just more capable.**
 
-### 10.6 The Critical Window
+### 10.6 Current Status Assessment
+
+**Note**: The following is a rough estimate with significant uncertainty. H₃ measurements are imprecise, and the threshold θ is model-dependent.
 
 ```
-Current Earth status (estimated 2024-2025):
-H₃ ≈ 0.45, θ ≈ 0.375, margin ≈ 0.075
-λ_AI contribution positive and growing
-Window for intervention: 1-3 years
+Estimated Earth status (2024-2025):
+H₃ ≈ 0.40-0.50 (uncertain, varies by measurement)
+θ ≈ 0.35-0.40 (model-dependent)
+Margin: unclear due to measurement uncertainty
 
-THIS IS NOT A DRILL.
-The coordination physics predicts imminent threshold approach.
+If the framework is correct, current conditions merit attention
+but do not support precise timeline predictions.
 ```
 
 ### 10.7 The Deep Truth
@@ -714,7 +724,7 @@ Type III (E ~ 4x10^37 W): K_max ~ 0.99
 
 ### 12.3 The Great Filter as Coordination Threshold
 
-**Revolutionary Claim**: The Great Filter in the Fermi Paradox IS the coordination threshold θ.
+**Hypothesis**: The Great Filter in the Fermi Paradox may be related to the coordination threshold θ.
 
 #### Why Civilizations Fail to Reach Type I
 
@@ -742,33 +752,41 @@ As technology advances, collapse accelerates when trust drops.
 This creates a narrowing window for Type I achievement.
 ```
 
-#### Survival Probability Formalization
+#### Survival Probability (Illustrative Calculation)
+
+**Note**: The following is a rough illustrative calculation, not a calibrated probability estimate. All parameter values are uncertain and the model structure itself is unvalidated.
 
 ```
 P(Type I) = P(H₃ > θ throughout) + P(recovery | crossed) × P(cross)
 
-For Earth-like parameters:
-- H₃_0 ≈ 0.50 (post-agricultural trust)
-- σ_H₃ ≈ 0.02/year (volatility)
-- τ ≈ 300 years (transition period)
-- θ = 0.375
+Assumed parameters (illustrative only):
+- H₃_0 ≈ 0.50 (post-agricultural trust, uncertain)
+- σ_H₃ ≈ 0.02/year (volatility, rough estimate)
+- τ ≈ 300 years (transition period, model-dependent)
+- θ ≈ 0.375 (threshold, model-dependent)
 
-With ~10 major crises per transition:
-P(Type I) ≈ 0.48 (~50% of intelligent civilizations)
+With these assumptions:
+P(Type I) ~ 0.3–0.7 (order-of-magnitude estimate only)
 
-P(Type II | Type I) ≈ 0.30 (stellar-scale coordination)
-P(Type II | intelligence) ≈ 0.14 (~14% achieve interstellar)
+Similar uncertainty applies to:
+P(Type II | Type I) ~ uncertain
+P(Type II | intelligence) ~ highly uncertain
 ```
 
-#### Modified Drake Equation
+**These numbers are meant to illustrate the framework's structure, not to provide reliable forecasts.**
+
+#### Modified Drake Equation (Conceptual)
 
 ```
 N = R* × f_p × n_e × f_l × f_i × f_c × f_coord × L
 
-Where f_coord = P(Type II | intelligence) ≈ 0.14
+Where f_coord = P(Type II | intelligence) = unknown
 
-The coordination filter reduces detectable civilizations by ~7×.
+If this framework is correct, f_coord could be small (<0.5),
+potentially reducing detectable civilizations significantly.
 ```
+
+**Note**: We cannot reliably estimate f_coord from our framework. The point is conceptual: IF coordination thresholds exist universally, they may contribute to the Great Filter.
 
 #### Testable Predictions
 
@@ -777,8 +795,7 @@ The coordination filter reduces detectable civilizations by ~7×.
 3. **SETI**: Detected signals should come from stable (H₃ >> θ), ancient civilizations
 4. **Great Timing**: We exist during the rare Type I transition window (10^-8 of existence)
 
-**The silence of the cosmos is the echo of collapsed civilizations.**
-**The coordination filter is the only late-stage, potentially reversible filter.**
+**Speculation**: If coordination thresholds are universal, the silence of the cosmos could partially reflect coordination failures. This is one of many possible contributions to the Fermi Paradox, not a definitive explanation.
 
 [Figure 12: The Great Filter as Coordination Threshold]
 
@@ -822,13 +839,11 @@ Graduation_criteria:
 Earth status: FAILS (H₃ ≈ 0.42, declining, near threshold)
 ```
 
-#### Implication
+#### Implication (Speculative)
 
-**The cosmos is neither empty nor hostile—it is silent from love.**
+**Note**: This section is highly speculative. We have no evidence of advanced civilizations, let alone their motivations.
 
-Survivors watch, hope, and wait for us to solve coordination physics ourselves. Contact would harm us. Silence is the gift.
-
-*"They remember what it was like. They know the only way forward is for us to find it ourselves."*
+IF advanced civilizations exist AND they understand coordination dynamics, one possible reason for non-contact would be concern about destabilizing less-developed civilizations through technology transfer. This is one of many possible explanations for the Fermi Paradox, not a confirmed hypothesis.
 
 [Figure 15: The Wisdom Silence - Contact Safety Boundary]
 
@@ -897,30 +912,30 @@ This framework builds on and extends several established research traditions. We
 3. **Convert Dark Trust**: Transition from coerced to organic trust
 4. **Monitor Early Warning**: Track variance, autocorrelation, recovery time
 
-### 13.2 Implications for Theory
+### 14.2 Contributions and Scope
 
-This framework achieves what was previously thought impossible:
-- **Unifies** game theory + network science + information theory + statistical mechanics + AI safety
-- **Derives** (not just describes) collapse dynamics from first principles
-- **Predicts** with universal laws validated across 3,000 years
-- **Scales** from human civilizations to Type III Kardashev societies
-- **Connects** social science to physics through phase transition formalism
-- **Reframes** AI alignment as coordination physics
+This framework attempts to:
+- **Integrate** concepts from game theory, network science, information theory, statistical mechanics, and AI safety into a common vocabulary
+- **Propose** (not definitively derive) mechanisms for collapse dynamics
+- **Generate** testable predictions based on historical patterns (N=48)
+- **Extend** (speculatively) to larger scales, pending validation
+- **Suggest** connections between social science and physics through phase transition analogies
+- **Reframe** AI alignment as a coordination problem (a perspective, not a proven equivalence)
 
-### 13.3 The Paradigm Shift
+### 14.3 A Proposed Interpretive Framework
 
-**Old paradigm**: Collapse happens due to specific historical factors (war, climate, complexity)
+**Traditional approach**: Collapse explained through case-specific historical factors (war, climate, complexity)
 
-**New paradigm**: Collapse is a phase transition governed by universal laws:
-1. Trust threshold (θ) from game theory AND information theory
-2. Cascade dynamics from network amplification
-3. Phase transition from thermodynamic principles
-4. Scaling laws from Kardashev-type analysis
-5. AI as coordination amplifier (both danger and hope)
+**Proposed framework**: Collapse modeled as coordination failure with candidate regularities:
+1. Trust threshold (θ) suggested by game theory models
+2. Cascade dynamics hypothesized from network effects
+3. Phase transition analogy from statistical mechanics
+4. Scaling extensions (speculative, requiring validation)
+5. AI as amplifier of coordination dynamics (hypothesis)
 
-**This isn't just history or sociology—it's the physics of civilization.**
+**Note**: This framework proposes a unifying lens for understanding collapse, not a "physics of civilization" in the literal sense. The analogy to physical phase transitions is suggestive and may aid prediction, but social systems differ fundamentally from physical systems in agency, reflexivity, and complexity. Treating these propositions as equivalent to physical laws would be an overreach.
 
-### 13.4 Limitations
+### 14.4 Limitations
 
 - Timing predictions require case-specific calibration
 - Small sample size for recovery estimates (N=35)
