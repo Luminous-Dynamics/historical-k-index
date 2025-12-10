@@ -1,0 +1,43 @@
+{
+  "title": "Historical K-Index Dataset: Global Coordination Capacity (1996-2020)",
+  "description": "The K-Index measures humanity's collective capacity for coordination on a 0-1 scale. This dataset provides annual measurements across seven harmonies (Governance, Interconnection, Trust, Complexity, Knowledge, Wellbeing, Technology) for the period 1996-2020. The K-Index is calculated as the geometric mean of all seven harmonies: K = [H1 × H2 × H3 × H4 × H5 × H6 × H7]^(1/7). A critical threshold (Golden Threshold θ = 0.382 = 1/φ²) marks the boundary below which coordination collapse risk increases significantly.",
+  "creators": [
+    {
+      "name": "Stoltz, Tristan",
+      "affiliation": "Luminous Dynamics",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "coordination",
+    "governance",
+    "global indicators",
+    "social trust",
+    "economic complexity",
+    "human development",
+    "technological progress",
+    "civilization metrics"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "upload_type": "dataset",
+  "publication_date": "2025-12-10",
+  "version": "1.0.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Luminous-Dynamics/historical-k-index",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://luminous-dynamics.github.io/historical-k-index/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ],
+  "communities": [
+    {"identifier": "social-sciences"},
+    {"identifier": "economics"}
+  ],
+  "notes": "Data sources include V-Dem (governance), World Bank (trade, education, health), World Values Survey (trust), and various technology indicators. Full methodology available in accompanying documentation."
+}
