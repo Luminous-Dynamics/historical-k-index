@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "Global K-Index: Humanity's Coordination Capacity",
+    "description": "The K-Index measures global coordination capacity on a 0-1 scale",
+    "source": "Historical K-Index Research Project",
+    "version": "1.0",
+    "lastUpdated": "2025-12-10",
+    "goldenThreshold": 0.382
+  },
+  "harmonies": {
+    "h1": { "name": "Governance", "description": "Institutional quality and democratic governance" },
+    "h2": { "name": "Interconnection", "description": "Global trade and communication networks" },
+    "h3": { "name": "Trust", "description": "Social trust and interpersonal cooperation" },
+    "h4": { "name": "Complexity", "description": "Economic complexity and innovation capacity" },
+    "h5": { "name": "Knowledge", "description": "Education and human capital development" },
+    "h6": { "name": "Wellbeing", "description": "Health, life expectancy, and quality of life" },
+    "h7": { "name": "Technology", "description": "Technological adoption and digital infrastructure" }
+  },
+  "timeSeries": [
+    {"year": 1996, "k": 0.554, "h1": 0.631, "h2": 0.735, "h3": 0.592, "h4": 0.714, "h5": 0.482, "h6": 0.684, "h7": 0.249},
+    {"year": 1998, "k": 0.572, "h1": 0.648, "h2": 0.765, "h3": 0.606, "h4": 0.729, "h5": 0.499, "h6": 0.692, "h7": 0.265},
+    {"year": 2000, "k": 0.627, "h1": 0.664, "h2": 0.794, "h3": 0.620, "h4": 0.744, "h5": 0.516, "h6": 0.700, "h7": 0.434},
+    {"year": 2002, "k": 0.645, "h1": 0.683, "h2": 0.834, "h3": 0.632, "h4": 0.750, "h5": 0.532, "h6": 0.709, "h7": 0.456},
+    {"year": 2003, "k": 0.650, "h1": 0.693, "h2": 0.854, "h3": 0.638, "h4": 0.754, "h5": 0.540, "h6": 0.714, "h7": 0.448},
+    {"year": 2004, "k": 0.658, "h1": 0.702, "h2": 0.874, "h3": 0.644, "h4": 0.757, "h5": 0.548, "h6": 0.719, "h7": 0.455},
+    {"year": 2005, "k": 0.663, "h1": 0.712, "h2": 0.894, "h3": 0.650, "h4": 0.760, "h5": 0.555, "h6": 0.723, "h7": 0.446},
+    {"year": 2006, "k": 0.676, "h1": 0.722, "h2": 0.914, "h3": 0.656, "h4": 0.763, "h5": 0.563, "h6": 0.728, "h7": 0.475},
+    {"year": 2007, "k": 0.685, "h1": 0.731, "h2": 0.934, "h3": 0.662, "h4": 0.766, "h5": 0.571, "h6": 0.732, "h7": 0.487},
+    {"year": 2008, "k": 0.691, "h1": 0.741, "h2": 0.921, "h3": 0.668, "h4": 0.770, "h5": 0.579, "h6": 0.737, "h7": 0.500, "note": "Global Financial Crisis"},
+    {"year": 2009, "k": 0.693, "h1": 0.750, "h2": 0.899, "h3": 0.674, "h4": 0.773, "h5": 0.587, "h6": 0.742, "h7": 0.503},
+    {"year": 2010, "k": 0.692, "h1": 0.760, "h2": 0.877, "h3": 0.680, "h4": 0.776, "h5": 0.595, "h6": 0.746, "h7": 0.489},
+    {"year": 2011, "k": 0.698, "h1": 0.767, "h2": 0.880, "h3": 0.684, "h4": 0.778, "h5": 0.600, "h6": 0.749, "h7": 0.502},
+    {"year": 2012, "k": 0.701, "h1": 0.773, "h2": 0.884, "h3": 0.688, "h4": 0.780, "h5": 0.605, "h6": 0.753, "h7": 0.498},
+    {"year": 2013, "k": 0.706, "h1": 0.780, "h2": 0.888, "h3": 0.692, "h4": 0.782, "h5": 0.610, "h6": 0.756, "h7": 0.505},
+    {"year": 2014, "k": 0.711, "h1": 0.786, "h2": 0.891, "h3": 0.696, "h4": 0.784, "h5": 0.615, "h6": 0.759, "h7": 0.513},
+    {"year": 2015, "k": 0.711, "h1": 0.793, "h2": 0.895, "h3": 0.700, "h4": 0.786, "h5": 0.620, "h6": 0.762, "h7": 0.498},
+    {"year": 2016, "k": 0.713, "h1": 0.799, "h2": 0.890, "h3": 0.704, "h4": 0.788, "h5": 0.625, "h6": 0.765, "h7": 0.498, "note": "Brexit, Trump election"},
+    {"year": 2017, "k": 0.718, "h1": 0.806, "h2": 0.885, "h3": 0.708, "h4": 0.790, "h5": 0.630, "h6": 0.769, "h7": 0.512},
+    {"year": 2018, "k": 0.721, "h1": 0.812, "h2": 0.880, "h3": 0.712, "h4": 0.792, "h5": 0.635, "h6": 0.772, "h7": 0.512},
+    {"year": 2019, "k": 0.725, "h1": 0.819, "h2": 0.876, "h3": 0.716, "h4": 0.794, "h5": 0.640, "h6": 0.775, "h7": 0.522},
+    {"year": 2020, "k": 0.727, "h1": 0.825, "h2": 0.871, "h3": 0.720, "h4": 0.796, "h5": 0.645, "h6": 0.778, "h7": 0.517, "note": "COVID-19 pandemic begins"}
+  ],
+  "crisisEvents": [
+    {"year": 2008, "name": "Global Financial Crisis", "impact": "H2 (Interconnection) dropped sharply"},
+    {"year": 2016, "name": "Political Disruption", "impact": "Trust indicators showed stress"},
+    {"year": 2020, "name": "COVID-19 Pandemic", "impact": "H7 (Technology) accelerated, H2 constrained"}
+  ]
+}
