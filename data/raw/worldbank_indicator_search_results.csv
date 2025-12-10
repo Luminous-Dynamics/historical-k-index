@@ -1,0 +1,12 @@
+id,name,description,source,search_term
+1.1_YOUTH.LITERACY.RATE,"Literacy rate, youth total (% of people ages 15-24) ","the number of persons aged 15 to 24 years who can both read and write with understanding a short simple statement on their everyday life, divided by the population in that age group. generally, ‘liter...",Global Partnership for Education,literacy
+111300,111300:BALANCE OF EXPENDITURES OF RESIDENTS ABROAD AND EXPENDITURES OF NON-RESIDENTS IN THE ECONOMIC TERRITORY,,International Comparison Program (ICP) 2005,road
+1113000,1113000:NET PURCHASES ABROAD,,ICP 2017,road
+1.1_ACCESS.ELECTRICITY.TOT,Access to electricity (% of total population),access to electricity is the percentage of population with access to electricity.,Sustainable Energy for All,electricity
+1.2_ACCESS.ELECTRICITY.RURAL,Access to electricity (% of rural population),access to electricity is the percentage of rural population with access to electricity. ,Sustainable Energy for All,electricity
+1.3_ACCESS.ELECTRICITY.URBAN,Access to electricity (% of urban population),access to electricity is the percentage of total population with access to electricity. ,Sustainable Energy for All,electricity
+110400,"110400:HOUSING, WATER, ELECTRICITY, GAS, AND OTHER FUELS",,International Comparison Program (ICP) 2005,electricity
+110700,110700:TRANSPORT,,International Comparison Program (ICP) 2005,transport
+1107000,1107000:TRANSPORT,,ICP 2017,transport
+110730,110730:TRANSPORT SERVICES,,International Comparison Program (ICP) 2005,transport
+1107300,1107300:TRANSPORT SERVICES,,ICP 2017,transport
