@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Index Dashboard | Global Coordination Capacity</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --threshold: #fbbf24;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .card h2 {
+            font-size: 1rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .main-chart {
+            height: 400px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .current-k {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .k-value {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--success);
+        }
+
+        .k-label {
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        .k-year {
+            font-size: 1.25rem;
+            color: var(--text);
+            margin-top: 0.5rem;
+        }
+
+        .threshold-note {
+            font-size: 0.75rem;
+            color: var(--threshold);
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background: rgba(251, 191, 36, 0.1);
+            border-radius: 0.5rem;
+        }
+
+        .harmony-list {
+            list-style: none;
+        }
+
+        .harmony-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .harmony-item:last-child {
+            border-bottom: none;
+        }
+
+        .harmony-name {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .harmony-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .harmony-value {
+            font-weight: 600;
+            font-family: monospace;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-top: 0.25rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .events-list {
+            list-style: none;
+        }
+
+        .event-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .event-year {
+            font-weight: 600;
+            color: var(--warning);
+        }
+
+        .event-name {
+            font-size: 0.875rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: transparent;
+            color: var(--text);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .slider-container {
+            margin-top: 1rem;
+        }
+
+        .year-slider {
+            width: 100%;
+            accent-color: var(--primary);
+        }
+
+        .year-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 100;
+        }
+
+        .axis text {
+            fill: var(--muted);
+            font-size: 12px;
+        }
+
+        .axis line, .axis path {
+            stroke: rgba(255,255,255,0.1);
+        }
+
+        .grid line {
+            stroke: rgba(255,255,255,0.05);
+        }
+
+        .threshold-line {
+            stroke: var(--threshold);
+            stroke-width: 2;
+            stroke-dasharray: 5,5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Global K-Index Dashboard</h1>
+            <p class="subtitle">Measuring Humanity's Coordination Capacity (1996-2020)</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="main-area">
+                <div class="card">
+                    <h2>K-Index Over Time</h2>
+                    <div class="controls">
+                        <button class="btn active" data-view="k">K-Index</button>
+                        <button class="btn" data-view="harmonies">All Harmonies</button>
+                    </div>
+                    <div id="main-chart" class="main-chart"></div>
+                    <div class="slider-container">
+                        <input type="range" id="year-slider" class="year-slider" min="1996" max="2020" value="2020">
+                        <div class="year-label">
+                            <span>1996</span>
+                            <span id="selected-year">2020</span>
+                            <span>2020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h2>The Seven Harmonies Breakdown</h2>
+                    <div id="harmony-chart" style="height: 300px;"></div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="card current-k">
+                    <h2>Current K-Index</h2>
+                    <div class="k-value" id="current-k">0.727</div>
+                    <div class="k-label">Coordination Capacity</div>
+                    <div class="k-year" id="current-year">2020</div>
+                    <div class="threshold-note">
+                        Golden Threshold: 0.382 (φ⁻²)<br>
+                        Below this, coordination collapse risk increases
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Harmony Scores (<span id="harmony-year">2020</span>)</h2>
+                    <ul class="harmony-list" id="harmony-list"></ul>
+                </div>
+
+                <div class="card">
+                    <h2>Notable Events</h2>
+                    <ul class="events-list" id="events-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data from the <a href="https://github.com/Luminous-Dynamics/historical-k-index">Historical K-Index Research Project</a></p>
+            <p>K = [H₁ × H₂ × H₃ × H₄ × H₅ × H₆ × H₇]^(1/7) — The geometric mean of seven coordination harmonies</p>
+        </footer>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Load data and initialize
+        d3.json('data/k_index.json').then(data => {
+            const timeSeries = data.timeSeries;
+            const harmonies = data.harmonies;
+            const events = data.crisisEvents;
+            const threshold = data.metadata.goldenThreshold;
+
+            const colors = {
+                k: '#22c55e',
+                h1: '#3b82f6',
+                h2: '#8b5cf6',
+                h3: '#ec4899',
+                h4: '#f59e0b',
+                h5: '#10b981',
+                h6: '#06b6d4',
+                h7: '#f43f5e'
+            };
+
+            let currentView = 'k';
+            let selectedYear = 2020;
+
+            // Main time series chart
+            function drawMainChart() {
+                const container = d3.select('#main-chart');
+                container.selectAll('*').remove();
+
+                const bbox = container.node().getBoundingClientRect();
+                const margin = {top: 20, right: 30, bottom: 40, left: 50};
+                const width = bbox.width - margin.left - margin.right;
+                const height = bbox.height - margin.top - margin.bottom;
+
+                const svg = container.append('svg')
+                    .attr('width', bbox.width)
+                    .attr('height', bbox.height);
+
+                const g = svg.append('g')
+                    .attr('transform', `translate(${margin.left},${margin.top})`);
+
+                const x = d3.scaleLinear()
+                    .domain(d3.extent(timeSeries, d => d.year))
+                    .range([0, width]);
+
+                const y = d3.scaleLinear()
+                    .domain([0, 1])
+                    .range([height, 0]);
+
+                // Grid
+                g.append('g')
+                    .attr('class', 'grid')
+                    .selectAll('line')
+                    .data(y.ticks(5))
+                    .enter()
+                    .append('line')
+                    .attr('x1', 0)
+                    .attr('x2', width)
+                    .attr('y1', d => y(d))
+                    .attr('y2', d => y(d));
+
+                // Threshold line
+                g.append('line')
+                    .attr('class', 'threshold-line')
+                    .attr('x1', 0)
+                    .attr('x2', width)
+                    .attr('y1', y(threshold))
+                    .attr('y2', y(threshold));
+
+                g.append('text')
+                    .attr('x', width - 5)
+                    .attr('y', y(threshold) - 5)
+                    .attr('text-anchor', 'end')
+                    .attr('fill', '#fbbf24')
+                    .attr('font-size', '10px')
+                    .text('Golden Threshold (θ = 0.382)');
+
+                // Axes
+                g.append('g')
+                    .attr('class', 'axis')
+                    .attr('transform', `translate(0,${height})`)
+                    .call(d3.axisBottom(x).tickFormat(d3.format('d')));
+
+                g.append('g')
+                    .attr('class', 'axis')
+                    .call(d3.axisLeft(y).ticks(5));
+
+                if (currentView === 'k') {
+                    // K-Index line
+                    const line = d3.line()
+                        .x(d => x(d.year))
+                        .y(d => y(d.k))
+                        .curve(d3.curveMonotoneX);
+
+                    g.append('path')
+                        .datum(timeSeries)
+                        .attr('fill', 'none')
+                        .attr('stroke', colors.k)
+                        .attr('stroke-width', 3)
+                        .attr('d', line);
+
+                    // Area under curve
+                    const area = d3.area()
+                        .x(d => x(d.year))
+                        .y0(height)
+                        .y1(d => y(d.k))
+                        .curve(d3.curveMonotoneX);
+
+                    g.append('path')
+                        .datum(timeSeries)
+                        .attr('fill', colors.k)
+                        .attr('fill-opacity', 0.1)
+                        .attr('d', area);
+
+                    // Data points
+                    g.selectAll('.dot')
+                        .data(timeSeries)
+                        .enter()
+                        .append('circle')
+                        .attr('class', 'dot')
+                        .attr('cx', d => x(d.year))
+                        .attr('cy', d => y(d.k))
+                        .attr('r', 5)
+                        .attr('fill', colors.k)
+                        .style('cursor', 'pointer')
+                        .on('mouseover', function(event, d) {
+                            showTooltip(event, `<strong>${d.year}</strong><br>K-Index: ${d.k.toFixed(3)}${d.note ? '<br><em>' + d.note + '</em>' : ''}`);
+                        })
+                        .on('mouseout', hideTooltip)
+                        .on('click', (event, d) => {
+                            selectedYear = d.year;
+                            updateYear(d.year);
+                        });
+
+                    // Crisis markers
+                    events.forEach(event => {
+                        const point = timeSeries.find(d => d.year === event.year);
+                        if (point) {
+                            g.append('circle')
+                                .attr('cx', x(event.year))
+                                .attr('cy', y(point.k))
+                                .attr('r', 12)
+                                .attr('fill', 'none')
+                                .attr('stroke', '#f59e0b')
+                                .attr('stroke-width', 2)
+                                .attr('stroke-dasharray', '3,3');
+                        }
+                    });
+                } else {
+                    // All harmonies
+                    const harmonyKeys = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
+
+                    harmonyKeys.forEach(key => {
+                        const line = d3.line()
+                            .x(d => x(d.year))
+                            .y(d => y(d[key]))
+                            .curve(d3.curveMonotoneX);
+
+                        g.append('path')
+                            .datum(timeSeries)
+                            .attr('fill', 'none')
+                            .attr('stroke', colors[key])
+                            .attr('stroke-width', 2)
+                            .attr('stroke-opacity', 0.8)
+                            .attr('d', line);
+                    });
+
+                    // Legend
+                    const legend = g.append('g')
+                        .attr('transform', `translate(${width - 120}, 10)`);
+
+                    harmonyKeys.forEach((key, i) => {
+                        legend.append('rect')
+                            .attr('x', 0)
+                            .attr('y', i * 18)
+                            .attr('width', 12)
+                            .attr('height', 12)
+                            .attr('fill', colors[key]);
+
+                        legend.append('text')
+                            .attr('x', 18)
+                            .attr('y', i * 18 + 10)
+                            .attr('fill', '#94a3b8')
+                            .attr('font-size', '11px')
+                            .text(harmonies[key].name);
+                    });
+                }
+
+                // Year indicator line
+                g.append('line')
+                    .attr('id', 'year-line')
+                    .attr('x1', x(selectedYear))
+                    .attr('x2', x(selectedYear))
+                    .attr('y1', 0)
+                    .attr('y2', height)
+                    .attr('stroke', 'white')
+                    .attr('stroke-opacity', 0.3)
+                    .attr('stroke-width', 1)
+                    .attr('stroke-dasharray', '5,5');
+            }
+
+            // Radar/Bar chart for harmonies
+            function drawHarmonyChart(year) {
+                const container = d3.select('#harmony-chart');
+                container.selectAll('*').remove();
+
+                const dataPoint = timeSeries.find(d => d.year === year) || timeSeries[timeSeries.length - 1];
+                const harmonyKeys = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
+
+                const bbox = container.node().getBoundingClientRect();
+                const margin = {top: 20, right: 20, bottom: 60, left: 40};
+                const width = bbox.width - margin.left - margin.right;
+                const height = bbox.height - margin.top - margin.bottom;
+
+                const svg = container.append('svg')
+                    .attr('width', bbox.width)
+                    .attr('height', bbox.height);
+
+                const g = svg.append('g')
+                    .attr('transform', `translate(${margin.left},${margin.top})`);
+
+                const x = d3.scaleBand()
+                    .domain(harmonyKeys)
+                    .range([0, width])
+                    .padding(0.2);
+
+                const y = d3.scaleLinear()
+                    .domain([0, 1])
+                    .range([height, 0]);
+
+                // Bars
+                g.selectAll('.bar')
+                    .data(harmonyKeys)
+                    .enter()
+                    .append('rect')
+                    .attr('class', 'bar')
+                    .attr('x', d => x(d))
+                    .attr('y', d => y(dataPoint[d]))
+                    .attr('width', x.bandwidth())
+                    .attr('height', d => height - y(dataPoint[d]))
+                    .attr('fill', d => colors[d])
+                    .attr('rx', 4);
+
+                // Labels
+                g.selectAll('.label')
+                    .data(harmonyKeys)
+                    .enter()
+                    .append('text')
+                    .attr('x', d => x(d) + x.bandwidth() / 2)
+                    .attr('y', height + 20)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#94a3b8')
+                    .attr('font-size', '11px')
+                    .text(d => harmonies[d].name);
+
+                // Values on top
+                g.selectAll('.value')
+                    .data(harmonyKeys)
+                    .enter()
+                    .append('text')
+                    .attr('x', d => x(d) + x.bandwidth() / 2)
+                    .attr('y', d => y(dataPoint[d]) - 5)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', '#f8fafc')
+                    .attr('font-size', '11px')
+                    .attr('font-weight', '600')
+                    .text(d => dataPoint[d].toFixed(2));
+
+                // Threshold line
+                g.append('line')
+                    .attr('x1', 0)
+                    .attr('x2', width)
+                    .attr('y1', y(threshold))
+                    .attr('y2', y(threshold))
+                    .attr('stroke', '#fbbf24')
+                    .attr('stroke-dasharray', '5,5');
+            }
+
+            // Update harmony sidebar
+            function updateHarmonyList(year) {
+                const dataPoint = timeSeries.find(d => d.year === year) || timeSeries[timeSeries.length - 1];
+                const list = d3.select('#harmony-list');
+                list.selectAll('*').remove();
+
+                const harmonyKeys = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
+
+                harmonyKeys.forEach(key => {
+                    const item = list.append('li').attr('class', 'harmony-item');
+
+                    item.append('div')
+                        .attr('class', 'harmony-name')
+                        .html(`<span class="harmony-dot" style="background: ${colors[key]}"></span>${harmonies[key].name}`);
+
+                    item.append('div')
+                        .attr('class', 'harmony-value')
+                        .text(dataPoint[key].toFixed(3));
+
+                    const progress = item.append('div').attr('class', 'progress-bar');
+                    progress.append('div')
+                        .attr('class', 'progress-fill')
+                        .style('width', `${dataPoint[key] * 100}%`)
+                        .style('background', colors[key]);
+                });
+            }
+
+            // Update events list
+            function updateEventsList() {
+                const list = d3.select('#events-list');
+                list.selectAll('*').remove();
+
+                events.forEach(event => {
+                    const item = list.append('li').attr('class', 'event-item');
+                    item.html(`<span class="event-year">${event.year}</span> — <span class="event-name">${event.name}</span>`);
+                });
+            }
+
+            // Update year
+            function updateYear(year) {
+                const dataPoint = timeSeries.find(d => d.year === year) || timeSeries[timeSeries.length - 1];
+
+                d3.select('#current-k').text(dataPoint.k.toFixed(3));
+                d3.select('#current-year').text(year);
+                d3.select('#harmony-year').text(year);
+                d3.select('#selected-year').text(year);
+                d3.select('#year-slider').property('value', year);
+
+                updateHarmonyList(year);
+                drawHarmonyChart(year);
+
+                // Update year line
+                const container = d3.select('#main-chart');
+                const bbox = container.node().getBoundingClientRect();
+                const margin = {top: 20, right: 30, bottom: 40, left: 50};
+                const width = bbox.width - margin.left - margin.right;
+
+                const x = d3.scaleLinear()
+                    .domain(d3.extent(timeSeries, d => d.year))
+                    .range([0, width]);
+
+                d3.select('#year-line')
+                    .attr('x1', x(year))
+                    .attr('x2', x(year));
+            }
+
+            // Tooltip
+            function showTooltip(event, content) {
+                d3.select('#tooltip')
+                    .html(content)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 10) + 'px')
+                    .style('opacity', 1);
+            }
+
+            function hideTooltip() {
+                d3.select('#tooltip').style('opacity', 0);
+            }
+
+            // Event handlers
+            d3.selectAll('.btn[data-view]').on('click', function() {
+                d3.selectAll('.btn[data-view]').classed('active', false);
+                d3.select(this).classed('active', true);
+                currentView = this.dataset.view;
+                drawMainChart();
+            });
+
+            d3.select('#year-slider').on('input', function() {
+                updateYear(+this.value);
+            });
+
+            // Initialize
+            drawMainChart();
+            updateYear(2020);
+            updateEventsList();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                drawMainChart();
+                drawHarmonyChart(selectedYear);
+            });
+        });
+    </script>
+</body>
+</html>
